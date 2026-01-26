@@ -173,7 +173,64 @@
             .nav-grid {
                 grid-template-columns: 1fr;
             }
-        }
+        }.agent-section {
+    scroll-margin-top: 6.5rem;
+    margin-bottom: 3rem;
+}
+
+.agent-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem 2.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid rgba(16,110,190,0.12);
+}
+
+.agent-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.agent-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin-bottom: 0.35rem;
+}
+
+.agent-subtitle {
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.challenge-box {
+    background: #fff8e1;
+    border-left: 4px solid #f59e0b;
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+}
+
+.challenge-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #b45309;
+    margin-bottom: 0.35rem;
+}
+
+.challenge-text {
+    font-size: 0.95rem;
+    color: #1e293b;
+    line-height: 1.7;
+}
+
     </style>
 </head>
 
@@ -239,11 +296,22 @@
                 </button>
             </div>
         </nav>
+        <section id="agent-1" class="agent-section">
+    <div class="agent-card">
+        <div class="agent-eyebrow">Agent 1</div>
+        <div class="agent-title">Research &amp; Definition Agent</div>
+        <div class="agent-subtitle">
+            Use this section to clarify the problem, gather inputs, and define what the agent should do before you build.
+        </div>
 
-        <!-- Future sections -->
-        <!-- <section id="agent-1"></section> -->
-        <!-- <section id="agent-2"></section> -->
-        <!-- <section id="agent-3"></section> -->
+        <div class="challenge-box">
+            <div class="challenge-label">Objective</div>
+            <div class="challenge-text">
+                Align on a clear problem statement, identify key users and constraints, and produce a draft agent charter to guide the build.
+            </div>
+        </div>
+    </div>
+</section>
 
     </div>
 
