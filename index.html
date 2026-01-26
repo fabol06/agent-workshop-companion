@@ -3,10 +3,203 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI for Nonprofit Leaders</title>
+  <title>Microsoft Elevate Days — Agent Workshop Companion</title>
+
+  <style>
+    :root{
+      --bg: #0b0c10;
+      --surface: rgba(255,255,255,0.06);
+      --surface-2: rgba(255,255,255,0.10);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      --radius: 16px;
+      --max: 980px;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1000px 600px at 20% 0%, rgba(88,101,242,0.35), transparent 60%),
+                  radial-gradient(900px 600px at 80% 20%, rgba(16,185,129,0.28), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    a{ color: inherit; }
+    .wrap{ max-width: var(--max); margin: 0 auto; padding: 28px 18px 60px; }
+
+    header{
+      border: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
+    }
+
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    h1{ margin: 10px 0 8px; font-size: 34px; letter-spacing: -0.02em; }
+    .sub{ margin: 0; color: var(--muted); max-width: 75ch; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .section{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.04);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+
+    .section h2{
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+
+    .meta{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .card{
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 14px;
+      margin-top: 12px;
+    }
+
+    .card h3{ margin: 0 0 6px; font-size: 15px; }
+    .card p{ margin: 0; color: var(--muted); font-size: 14px; }
+
+    .row{
+      display:flex; flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+      align-items: center;
+    }
+
+    button{
+      appearance: none;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    button:hover{ background: rgba(255,255,255,0.12); }
+    .ghost{ background: transparent; }
+    .note{
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    @media (min-width: 860px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+      .span-2{ grid-column: 1 / -1; }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Choose Your Own Adventure — Microsoft Elevate Days</h1>
-  <p>60 minutes</p>
+  <div class="wrap">
+    <!-- HEADER / FRAME -->
+    <header>
+      <div class="pill">Microsoft Elevate Days • London • 60 minutes</div>
+      <h1>Choose Your Own Adventure</h1>
+      <p class="sub">
+        A step-by-step companion that guides you through three agents:
+        <strong>Research → Design → Charter</strong>.
+        Keep your outputs from each step — you’ll paste them into the next one.
+      </p>
+    </header>
+
+    <div class="grid">
+      <!-- HOW TO USE (span full width on desktop) -->
+      <section class="section span-2" id="how-to-use">
+        <h2>How to use this companion</h2>
+        <p class="meta">
+          Follow the sections in order. Each one produces an output you’ll reuse.
+        </p>
+
+        <div class="card">
+          <h3>Workshop flow (3 agents)</h3>
+          <p>
+            1) Research Agent → 2) Design Agent → 3) Charter Agent
+          </p>
+          <div class="row">
+            <button class="ghost" onclick="window.location.hash='#research'">Go to Research</button>
+            <button class="ghost" onclick="window.location.hash='#design'">Go to Design</button>
+            <button class="ghost" onclick="window.location.hash='#charter'">Go to Charter</button>
+          </div>
+          <p class="note">Next: we’ll add “copy prompt” blocks and a place to paste/save outputs.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 1 -->
+      <section class="section" id="research">
+        <h2>1) Research Agent</h2>
+        <p class="meta">
+          Clarify the problem, persona, JTBD, and prioritize the use cases worth building.
+        </p>
+
+        <div class="card">
+          <h3>Output you’ll need later</h3>
+          <p>Problem statement • Persona • JTBD • Top use case (prioritized)</p>
+          <p class="note">Next: we’ll add the actual prompt + a copy button.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 2 -->
+      <section class="section" id="design">
+        <h2>2) Design Agent</h2>
+        <p class="meta">
+          Starting from the chosen use case, define the agent’s behavior, archetype, and the build instructions.
+        </p>
+
+        <div class="card">
+          <h3>Output you’ll need later</h3>
+          <p>Agent behavior • Archetype • Build instructions to paste into your agent builder</p>
+          <p class="note">Next: we’ll design the “instructions block” format.</p>
+        </div>
+      </section>
+
+      <!-- SECTION 3 (span full width on desktop) -->
+      <section class="section span-2" id="charter">
+        <h2>3) Charter Agent</h2>
+        <p class="meta">
+          Convert the build instructions into an Agent Charter: guardrails, success signals, safety, scope, and more.
+        </p>
+
+        <div class="card">
+          <h3>Output (deliverable)</h3>
+          <p>Agent Charter (Guardrails • Success signals • Safety • Scope • Risks • Open questions)</p>
+          <p class="note">Next: we’ll add a “download / copy charter” block.</p>
+        </div>
+      </section>
+    </div>
+  </div>
 </body>
 </html>
