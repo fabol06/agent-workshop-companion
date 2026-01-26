@@ -21,7 +21,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+            background: linear-gradient(180deg, #f9fbfd 0%, #edf2f7 100%);
             color: #1e293b;
             line-height: 1.6;
         }
@@ -169,6 +169,14 @@
             .nav-grid {
                 grid-template-columns: 1fr;
             }
+            .start-label {
+    text-align: left;
+    margin-bottom: 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    color: var(--gray);
+}
+
         }
     </style>
 </head>
@@ -213,7 +221,7 @@
         </div>
 
         <nav class="nav-section">
-            <h4>Choose where to start</h4>
+            <h4 class="start-label">CHOOSE WHERE TO START</h4>
             <div class="nav-grid">
                 <button class="nav-btn primary" onclick="document.getElementById('agent-1').scrollIntoView({ behavior: 'smooth' })">
                     <span>🔍</span>
