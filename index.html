@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI for Nonprofit Leaders | Microsoft Elevate Days London</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
         :root {
             --primary: #0078D4;
@@ -17,7 +18,11 @@
             --gray: #64748B;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -119,15 +124,14 @@
 
         .nav-section {
             margin-bottom: 3rem;
-            text-align: center;
         }
 
-        .nav-section h4 {
-            font-size: 0.85rem;
-            color: var(--gray);
+        .start-label {
+            text-align: left;
             margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            color: var(--gray);
         }
 
         .nav-grid {
@@ -165,22 +169,10 @@
             box-shadow: 0 6px 16px rgba(0,120,212,0.35);
         }
 
-        .nav-section .start-label {
-            text-align: left;
-            margin-left: 0;
-        }
-        
         @media (max-width: 768px) {
             .nav-grid {
                 grid-template-columns: 1fr;
-        }
-    
-        .start-label {
-            text-align: left;
-            margin-bottom: 1rem;
-            font-size: 0.75rem;
-            letter-spacing: 0.08em;
-            color: var(--gray);
+            }
         }
     </style>
 </head>
@@ -213,19 +205,23 @@
             </p>
 
             <p>
-                You’ll move through three parts of the journey: <strong>understanding</strong> the problem, 
-                <strong>defining</strong> the assistant, and <strong>setting</strong> the guardrails that 
-                keep it safe, responsible, and usable.
+                You’ll move through three parts of the journey:
+                <strong>understanding</strong> the problem,
+                <strong>defining</strong> the assistant,
+                and <strong>setting</strong> the guardrails that keep it safe,
+                responsible, and usable.
             </p>
 
             <p>
-                By the end of the session, you’ll leave with a <strong>working agent concept</strong>, 
-                a clear agent charter, and a roadmap to iterate and scale.
+                By the end of the session, you’ll leave with a
+                <strong>working agent concept</strong>, a clear agent charter,
+                and a roadmap to iterate and scale.
             </p>
         </div>
 
         <nav class="nav-section">
             <h4 class="start-label">CHOOSE WHERE TO START</h4>
+
             <div class="nav-grid">
                 <button class="nav-btn primary" onclick="document.getElementById('agent-1').scrollIntoView({ behavior: 'smooth' })">
                     <span>🔍</span>
@@ -244,7 +240,7 @@
             </div>
         </nav>
 
-        <!-- Add agent sections here -->
+        <!-- Future sections -->
         <!-- <section id="agent-1"></section> -->
         <!-- <section id="agent-2"></section> -->
         <!-- <section id="agent-3"></section> -->
