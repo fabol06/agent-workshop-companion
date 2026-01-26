@@ -88,54 +88,87 @@
             margin: 0 auto;
             padding: 3rem 1.5rem 1.5rem;
         }
-.intro {
-    background: white;
-    border-radius: 1rem;
-    padding: 2rem 2.5rem;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
 
-.intro h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-dark);
-    margin-bottom: 0.5rem;
-}
-
-.intro h3 {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--gray);
-    margin-bottom: 1.5rem;
-}
-
-.intro p {
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-    line-height: 1.7;
-}
-
-        .instructions {
+        .intro {
             background: white;
             border-radius: 1rem;
-            padding: 1.5rem 2rem;
-            margin-bottom: 1.5rem;
-            border-left: 4px solid var(--primary);
+            padding: 2rem 2.5rem;
+            margin-bottom: 2.5rem;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }
 
-        .instructions h3 {
+        .intro h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
             color: var(--primary-dark);
-            margin-bottom: 1rem;
-        }
-
-        .instructions ol {
-            margin-left: 1.25rem;
-        }
-
-        .instructions li {
             margin-bottom: 0.5rem;
+        }
+
+        .intro h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+        }
+
+        .intro p {
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+        }
+
+        .nav-section {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .nav-section h4 {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .nav-btn {
+            background: white;
+            border: 2px solid transparent;
+            border-radius: 0.75rem;
+            padding: 1.25rem 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+
+        .nav-btn span {
+            display: block;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-btn.primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 16px rgba(0,120,212,0.35);
+        }
+
+        @media (max-width: 768px) {
+            .nav-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -156,39 +189,56 @@
     </div>
 
     <div class="container">
+
         <div class="intro">
-    <h2>Welcome to Agent-to-Agent-to-Impact</h2>
-    <h3>A human-centered copilot build sprint</h3>
+            <h2>Welcome to Agent-to-Agent-to-Impact</h2>
+            <h3>A human-centered copilot build sprint</h3>
 
-    <p>
-        In this <strong>90-minute</strong> hands-on sprint, you’ll work with Copilot 
-        as a co‑maker to explore a real problem and shape an AI assistant
-        that can support meaningful work.
-    </p>
+            <p>
+                In this <strong>90-minute</strong> hands-on sprint, you’ll work with Copilot 
+                as a co-maker to explore a real problem and shape an AI assistant
+                that can support meaningful work.
+            </p>
 
-    <p>
-        You’ll move through three parts of the journey: <strong>understanding</strong> the problem, 
-        <strong>defining</strong> the assistant, and <strong>setting</strong> the guardrails that 
-        keep it safe, responsible, and usable. Each part has dedicated support to guide you, 
-        so you can focus on decisions rather than the mechanics.
-    </p>
+            <p>
+                You’ll move through three parts of the journey: <strong>understanding</strong> the problem, 
+                <strong>defining</strong> the assistant, and <strong>setting</strong> the guardrails that 
+                keep it safe, responsible, and usable.
+            </p>
 
-    <p>
-        By the end of the session, you’ll leave with a <strong>working agent concept</strong>, a
-        clear agent charter, and a roadmap to iterate and scale — blending
-        creative exploration with concrete build steps and quick testing.
-    </p>
-</div>
-        <div class="instructions">
-            <h3>How to Use This Guide</h3>
-            <ol>
-                <li><strong>Choose the category</strong> that fits what you’re working on</li>
-                <li><strong>Begin with the scaffolded prompts</strong> (yellow boxes) — they warm you up</li>
-                <li><strong>Try the visualisation prompt</strong> early for quick clarity</li>
-                <li><strong>Start a fresh chat</strong> when moving to a new topic</li>
-                <li><strong>Use follow-up prompts</strong> to go deeper and improve the results</li>
-            </ol>
+            <p>
+                By the end of the session, you’ll leave with a <strong>working agent concept</strong>, 
+                a clear agent charter, and a roadmap to iterate and scale.
+            </p>
         </div>
+
+        <nav class="nav-section">
+            <h4>Choose where to start</h4>
+            <div class="nav-grid">
+                <button class="nav-btn primary" onclick="document.getElementById('agent-1').scrollIntoView({ behavior: 'smooth' })">
+                    <span>🔍</span>
+                    Research & Definition
+                </button>
+
+                <button class="nav-btn primary" onclick="document.getElementById('agent-2').scrollIntoView({ behavior: 'smooth' })">
+                    <span>🧠</span>
+                    Agent Design
+                </button>
+
+                <button class="nav-btn primary" onclick="document.getElementById('agent-3').scrollIntoView({ behavior: 'smooth' })">
+                    <span>🛡️</span>
+                    Governance & Scale
+                </button>
+            </div>
+        </nav>
+
+        <!-- Le sezioni agent verranno qui sotto -->
+        <!-- <section id="agent-1"></section> -->
+        <!-- <section id="agent-2"></section> -->
+        <!-- <section id="agent-3"></section> -->
+
     </div>
+
 </body>
 </html>
+
