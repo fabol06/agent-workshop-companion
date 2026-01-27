@@ -230,6 +230,72 @@
     color: #1e293b;
     line-height: 1.7;
 }
+.entry-nav {
+  margin: 2.5rem 0 3rem;
+}
+
+.entry-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 1rem;
+}
+
+.entry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.entry-btn {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.entry-btn span {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.entry-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,120,212,0.25);
+}
+
+@media (max-width: 768px) {
+  .entry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.agent-subsection {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.agent-subsection h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.sub-intro {
+  font-size: 0.95rem;
+  color: var(--gray);
+}
 
     </style>
 </head>
@@ -333,11 +399,27 @@
       </button>
     </div>
   </div>
-    </div>
-    </div>
+        
+<section id="agent1-problem" class="agent-subsection">
+  <h4>Start from a problem</h4>
+  <p class="sub-intro">
+    Use this path if you have a challenge or tension but the solution is still unclear.
+  </p>
 </section>
 
-    </div>
+<section id="agent1-persona" class="agent-subsection">
+  <h4>Start from a persona</h4>
+  <p class="sub-intro">
+    Use this path if you know who you’re designing for but need clarity on their needs.
+  </p>
+</section>
+
+<section id="agent1-docs" class="agent-subsection">
+  <h4>Start from documents</h4>
+  <p class="sub-intro">
+    Use this path if you already have materials, files, or inputs the agent should be grounded in.
+  </p>
+</section>
 
 </body>
 </html>
