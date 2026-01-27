@@ -172,49 +172,50 @@
         @media (max-width: 768px) {
             .nav-grid {
                 grid-template-columns: 1fr;
+        }
+        
+            }.agent-section {
+        scroll-margin-top: 6.5rem;
+        margin-bottom: 3rem;
             }
-        }.agent-section {
-    scroll-margin-top: 6.5rem;
-    margin-bottom: 3rem;
-}
 
-.agent-card {
-    background: white;
-    border-radius: 1rem;
-    padding: 2rem 2.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    border: 1px solid rgba(16,110,190,0.12);
-}
+    .agent-card {
+        background: white;
+        border-radius: 1rem;
+        padding: 2rem 2.5rem;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        border: 1px solid rgba(16,110,190,0.12);
+        }
 
-.agent-eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--gray);
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-}
+    .agent-eyebrow {
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--gray);
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
 
 .agent-title {
     font-size: 1.6rem;
     font-weight: 800;
     color: var(--primary-dark);
     margin-bottom: 0.35rem;
-}
+    }
 
 .agent-subtitle {
     font-size: 1rem;
     color: #475569;
     line-height: 1.7;
     margin-bottom: 1.5rem;
-}
+    }
 
 .challenge-box {
     background: #fff8e1;
     border-left: 4px solid #f59e0b;
     border-radius: 0.75rem;
     padding: 1rem 1.25rem;
-}
+    }
 
 .challenge-label {
     font-size: 0.75rem;
@@ -223,16 +224,17 @@
     font-weight: 700;
     color: #b45309;
     margin-bottom: 0.35rem;
-}
+    }
 
 .challenge-text {
     font-size: 0.95rem;
     color: #1e293b;
     line-height: 1.7;
-}
+    }
+        
 .entry-nav {
   margin: 2.5rem 0 3rem;
-}
+    }
 
 .entry-label {
   font-size: 0.75rem;
@@ -240,13 +242,13 @@
   text-transform: uppercase;
   color: var(--gray);
   margin-bottom: 1rem;
-}
+    }
 
 .entry-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-}
+    }
 
 .entry-btn {
   background: white;
@@ -259,18 +261,18 @@
   text-align: center;
   transition: all 0.2s;
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-}
+    }
 
 .entry-btn span {
   display: block;
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
-}
+    }
 
 .entry-btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0,120,212,0.25);
-}
+    }
 
 @media (max-width: 768px) {
   .entry-grid {
@@ -295,6 +297,21 @@
 .sub-intro {
   font-size: 0.95rem;
   color: var(--gray);
+}
+.help-choose {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+.help-choose a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.help-choose a:hover {
+  text-decoration: underline;
 }
 
     </style>
@@ -400,6 +417,11 @@
     </div>
   </div>
         
+      <p class="help-choose">
+  Not sure where to start?
+  <a href="#agent1-help">Help me choose →</a>
+</p>
+  
 <section id="agent1-problem" class="agent-subsection">
   <h4>Start from a problem</h4>
   <p class="sub-intro">
