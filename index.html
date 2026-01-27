@@ -282,13 +282,32 @@
       }
     }
 
-    .agent-subsection {
+   .agent-subsection {
+      position: relative;
+    
       background: white;
       border-radius: 1rem;
-      padding: 2rem 2.5rem;
+      padding: 2rem 2.5rem 2rem 3rem; /* spazio per il bordo */
       margin-bottom: 2rem;
+    
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+    .agent-subsection::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1.5rem;
+      bottom: 1.5rem;
+      width: 5px;
+      border-radius: 4px;
+      background: linear-gradient(
+        180deg,
+        var(--primary),
+        var(--primary-dark)
+      );
     }
+
 
     .agent-subsection h4 {
       font-size: 1.1rem;
