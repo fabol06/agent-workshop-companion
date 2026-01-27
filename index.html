@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI for Nonprofit Leaders | Microsoft Elevate Days London</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --primary: #0078D4;
       --primary-dark: #106EBE;
-      --gray: #64748b;
+      --purple: #5C2D91;
+      --gray: #475569; /* fix: era usato ma non definito */
     }
 
     * {
@@ -21,13 +21,11 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       background: linear-gradient(180deg, #f9fbfd 0%, #edf2f7 100%);
       color: #1e293b;
       line-height: 1.6;
     }
-
-    /* ---------- HEADER ---------- */
 
     .header {
       background: linear-gradient(135deg, #004578 0%, #005A9E 100%);
@@ -53,38 +51,274 @@
       opacity: 0.8;
     }
 
-    /* ---------- COPILOT BAR ---------- */
-
     .copilot-bar {
       background: linear-gradient(135deg, #0078D4 0%, #106EBE 100%);
       color: white;
-      padding: 1rem;
+      padding: 1rem 1.5rem;
       text-align: center;
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .copilot-bar p {
+      margin-bottom: 0.75rem;
+      font-size: 0.9rem;
     }
 
     .copilot-link {
       display: inline-block;
-      margin-top: 0.75rem;
-      padding: 0.6rem 1.5rem;
-      border-radius: 2rem;
+      background: rgba(255,255,255,0.2);
       color: white;
       text-decoration: none;
+      padding: 0.625rem 1.5rem;
+      border-radius: 2rem;
       font-weight: 600;
       border: 2px solid rgba(255,255,255,0.3);
+      transition: all 0.2s;
     }
 
-    /* ---------- LAYOUT ---------- */
+    .copilot-link:hover {
+      background: rgba(255,255,255,0.3);
+      transform: translateY(-2px);
+    }
 
     .container {
       max-width: 60rem;
       margin: 0 auto;
-      padding: 3rem 1.5rem;
+      padding: 3rem 1.5rem 1.5rem;
     }
 
-    /* ---------- WHY ---------- */
+    .intro {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .intro h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .intro h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+    }
+
+    .intro p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+
+    .nav-section {
+      margin-bottom: 3rem;
+    }
+
+    .start-label {
+      text-align: left;
+      margin-bottom: 1rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--gray);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .nav-btn {
+      background: white;
+      border: 2px solid transparent;
+      border-radius: 0.75rem;
+      padding: 1.25rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    .nav-btn span {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .nav-btn.primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+    }
+
+    .nav-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,120,212,0.35);
+    }
+
+    @media (max-width: 768px) {
+      .nav-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .agent-section {
+      scroll-margin-top: 6.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .agent-card {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem 2.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border: 1px solid #e2e8f0;
+    }
+
+    .agent-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .agent-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .agent-subtitle {
+      font-size: 1rem;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .challenge-box {
+      background: #fff8e1;
+      border-left: 4px solid #f59e0b;
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+    }
+
+    .challenge-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #b45309;
+      margin-bottom: 0.35rem;
+    }
+
+    .challenge-text {
+      font-size: 0.95rem;
+      color: #1e293b;
+      line-height: 1.7;
+    }
+
+    .entry-nav {
+      margin: 2.5rem 0 3rem;
+    }
+
+    .entry-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .entry-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .entry-btn {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.75rem;
+      padding: 1.25rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    .entry-btn span {
+      display: block;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .entry-btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 16px rgba(0,120,212,0.25);
+    }
+
+    @media (max-width: 768px) {
+      .entry-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .agent-subsection {
+      background: white;
+      border-radius: 1rem;
+      padding: 2rem 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .agent-subsection h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+
+    .sub-intro {
+      font-size: 0.95rem;
+      color: var(--gray);
+    }
+
+    .help-choose {
+      margin-top: 0.75rem;
+      margin-bottom: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--gray);
+    }
+
+    .help-choose a,
+    .open-agent-link {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .help-choose a:hover,
+    .open-agent-link:hover {
+      text-decoration: underline;
+    }
 
     .why-agents {
       margin-bottom: 3.5rem;
@@ -121,17 +355,26 @@
       border-radius: 2px;
     }
 
-    /* ---------- DIVIDER ---------- */
-
-    .section-divider {
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(0,120,212,0.25), transparent);
-      margin: 3.5rem 0;
+    .why-emoji {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
     }
 
-    /* ---------- JOURNEY ---------- */
+    .why-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .why-card p {
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.5;
+    }
 
     .journey-start {
+      margin: 3rem 0 3.5rem;
       padding: 1.75rem 2rem;
       max-width: 56rem;
       background: linear-gradient(
@@ -139,15 +382,17 @@
         rgba(0,120,212,0.08),
         rgba(0,120,212,0.025)
       );
+
       border: 1.5px solid rgba(0,120,212,0.18);
       border-radius: 1.25rem;
-      margin-bottom: 3rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
     }
 
     .journey-title {
       font-size: 1.25rem;
       font-weight: 700;
       color: var(--primary-dark);
+      margin-bottom: 0.35rem;
     }
 
     .journey-subtitle {
@@ -156,121 +401,37 @@
       margin-bottom: 1.5rem;
     }
 
-    /* ---------- AGENTS ---------- */
-
-    .agent-section {
-      scroll-margin-top: 7rem;
-      margin-bottom: 3rem;
+    .section-divider {
+      height: 2px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0,120,212,0.25),
+        transparent
+      );
+      margin: 3.5rem 0 3rem;
     }
-
-    .agent-card {
-      background: white;
-      border-radius: 1rem;
-      padding: 2rem 2.5rem;
-      border: 1px solid #e2e8f0;
-    }
-
-    .agent-eyebrow {
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gray);
-      font-weight: 600;
-    }
-
-    .agent-title {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--primary-dark);
-      margin-bottom: 0.35rem;
-    }
-
-    .agent-subtitle {
-      font-size: 1rem;
-      color: #475569;
-      margin-bottom: 1.5rem;
-    }
-
-    /* ---------- OBJECTIVE ---------- */
-
-    .challenge-box {
-      background: #fff8e1;
-      border-left: 4px solid #f59e0b;
-      border-radius: 0.75rem;
-      padding: 1rem 1.25rem;
-      margin-bottom: 2rem;
-    }
-
-    .challenge-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: #b45309;
-    }
-
-    /* ---------- SHARED LABEL ---------- */
-
-    .entry-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gray);
-      font-weight: 600;
-      margin: 1.5rem 0 0.75rem;
-    }
-
-    /* ---------- LINKS ---------- */
-
-    .open-agent-link {
-      display: inline-block;
-      margin-bottom: 2rem;
-      color: var(--primary);
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    /* ---------- SUBSECTIONS ---------- */
-
-    .agent-subsection {
-      background: white;
-      border-radius: 1rem;
-      padding: 2rem 2.5rem;
-      margin-bottom: 2rem;
-      border: 1px solid #e2e8f0;
-    }
-
-    .sub-intro {
-      font-size: 0.95rem;
-      color: var(--gray);
-    }
-
-    /* ---------- START HELP ---------- */
-
-    .start-help {
-      margin-top: 3rem;
-      padding: 1.75rem 2rem;
-      background: #f7f9fc;
-      border: 1px solid rgba(0,120,212,0.12);
-      border-radius: 0.75rem;
-    }
-
-    .start-help-footer {
-      margin-top: 1.25rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(0,120,212,0.18);
-      font-size: 0.95rem;
-    }
-
-    /* ---------- CHEATSHEET ---------- */
 
     .cheatsheet {
       margin-top: 4rem;
     }
 
+    .cheatsheet-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .cheatsheet-subtitle {
+      font-size: 0.95rem;
+      color: var(--gray);
+      margin-bottom: 1.5rem;
+    }
+
     .cheatsheet-table-wrapper {
       overflow-x: auto;
-      background: white;
+      background: #ffffff;
       border-radius: 0.75rem;
       border: 1px solid #e2e8f0;
     }
@@ -281,104 +442,336 @@
       font-size: 0.9rem;
     }
 
-    .cheatsheet-table th {
+    .cheatsheet-table thead th {
       background: var(--primary);
       color: white;
-      padding: 0.75rem 1rem;
       text-align: left;
+      padding: 0.75rem 1rem;
+      font-weight: 600;
     }
 
-    .cheatsheet-table td {
+    .cheatsheet-table tbody td {
       padding: 0.85rem 1rem;
+      vertical-align: top;
       border-top: 1px solid #e5e7eb;
+      color: #1e293b;
     }
 
+    .cheatsheet-table tbody tr:nth-child(even) {
+      background: #f9fafb;
+    }
+
+    .start-help {
+      margin-top: 3rem;
+      padding: 1.75rem 2rem;
+      background: #f7f9fc;
+      border: 1px solid rgba(0, 120, 212, 0.12);
+      border-radius: 0.75rem;
+    }
+
+    .start-help-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary-dark);
+    }
+
+    .start-help-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .start-help-item {
+      display: block;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .start-help-item strong {
+      font-weight: 600;
+    }
+
+    .start-help-item span {
+      margin-left: 0.25rem;
+      color: var(--gray);
+    }
+
+    .start-help-item:hover {
+      background: rgba(0, 120, 212, 0.06);
+    }
+
+    #agent1-problem,
+    #agent1-persona,
+    #agent1-docs,
+    #agent1-help {
+      scroll-margin-top: 7.5rem;
+    }
+
+    .start-help-footer {
+      margin-top: 1.25rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(0, 120, 212, 0.18);
+      color: #334155;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
   </style>
 </head>
 
 <body>
-
-  <!-- HEADER -->
   <header class="header">
     <h1>AI for Nonprofit Leaders</h1>
     <p class="subtitle">Choose Your Own Adventure — Microsoft Elevate Days</p>
     <p class="meta">90 minutes • Groups of 2–4 • London</p>
   </header>
 
-  <!-- COPILOT BAR -->
   <div class="copilot-bar">
     <p>Ready to start building your agent?</p>
-    <a href="#" class="copilot-link">🚀 Open M365 Copilot</a>
+    <a href="https://m365copilot.com/" target="_blank" rel="noopener" class="copilot-link">
+      🚀 Open M365 Copilot
+    </a>
   </div>
 
   <div class="container">
+    <div class="intro">
+      <h2>Welcome to Agent-to-Agent-to-Impact</h2>
+      <h3>A human-centered copilot build sprint</h3>
 
-    <!-- AGENT 1 -->
+      <p>
+        In this <strong>90-minute</strong> hands-on sprint, you’ll work with Copilot
+        as a co-maker to explore a real problem and shape an AI assistant
+        that can support meaningful work.
+      </p>
+
+      <p>
+        You’ll move through three parts of the journey:
+        <strong>understanding</strong> the problem,
+        <strong>defining</strong> the assistant,
+        and <strong>setting</strong> the guardrails that keep it safe,
+        responsible, and usable.
+      </p>
+
+      <p>
+        By the end of the session, you’ll leave with a
+        <strong>working agent concept</strong>, a clear agent charter,
+        and a roadmap to iterate and scale.
+      </p>
+    </div>
+
+    <section class="why-agents">
+      <h2 class="why-title">What You’ll Learn</h2>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <span class="why-emoji">🎯</span>
+          <h4>Frame the right problems</h4>
+          <p>Learn how to focus on what truly matters before jumping to solutions.</p>
+        </div>
+
+        <div class="why-card">
+          <span class="why-emoji">🧠</span>
+          <h4>Turn scattered information into insight</h4>
+          <p>Make sense of messy inputs, signals, and data to inform better decisions.</p>
+        </div>
+
+        <div class="why-card">
+          <span class="why-emoji">🤝</span>
+          <h4>Design agents that support people</h4>
+          <p>Build AI that augments human judgment and real work.</p>
+        </div>
+
+        <div class="why-card">
+          <span class="why-emoji">🔁</span>
+          <h4>Advance equity & accessibility</h4>
+          <p>Understand how agent design choices impact inclusion and trust.</p>
+        </div>
+
+        <div class="why-card">
+          <span class="why-emoji">📚</span>
+          <h4>Create reusable expertise</h4>
+          <p>Capture knowledge once and make it consistently available across teams.</p>
+        </div>
+
+        <div class="why-card">
+          <span class="why-emoji">⚡</span>
+          <h4>Accelerate innovation</h4>
+          <p>Free up time and cognitive load so teams can focus on higher-value work.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-divider"></div>
+
+    <div class="journey-start">
+      <h3 class="journey-title">Step 1 · Your learning journey starts here</h3>
+      <p class="journey-subtitle">Choose the path that best matches what you already have.</p>
+
+      <nav class="nav-section">
+        <p class="start-label">CHOOSE WHERE TO START</p>
+
+        <div class="nav-grid">
+          <button class="nav-btn primary" onclick="document.getElementById('agent-1').scrollIntoView({ behavior: 'smooth' })">
+            <span>🔍</span>
+            Research & Definition Agent
+          </button>
+
+          <button class="nav-btn primary" onclick="document.getElementById('agent-2').scrollIntoView({ behavior: 'smooth' })">
+            <span>🧠</span>
+            Agent Builder
+          </button>
+
+          <button class="nav-btn primary" onclick="document.getElementById('agent-3').scrollIntoView({ behavior: 'smooth' })">
+            <span>🛡️</span>
+            Governance & Scale Agent
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- ============ AGENT 1 ============ -->
     <section id="agent-1" class="agent-section">
       <div class="agent-card">
-
         <div class="agent-eyebrow">Agent 1</div>
-        <div class="agent-title">Research & Definition Agent</div>
+        <div class="agent-title">Research &amp; Definition Agent</div>
         <div class="agent-subtitle">
-          Clarify the problem, gather inputs, and define what the agent should do.
+          Use this section to clarify the problem, gather inputs, and define what the agent should do before you build.
         </div>
 
         <div class="challenge-box">
           <div class="challenge-label">Objective</div>
-          Clarify the core problem and define the job-to-be-done.
+          <div class="challenge-text">
+            Clarify the core problem, identify who is most affected, and define the job-to-be-done that will anchor the future agent’s design.
+          </div>
         </div>
 
         <p class="entry-label">Open the agent</p>
         <a href="#" class="open-agent-link">🚀 Open in Copilot Studio</a>
 
+        <div class="entry-nav">
+          <p class="entry-label">Choose how you want to start</p>
+
+          <div class="entry-grid">
+            <button class="entry-btn" onclick="document.getElementById('agent1-problem').scrollIntoView({ behavior: 'smooth' })">
+              <span>🎯</span>
+              Start from a problem
+            </button>
+
+            <button class="entry-btn" onclick="document.getElementById('agent1-persona').scrollIntoView({ behavior: 'smooth' })">
+              <span>👤</span>
+              Start from a persona
+            </button>
+
+            <button class="entry-btn" onclick="document.getElementById('agent1-docs').scrollIntoView({ behavior: 'smooth' })">
+              <span>📄</span>
+              Start from documents
+            </button>
+          </div>
+
+          <p class="help-choose">
+            Not sure where to start?
+            <a href="#agent1-help">Help me choose →</a>
+          </p>
+        </div>
+
+        <section id="agent1-problem" class="agent-subsection">
+          <h4>Start from a problem</h4>
+          <p class="sub-intro">
+            Use this path if you have a challenge or tension but the solution is still unclear.
+          </p>
+        </section>
+
+        <section id="agent1-persona" class="agent-subsection">
+          <h4>Start from a persona</h4>
+          <p class="sub-intro">
+            Use this path if you know who you’re designing for but need clarity on their needs.
+          </p>
+        </section>
+
+        <section id="agent1-docs" class="agent-subsection">
+          <h4>Start from documents</h4>
+          <p class="sub-intro">
+            Use this path if you already have materials, files, or inputs the agent should be grounded in.
+          </p>
+        </section>
+
+        <div id="agent1-help" class="start-help">
+          <div class="start-help-title">Not sure where to start?</div>
+
+          <div class="start-help-list">
+            <a href="#agent1-problem" class="start-help-item">
+              <strong>Start from a problem</strong>
+              <span>→ when you have a challenge or symptoms, but no shared definition of what success looks like</span>
+            </a>
+
+            <a href="#agent1-persona" class="start-help-item">
+              <strong>Start from a persona</strong>
+              <span>→ when you know who the agent is for, but not what they actually need help with</span>
+            </a>
+
+            <a href="#agent1-docs" class="start-help-item">
+              <strong>Start from documents</strong>
+              <span>→ when you already have materials and want to ground the agent in facts</span>
+            </a>
+          </div>
+
+          <p class="start-help-footer">
+            <strong>Still unsure?</strong> Start from a problem — if something feels hard or slow today, that’s usually a good place to begin.
+          </p>
+        </div>
       </div>
     </section>
 
-    <!-- AGENT 2 -->
+    <!-- ============ AGENT 2 ============ -->
     <section id="agent-2" class="agent-section">
       <div class="agent-card">
-
         <div class="agent-eyebrow">Agent 2</div>
         <div class="agent-title">Agent Builder</div>
         <div class="agent-subtitle">
-          Design, configure, and build a working agent.
+          Use this section to design, configure, and build a working agent based on the problem you defined.
         </div>
 
         <div class="challenge-box">
           <div class="challenge-label">Objective</div>
-          Translate the concept into a functional assistant.
+          <div class="challenge-text">
+            Translate the agent concept into a functional assistant by defining scope, grounding, and behavior.
+          </div>
         </div>
 
         <p class="entry-label">Open the agent</p>
         <a href="#" class="open-agent-link">🚀 Open in Copilot Studio</a>
-
       </div>
     </section>
 
-    <!-- AGENT 3 -->
+    <!-- ============ AGENT 3 ============ -->
     <section id="agent-3" class="agent-section">
       <div class="agent-card">
-
         <div class="agent-eyebrow">Agent 3</div>
         <div class="agent-title">Governance & Scale Agent</div>
         <div class="agent-subtitle">
-          Ensure the agent is safe, responsible, and scalable.
+          Use this section to ensure the agent is safe, responsible, and ready to scale across teams.
         </div>
 
         <div class="challenge-box">
           <div class="challenge-label">Objective</div>
-          Define guardrails and success criteria.
+          <div class="challenge-text">
+            Define guardrails, ownership, and success criteria to support responsible deployment and iteration.
+          </div>
         </div>
 
         <p class="entry-label">Open the agent</p>
         <a href="#" class="open-agent-link">🚀 Open in Copilot Studio</a>
-
       </div>
     </section>
 
-    <!-- CHEATSHEET -->
+    <!-- ============ CHEATSHEET ============ -->
     <section class="cheatsheet">
-      <h2>Agent Design Cheatsheet</h2>
+      <h2 class="cheatsheet-title">Agent Design Cheatsheet</h2>
+      <p class="cheatsheet-subtitle">
+        Key terms used throughout the workshop, with practical guidance.
+      </p>
 
       <div class="cheatsheet-table-wrapper">
         <table class="cheatsheet-table">
@@ -391,17 +784,76 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>Prompt</strong></td>
-              <td>The brain of the agent.</td>
-              <td>Be explicit.</td>
+              <td><strong>Prompt / Instructions</strong></td>
+              <td>The “brain” of the agent: clear goals, scope, guardrails, tone.</td>
+              <td>Write like a policy. Be explicit about what to do and what not to do.</td>
+            </tr>
+
+            <tr>
+              <td><strong>System Prompt (Agent Instructions)</strong></td>
+              <td>Persistent rules that shape all responses and actions.</td>
+              <td>Include persona, JTBD, success criteria, and compliance notes.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Grounding / Knowledge</strong></td>
+              <td>The sources an agent can use (files, sites, data).</td>
+              <td>Curate “just enough” high-quality content; keep it current.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Actions / Connectors</strong></td>
+              <td>The capabilities the agent can execute (tasks, records, APIs).</td>
+              <td>Start read-only; add write actions once guardrails are tested.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Temperature</strong></td>
+              <td>Controls creativity vs. determinism.</td>
+              <td>Lower if the agent rambles or invents details.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Max Tokens / Response Length</strong></td>
+              <td>Caps how long a response can be.</td>
+              <td>Short for chat UX; longer for drafts or summaries.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Guardrails & Safety Filters</strong></td>
+              <td>Policy boundaries and role-based constraints.</td>
+              <td>Encode must/never rules and test with edge cases.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Evaluation / Test Scenarios</strong></td>
+              <td>Repeatable prompts with expected outcomes.</td>
+              <td>Build 10–20 real prompts and iterate.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Observability (Logs / Telemetry)</strong></td>
+              <td>How you review what the agent did and why.</td>
+              <td>Track failures, refusals, hallucinations, latency.</td>
+            </tr>
+
+            <tr>
+              <td><strong>Publishing & Governance</strong></td>
+              <td>Who can see/use the agent; versioning and control.</td>
+              <td>Maintain an Agent Register (owner, data, risk).</td>
+            </tr>
+
+            <tr>
+              <td><strong>Agent Builder vs. Copilot Studio</strong></td>
+              <td>Fast prototyping vs. deeper customization.</td>
+              <td>Prototype in Agent Builder → harden in Copilot Studio.</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
-
   </div>
-
 </body>
 </html>
+
 
