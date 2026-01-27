@@ -370,30 +370,27 @@
       line-height: 1.5;
     }
 
-  .journey-start {
-  margin: 3rem 0 3.5rem;
-  padding: 1.75rem 2rem;
-  max-width: 56rem;
+    .journey-start {
+      margin: 3rem 0 3.5rem;
+      padding: 1.75rem 2rem;
+      max-width: 56rem;
+      background: linear-gradient(
+        180deg,
+        rgba(0,120,212,0.08),
+        rgba(0,120,212,0.025)
+      );
 
-  background: linear-gradient(
-    180deg,
-    rgba(0,120,212,0.08),
-    rgba(0,120,212,0.025)
-  );
-
-  border: 1.5px solid rgba(0,120,212,0.18);
-  border-radius: 1.25rem;
-
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
-}
-
-
-    .journey-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-      margin-bottom: 0.35rem;
+      border: 1.5px solid rgba(0,120,212,0.18);
+      border-radius: 1.25rem;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
     }
+
+     .journey-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--primary-dark);
+        margin-bottom: 0.35rem;
+      }
 
     .journey-subtitle {
       font-size: 0.95rem;
@@ -411,7 +408,56 @@
       );
       margin: 3.5rem 0 3rem;
     }
-    
+
+    .cheatsheet {
+      margin-top: 4rem;
+    }
+
+  .cheatsheet-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 0.25rem;
+    }
+
+  .cheatsheet-subtitle {
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin-bottom: 1.5rem;
+  }
+
+  .cheatsheet-table-wrapper {
+    overflow-x: auto;
+    background: #ffffff;
+    border-radius: 0.75rem;
+    border: 1px solid #e2e8f0;
+  }
+
+  .cheatsheet-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+  }
+
+  .cheatsheet-table thead th {
+    background: var(--primary);
+    color: white;
+    text-align: left;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+  }
+
+  .cheatsheet-table tbody td {
+    padding: 0.85rem 1rem;
+    vertical-align: top;
+    border-top: 1px solid #e5e7eb;
+    color: #1e293b;
+  }
+
+  .cheatsheet-table tbody tr:nth-child(even) {
+    background: #f9fafb;
+  }
+
   </style>
 </head>
 
@@ -623,6 +669,92 @@
         Define guardrails, ownership, and success criteria to support responsible deployment and iteration.
       </div>
     </div>
+  </div>
+</section>
+
+    <section class="cheatsheet">
+  <h2 class="cheatsheet-title">Agent Design Cheatsheet</h2>
+  <p class="cheatsheet-subtitle">
+    Key terms used throughout the workshop, with practical guidance.
+  </p>
+
+  <div class="cheatsheet-table-wrapper">
+    <table class="cheatsheet-table">
+      <thead>
+        <tr>
+          <th>Terms</th>
+          <th>Definition</th>
+          <th>Tips</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Prompt / Instructions</strong></td>
+          <td>The “brain” of the agent: clear goals, scope, guardrails, tone.</td>
+          <td>Write like a policy. Be explicit about what to do and what not to do.</td>
+        </tr>
+
+        <tr>
+          <td><strong>System Prompt (Agent Instructions)</strong></td>
+          <td>Persistent rules that shape all responses and actions.</td>
+          <td>Include persona, JTBD, success criteria, and compliance notes.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Grounding / Knowledge</strong></td>
+          <td>The sources an agent can use (files, sites, data).</td>
+          <td>Curate “just enough” high-quality content; keep it current.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Actions / Connectors</strong></td>
+          <td>The capabilities the agent can execute (tasks, records, APIs).</td>
+          <td>Start read-only; add write actions once guardrails are tested.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Temperature</strong></td>
+          <td>Controls creativity vs. determinism.</td>
+          <td>Lower if the agent rambles or invents details.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Max Tokens / Response Length</strong></td>
+          <td>Caps how long a response can be.</td>
+          <td>Short for chat UX; longer for drafts or summaries.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Guardrails & Safety Filters</strong></td>
+          <td>Policy boundaries and role-based constraints.</td>
+          <td>Encode must/never rules and test with edge cases.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Evaluation / Test Scenarios</strong></td>
+          <td>Repeatable prompts with expected outcomes.</td>
+          <td>Build 10–20 real prompts and iterate.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Observability (Logs / Telemetry)</strong></td>
+          <td>How you review what the agent did and why.</td>
+          <td>Track failures, refusals, hallucinations, latency.</td>
+        </tr>
+
+        <tr>
+          <td><strong>Publishing & Governance</strong></td>
+          <td>Who can see/use the agent; versioning and control.</td>
+          <td>Maintain an Agent Register (owner, data, risk).</td>
+        </tr>
+
+        <tr>
+          <td><strong>Agent Builder vs. Copilot Studio</strong></td>
+          <td>Fast prototyping vs. deeper customization.</td>
+          <td>Prototype in Agent Builder → harden in Copilot Studio.</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
