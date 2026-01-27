@@ -338,18 +338,26 @@
           gap: 1.25rem;
         }
 
-        .why-card {
-           background: #fbfcfe;
-           border-radius: 1.1rem;
-           padding: 2rem;
-           box-shadow: 0 2px 6px rgba(0,0,0,0.04);
-           border-left: 2px solid rgba(124,58,237,0.18);
-           transition: transform 0.2s ease, box-shadow 0.2s ease;
+          .why-card {
+               background: #f6f4f2;
+                border-radius: 0.75rem;
+                padding: 1.75rem 2rem;
+                position: relative;
         }
 
+        .why-card::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: 1.25rem;
+              bottom: 1.25rem;
+              width: 4px;
+              background: var(--primary);
+              border-radius: 2px;
+            }
+
          .why-card:hover {
-              transform: translateY(-2px);
-              box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+            background: #f2f0ee;
         }
 
         .why-emoji {
@@ -432,14 +440,14 @@
             </p>
         </div>
 <section class="why-agents">
-  <h3 class="why-title">What You'll Learn?</h3>
+  <h2 class="why-title">What You’ll Learn</h2>
 
   <div class="why-grid">
     <div class="why-card">
       <span class="why-emoji">🎯</span>
       <h4>Frame the right problems</h4>
       <p>
-       Learn how to focus on what truly matters before jumping to solutions.
+        Learn how to focus on what truly matters before jumping to solutions.
       </p>
     </div>
 
@@ -453,37 +461,38 @@
 
     <div class="why-card">
       <span class="why-emoji">🤝</span>
-      <h4>Design agents that support people, not replace them</h4>
+      <h4>Design agents that support people</h4>
       <p>
-        Build AI that augments human judgment and real work
+        Build AI that augments human judgment and real work.
       </p>
     </div>
 
     <div class="why-card">
       <span class="why-emoji">🔁</span>
-      <h4>Advance equity, accessibility, and service quality</h4>
+      <h4>Advance equity & accessibility</h4>
       <p>
         Understand how agent design choices impact inclusion and trust.
       </p>
     </div>
 
     <div class="why-card">
-      <span class="why-emoji">🧠</span>
-      <h4>Create reusable, scalable expertise</h4>
+      <span class="why-emoji">📚</span>
+      <h4>Create reusable expertise</h4>
       <p>
         Capture knowledge once and make it consistently available across teams.
       </p>
     </div>
-      
-      <div class="why-card">
+
+    <div class="why-card">
       <span class="why-emoji">⚡</span>
-      <h4>Accelerate innovation by automating the routine</h4>
+      <h4>Accelerate innovation</h4>
       <p>
-        Free up time and cognitive load so people can focus on higher-value work.
+        Free up time and cognitive load so teams can focus on higher-value work.
       </p>
     </div>
   </div>
 </section>
+
         
 <div class="entry-intro">
   <h3 class="entry-title">Your learning journey starts here</h3>
