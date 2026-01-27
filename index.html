@@ -564,6 +564,96 @@
       font-size: 0.95rem;
       line-height: 1.6;
     }
+
+    .flow-block {
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      border-radius: 0.75rem;
+      border: 1px solid #e2e8f0;
+      background: #fbfdff;
+    }
+
+    .flow-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    .flow-text {
+      font-size: 0.95rem;
+      color: var(--gray);
+      line-height: 1.7;
+    }
+
+    .choose-level {
+      margin-top: 1.5rem;
+      padding: 1.25rem;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(0,120,212,0.18);
+      background: linear-gradient(
+        180deg,
+        rgba(0,120,212,0.06),
+        rgba(0,120,212,0.02)
+      );
+    }
+
+    .choose-level-header {
+      margin-bottom: 1rem;
+  }
+
+    .level-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+  }
+
+    .level-btn {
+      background: white;
+      border: 1px solid rgba(0,120,212,0.18);
+      border-radius: 0.75rem;
+      padding: 1rem 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.2s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    .level-btn span {
+      display: block;
+      font-size: 1.3rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .level-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,120,212,0.18);
+    }
+
+    .level-section {
+      margin-top: 1.25rem;
+      scroll-margin-top: 7.5rem;
+      padding: 1rem 1.25rem;
+      border-radius: 0.75rem;
+      border: 1px solid #e2e8f0;
+      background: white;
+    }
+
+    .level-title {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      margin-bottom: 0.25rem;
+    }
+
+    @media (max-width: 768px) {
+      .level-grid {
+        grid-template-columns: 1fr;
+    }
+  }
+    
   </style>
 </head>
 
@@ -724,12 +814,67 @@
           </p>
         </div>
 
-        <section id="agent1-problem" class="agent-subsection">
-          <h4>Start from a problem</h4>
-          <p class="sub-intro">
-            Use this path if you have a challenge or tension but the solution is still unclear.
-          </p>
-        </section>
+       <section id="agent1-problem" class="agent-subsection">
+  <h4>Start from a problem</h4>
+  <p class="sub-intro">
+    Use this path if you have a challenge or tension but the solution is still unclear.
+  </p>
+
+  <div class="flow-block">
+    <h5 class="flow-title">What this step is about</h5>
+    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div class="flow-block">
+    <h5 class="flow-title">What the agent is trying to understand</h5>
+    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div class="flow-block">
+    <h5 class="flow-title">How to respond</h5>
+    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div class="choose-level">
+    <div class="choose-level-header">
+      <h5 class="flow-title">Choose your level</h5>
+      <p class="flow-text">Pick the kind of support you want for this step.</p>
+    </div>
+
+    <div class="level-grid">
+      <button class="level-btn" onclick="document.getElementById('agent1-problem-hint').scrollIntoView({ behavior: 'smooth' })">
+        <span>💡</span>
+        Get a hint
+      </button>
+
+      <button class="level-btn" onclick="document.getElementById('agent1-problem-template').scrollIntoView({ behavior: 'smooth' })">
+        <span>📋</span>
+        Copy a template
+      </button>
+
+      <button class="level-btn" onclick="document.getElementById('agent1-problem-example').scrollIntoView({ behavior: 'smooth' })">
+        <span>🧩</span>
+        See an example
+      </button>
+    </div>
+  </div>
+
+  <div id="agent1-problem-hint" class="level-section">
+    <h5 class="level-title">Get a hint</h5>
+    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div id="agent1-problem-template" class="level-section">
+    <h5 class="level-title">Copy a template</h5>
+    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+
+  <div id="agent1-problem-example" class="level-section">
+    <h5 class="level-title">See an example</h5>
+    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+</section>
+
 
         <section id="agent1-persona" class="agent-subsection">
           <h4>Start from a persona</h4>
