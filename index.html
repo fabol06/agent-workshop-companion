@@ -297,6 +297,43 @@
       margin-bottom: 0.5rem;
     }
 
+    .open-agent-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #fff;
+
+      padding: 0.85rem 1.1rem;
+      border-radius: 0.9rem;
+      border: 1px solid rgba(255,255,255,0.25);
+
+      font-weight: 700;
+      font-size: 0.95rem;
+      line-height: 1;
+
+      box-shadow: 0 10px 24px rgba(0,120,212,0.22);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    }
+
+    .open-agent-btn:hover {
+      text-decoration: none; /* evita underline sull’hover */
+      transform: translateY(-2px);
+      filter: brightness(1.02);
+      box-shadow: 0 14px 30px rgba(0,120,212,0.28);
+    }
+
+    .open-agent-btn:active {
+      transform: translateY(0px);
+      box-shadow: 0 8px 18px rgba(0,120,212,0.22);
+    }
+
+    .open-agent-btn:focus-visible {
+      outline: 3px solid rgba(0,120,212,0.35);
+      outline-offset: 3px;
+    }
+    
     .sub-intro {
       font-size: 0.95rem;
       color: var(--gray);
@@ -648,11 +685,13 @@
           </div>
         </div>
 
-        <p class="entry-label">Open the agent</p>
-        <a href="#" class="open-agent-link">🚀 Open in Copilot Studio</a>
+        <p class="entry-label"> 1. Open the agent</p>
+       <a href="#" class="open-agent-link open-agent-btn">
+  🚀 Open in Copilot Studio <span aria-hidden="true">→</span>
+</a>
 
         <div class="entry-nav">
-          <p class="entry-label">Choose how you want to start</p>
+          <p class="entry-label"> 2. Choose how you want to start</p>
 
           <div class="entry-grid">
             <button class="entry-btn" onclick="document.getElementById('agent1-problem').scrollIntoView({ behavior: 'smooth' })">
@@ -741,8 +780,10 @@
           </div>
         </div>
 
-        <p class="entry-label">Open the agent</p>
-        <a href="#" class="open-agent-link">🚀 Open in Copilot Studio</a>
+        <p class="entry-label"> 1. Open the agent</p>
+        <a href="#" class="open-agent-link open-agent-btn">
+  🚀 Open in Copilot Studio <span aria-hidden="true">→</span>
+</a>
       </div>
     </section>
 
@@ -762,8 +803,10 @@
           </div>
         </div>
 
-        <p class="entry-label">Open the agent</p>
-        <a href="#" class="open-agent-link">🚀 Open in Copilot Studio</a>
+        <p class="entry-label"> 1. Open the agent</p>
+        <a href="#" class="open-agent-link open-agent-btn">
+  🚀 Open in Copilot Studio <span aria-hidden="true">→</span>
+</a>
       </div>
     </section>
 
