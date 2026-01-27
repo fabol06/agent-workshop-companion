@@ -372,7 +372,7 @@
 
     .journey-start {
       margin: 3rem 0 3.5rem;
-      padding: 2.25rem 2.75rem;
+      padding: 2.25rem 2.75rem 1.75rem;
       background: linear-gradient(
         180deg,
         rgba(0,120,212,0.06),
@@ -394,6 +394,18 @@
       color: var(--gray);
       margin-bottom: 1.5rem;
     }
+
+    .section-divider {
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        rgba(0,0,0,0.08),
+        transparent
+      );
+      margin: 4rem 0 3rem;
+    }
+    
   </style>
 </head>
 
@@ -479,7 +491,8 @@
       </div>
     </section>
 
-    <!-- STEP 1 -->
+   <div class="section-divider"></div>
+    
     <div class="journey-start">
       <h3 class="journey-title">Step 1 · Your learning journey starts here</h3>
       <p class="journey-subtitle">Choose the path that best matches what you already have.</p>
