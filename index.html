@@ -1107,10 +1107,12 @@
 
         <div class="prompt-container">
           <div class="prompt-divider"><span> 🟢 Starting prompts</span></div>
+          <p class="flow-text"> Choose one of these prompts to get started. There’s no right order — 
+            follow the one that helps you explain the problem best, click Copy, and paste it into the agent’s text field to begin. </p>
 
           <div class="prompt-card">
             <div class="prompt-header">
-              <h3 class="prompt-title">Describe the problem space</h3>
+              <h3 class="prompt-title">Frame the problem</h3>
               <button class="copy-btn" data-copy="prompt-1">📋 Copy</button>
             </div>
             <div class="prompt-content" id="prompt-1">
@@ -1118,57 +1120,79 @@
             </div>
           </div>
 
-           <div class="prompt-card">
+              <div class="prompt-card">
             <div class="prompt-header">
-              <h3 class="prompt-title">Describe the problem space</h3>
+              <h3 class="prompt-title">Share a concrete problem moment</h3>
               <button class="copy-btn" data-copy="prompt-2">📋 Copy</button>
             </div>
             <div class="prompt-content" id="prompt-2">
-              One moment where this problem shows up is when <strong>[someone]</strong> tries to <strong>[do something]</strong>, but <strong>[what goes wrong]</strong>.
+              A concrete moment where this problem shows up is when <strong>[someone]</strong> tries to <strong>[do something]</strong>, 
+              <strong>but [what goes wrong or breaks down]</strong>.
+            </div>
+          </div>
+          
+           <div class="prompt-card">
+            <div class="prompt-header">
+              <h3 class="prompt-title">Describe the problem as it exists today</h3>
+              <button class="copy-btn" data-copy="prompt-3">📋 Copy</button>
+            </div>
+            <div class="prompt-content" id="prompt-3">
+              Today, the situation looks like this:<strong>[describe what is happening now]</strong>. 
+              This creates issues because<strong>[what makes this hard, slow, confusing, or risky]</strong>.
             </div>
           </div>
 
-          <div class="prompt-divider"><span> 🟪 Optional prompts</span></div>
+          <div class="prompt-divider"><span> 🟪 Follow-up prompts</span></div>
           <p class="flow-text"> After you start, the agent will ask follow-up questions to help you clarify the problem. 
             Respond naturally and honestly—just like you would in an interview.
             If you feel stuck, you can use the prompt below. </p>
 
           <div class="prompt-card">
             <div class="prompt-header">
-              <h3 class="prompt-title">When the agent ask for []</h3>
-              <button class="copy-btn" data-copy="prompt-3">📋 Copy</button>
+              <h3 class="prompt-title">When the agent asks how things actually work </h3>
+              <button class="copy-btn" data-copy="prompt-4">📋 Copy</button>
             </div>
-            <div class="prompt-content" id="prompt-3">
+            <div class="prompt-content" id="prompt-4">
               One important nuance is that <strong>[how it actually works]</strong>, affecting <strong>[who / why]</strong>.
             </div>
           </div>
 
            <div class="prompt-card">
             <div class="prompt-header">
-              <h3 class="prompt-title">Lorem ipsum</h3>
-              <button class="copy-btn" data-copy="prompt-4">📋 Copy</button>
+              <h3 class="prompt-title">When the agent needs a concrete example</h3>
+              <button class="copy-btn" data-copy="prompt-5">📋 Copy</button>
             </div>
-            <div class="prompt-content" id="prompt-4">
+            <div class="prompt-content" id="prompt-5">
               Here’s a concrete moment that shows the problem: <strong>[describe what someone tried to do, what went wrong, and why it mattered].</strong>
             </div>
           </div>
 
             <div class="prompt-card">
             <div class="prompt-header">
-              <h3 class="prompt-title">Lorem ipsum</h3>
-              <button class="copy-btn" data-copy="prompt-5">📋 Copy</button>
+              <h3 class="prompt-title">When something feels slightly off</h3>
+              <button class="copy-btn" data-copy="prompt-6">📋 Copy</button>
             </div>
-            <div class="prompt-content" id="prompt-5">
+            <div class="prompt-content" id="prompt-6">
               This is mostly right, but one thing is missing or slightly off: <strong>[short clarification].</strong>
             </div>
           </div>
 
+           <div class="prompt-card">
+            <div class="prompt-header">
+              <h3 class="prompt-title">When the problem scope is too broad</h3>
+              <button class="copy-btn" data-copy="prompt-7">📋 Copy</button>
+            </div>
+            <div class="prompt-content" id="prompt-7">
+              This problem is too broad. Let’s focus specifically on <strong>[part of the problem / moment / context]</strong>.
+            </div>
+          </div>
+          
             <div class="prompt-card">
             <div class="prompt-header">
-              <h3 class="prompt-title">Lorem ipsum</h3>
-              <button class="copy-btn" data-copy="prompt-6">📋 Copy</button>
+              <h3 class="prompt-title">When the wrong person is in focus</h3>
+              <button class="copy-btn" data-copy="prompt-8">📋 Copy</button>
             </div>
-            <div class="prompt-content" id="prompt-6">
+            <div class="prompt-content" id="prompt-8">
               I’d prefer to focus on a different person: <strong>[who they are and why].</strong>
             </div>
           </div>
