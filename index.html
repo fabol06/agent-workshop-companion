@@ -1095,57 +1095,91 @@
   </div>
 </div>
 
-      <!-- ===== Copy a prompt (inside the main card + level-section) ===== -->
-      
-      <section id="agent1-problem-template" class="level-section prompt-section">
-        <h5 class="level-title">Copy a prompt</h5>
-        <p class="flow-text">
-          Use these prompts to quickly explore the problem before going deeper.
-        </p>
+     <!-- ===== Copy a prompt (inside the main card + level-section) ===== -->
 
-        <div class="prompt-container">
+<section id="agent1-problem-template" class="level-section prompt-section">
+  <h5 class="level-title">Copy a prompt</h5>
+  <p class="flow-text">
+    Use these prompts to quickly explore the problem before going deeper.
+  </p>
 
-          <div class="prompt-card">
-            <div class="prompt-header">
-              <span class="prompt-step">1</span>
-              <h3 class="prompt-title">Prompt 1</h3>
-              <button class="copy-btn" data-copy="prompt-1">📋 Copy</button>
-            </div>
-            <div class="prompt-content" id="prompt-1">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </div>
+  <div class="prompt-container">
 
-          <div class="prompt-card">
-            <div class="prompt-header">
-              <span class="prompt-step">2</span>
-              <h3 class="prompt-title">Prompt 2</h3>
-              <button class="copy-btn" data-copy="prompt-2">📋 Copy</button>
-            </div>
-            <div class="prompt-content" id="prompt-2">
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-            </div>
-          </div>
+    <!-- Starting prompts -->
+    <p class="flow-text" style="font-weight: 600;">
+      Starting prompts
+    </p>
 
-          <div class="prompt-card">
-            <div class="prompt-header">
-              <span class="prompt-step">3</span>
-              <h3 class="prompt-title">Prompt 3</h3>
-              <button class="copy-btn" data-copy="prompt-3">📋 Copy</button>
-            </div>
-            <div class="prompt-content" id="prompt-3">
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <div id="agent1-problem-example" class="level-section">
-        <h5 class="level-title">See an example</h5>
-        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <span class="prompt-step">1</span>
+        <h3 class="prompt-title">Describe the problem space</h3>
+        <button class="copy-btn" data-copy="prompt-1">📋 Copy</button>
       </div>
-    </section>
+      <div class="prompt-content" id="prompt-1">
+        <p>
+          I’m working with <strong>[organization / team]</strong> on
+          <strong>[area of focus]</strong>, and we’re trying to understand
+          <strong>[a problem or opportunity]</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <span class="prompt-step">2</span>
+        <h3 class="prompt-title">Share a concrete moment</h3>
+        <button class="copy-btn" data-copy="prompt-2">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="prompt-2">
+        <p>
+          One moment where this problem shows up is when
+          <strong>[someone]</strong> tries to
+          <strong>[do something]</strong>, but
+          <strong>[what goes wrong]</strong>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <hr style="
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 1.25rem 0;
+    ">
+
+    <!-- Optional prompts -->
+    <p class="flow-text" style="font-weight: 600;">
+      Optional prompts
+    </p>
+
+    <p class="flow-text">
+      After you start, the agent will ask follow-up questions to help you clarify
+      the problem. Respond naturally and honestly—just like you would in an
+      interview.
+      <br />
+      If you feel stuck, you can use the prompt below.
+    </p>
+
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <span class="prompt-step">3</span>
+        <h3 class="prompt-title">Add nuance or adjust direction</h3>
+        <button class="copy-btn" data-copy="prompt-3">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="prompt-3">
+        <p>
+          One important nuance is that
+          <strong>[something about how this actually works]</strong>,
+          which affects
+          <strong>[who is impacted or why this matters]</strong>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- ===== Start from a persona ===== -->
     <section id="agent1-persona" class="agent-subsection">
