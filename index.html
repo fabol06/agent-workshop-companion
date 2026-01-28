@@ -11,7 +11,7 @@
       --primary: #0078D4;
       --primary-dark: #106EBE;
       --purple: #5C2D91;
-      --gray: #475569; /* fix: era usato ma non definito */
+      --gray: #475569; 
     }
 
     * {
@@ -591,8 +591,7 @@
       margin-top: 1.25rem;
       padding: 1.25rem 1.5rem;
       background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-left: 3px solid #7c3aed;
+      border: 2px solid #106EBE;
       border-radius: 0.75rem;
     }
 
@@ -600,7 +599,7 @@
     .flow-title {
       font-size: 1rem;
       font-weight: 600;
-      color: #7c3aed; 
+      color: #106EBE; 
       margin-bottom: 0.5rem;
       text-transform: none;
       letter-spacing: normal;
@@ -689,7 +688,88 @@
       margin-bottom: 0;
   }
 
-    
+    .prompt-section {
+      margin-top: 3rem;
+  }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+  }
+
+    .section-subtitle {
+      color: #5b667a;
+      margin-bottom: 1.5rem;
+  }
+
+/* BIG CONTAINER */
+    .prompt-container {
+      background: #fff7e6;
+      border: 2px dashed #f59e0b;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+  }
+
+/* SMALL CARDS */
+    .prompt-card {
+      background: #ffffff;
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid #e6eaf2;
+  }
+
+/* HEADER */
+    .prompt-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+  }
+
+    .prompt-step {
+      font-weight: 700;
+      color: #f59e0b;
+  }
+
+    .prompt-title {
+      flex: 1;
+      font-size: 1rem;
+      font-weight: 600;
+  }
+
+    .copy-btn {
+      background: #4f46e5;
+      color: #ffffff;
+      border: none;
+      border-radius: 0.5rem;
+      padding: 0.4rem 0.75rem;
+      font-size: 0.85rem;
+      cursor: pointer;
+  }
+
+    .copy-btn:hover {
+      opacity: 0.9;
+  }
+
+/* BODY */
+    .prompt-body p {
+      margin-bottom: 0.5rem;
+  }
+
+    .prompt-body ul {
+      padding-left: 1.2rem;
+      margin: 0;
+  }
+
+    .prompt-body li {
+      margin-bottom: 0.25rem;
+  }
+
+   
   </style>
 </head>
 
@@ -883,7 +963,7 @@
 
       <button class="level-btn" onclick="document.getElementById('agent1-problem-template').scrollIntoView({ behavior: 'smooth' })">
         <span>📋</span>
-        Copy a template
+        Copy a prompt
       </button>
 
       <button class="level-btn" onclick="document.getElementById('agent1-problem-example').scrollIntoView({ behavior: 'smooth' })">
@@ -898,10 +978,71 @@
     <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
   </div>
 
-  <div id="agent1-problem-template" class="level-section">
-    <h5 class="level-title">Copy a template</h5>
-    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<section class="prompt-section">
+  <h2 class="section-title">Copy a prompt</h2>
+  <p class="section-subtitle">
+    Use these prompts to quickly explore the problem before going deeper.
+  </p>
+
+  <div class="prompt-container">
+    
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <span class="prompt-step">1</span>
+        <h3 class="prompt-title">Quick framing</h3>
+        <button class="copy-btn">📋 Copy</button>
+      </div>
+      <div class="prompt-body">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+        </p>
+        <ul>
+          <li>Lorem ipsum dolor sit amet</li>
+          <li>Consectetur adipiscing elit</li>
+          <li>Sed do eiusmod tempor</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <span class="prompt-step">2</span>
+        <h3 class="prompt-title">Add structure</h3>
+        <button class="copy-btn">📋 Copy</button>
+      </div>
+      <div class="prompt-body">
+        <p>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+        </p>
+        <ul>
+          <li>Duis aute irure dolor</li>
+          <li>In reprehenderit in voluptate</li>
+          <li>Velit esse cillum dolore</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <span class="prompt-step">3</span>
+        <h3 class="prompt-title">Stress test</h3>
+        <button class="copy-btn">📋 Copy</button>
+      </div>
+      <div class="prompt-body">
+        <p>
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
+        </p>
+        <ul>
+          <li>Sed ut perspiciatis unde</li>
+          <li>Omnis iste natus error</li>
+          <li>Accusantium doloremque</li>
+        </ul>
+      </div>
+    </div>
+
   </div>
+</section>
+
 
   <div id="agent1-problem-example" class="level-section">
     <h5 class="level-title">See an example</h5>
