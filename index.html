@@ -585,26 +585,48 @@
       line-height: 1.6;
     }
 
-    .flow-block {
-      margin-top: 1.25rem;
-      padding: 1rem 1.25rem;
+   .flow-block {
+      position: relative;
+    
+      margin-top: 1.5rem;
+      padding: 1.25rem 1.5rem;
+    
       border-radius: 0.75rem;
       border: 1px solid #e2e8f0;
       background: #ffffff;
     }
 
-    .flow-title {
-      font-size: 0.95rem;
-      font-weight: 800;
-      color: #374151;
-      margin-bottom: 0.25rem;
+
+  .flow-block::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      bottom: 0.5rem;
+      width: 3px;
+      border-radius: 2px;
+      background: #e2e8f0;
     }
+
+    
+   .flow-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #475569; 
+    }
+
 
     .flow-text {
       font-size: 0.95rem;
       font-weight: 400;
       color: #4b5563;
       line-height: 1.7;
+    }
+
+    .flow-text strong {
+      font-weight: 600;
     }
 
     .choose-level {
