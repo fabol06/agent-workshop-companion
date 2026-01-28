@@ -605,12 +605,6 @@
       letter-spacing: normal;
   }
 
-    .flow-text {
-      font-size: 0.95rem;
-      color: #475569;
-      line-height: 1.7;
-  }
-
 
     .choose-level {
       margin-top: 1.5rem;
@@ -680,13 +674,6 @@
     }
   }
 
-    .flow-text {
-      margin-bottom: 0.75rem;
-  }
-
-    .flow-text:last-child {
-      margin-bottom: 0;
-  }
 
     .prompt-section {
       margin-top: 3rem;
@@ -843,6 +830,12 @@
 }
 
 .step-info-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+    .text-body {
   font-size: 0.95rem;
   line-height: 1.7;
   color: #475569;
@@ -1041,7 +1034,7 @@
       <div class="choose-level">
         <div class="choose-level-header">
           <h5 class="level-title">Choose your level</h5>
-          <p class="flow-text">Pick the kind of support you want for this step.</p>
+          <p class="text-body">Pick the kind of support you want for this step.</p>
         </div>
 
         <div class="level-grid">
@@ -1064,13 +1057,13 @@
 
       <div id="agent1-problem-hint" class="level-section">
         <h5 class="level-title">Get some tips</h5>
-        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
 
       <!-- ===== Copy a prompt (inside the main card + level-section) ===== -->
       <section id="agent1-problem-template" class="level-section prompt-section">
         <h5 class="level-title">Copy a prompt</h5>
-        <p class="flow-text">
+        <p class="text-body">
           Use these prompts to quickly explore the problem before going deeper.
         </p>
 
@@ -1114,7 +1107,7 @@
 
       <div id="agent1-problem-example" class="level-section">
         <h5 class="level-title">See an example</h5>
-        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p class="text-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
     </section>
 
