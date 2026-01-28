@@ -800,6 +800,15 @@
   margin-bottom: 0.25rem;
 }
 
+    .prompt-content {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      color: #1e293b;
+}
+
    
   </style>
 </head>
@@ -993,7 +1002,7 @@
         <div class="level-grid">
           <button class="level-btn" onclick="document.getElementById('agent1-problem-hint').scrollIntoView({ behavior: 'smooth' })">
             <span>💡</span>
-            Get a hint
+            Get a few tips
           </button>
 
           <button class="level-btn" onclick="document.getElementById('agent1-problem-template').scrollIntoView({ behavior: 'smooth' })">
@@ -1009,7 +1018,7 @@
       </div>
 
       <div id="agent1-problem-hint" class="level-section">
-        <h5 class="level-title">Get a hint</h5>
+        <h5 class="level-title">Get some tips</h5>
         <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
 
@@ -1025,10 +1034,10 @@
           <div class="prompt-card">
             <div class="prompt-header">
               <span class="prompt-step">1</span>
-              <h3 class="prompt-title">Quick framing</h3>
+              <h3 class="prompt-title">Prompt 1</h3>
               <button class="copy-btn" data-copy="prompt-1">📋 Copy</button>
             </div>
-            <div class="prompt-body" id="prompt-1">
+            <div class="prompt-content" id="prompt-1">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </div>
@@ -1036,10 +1045,10 @@
           <div class="prompt-card">
             <div class="prompt-header">
               <span class="prompt-step">2</span>
-              <h3 class="prompt-title">Add structure</h3>
+              <h3 class="prompt-title">Prompt 2</h3>
               <button class="copy-btn" data-copy="prompt-2">📋 Copy</button>
             </div>
-            <div class="prompt-body" id="prompt-2">
+            <div class="prompt-contenty" id="prompt-2">
               <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
             </div>
           </div>
@@ -1047,10 +1056,10 @@
           <div class="prompt-card">
             <div class="prompt-header">
               <span class="prompt-step">3</span>
-              <h3 class="prompt-title">Stress test</h3>
+              <h3 class="prompt-title">Prompt 3</h3>
               <button class="copy-btn" data-copy="prompt-3">📋 Copy</button>
             </div>
-            <div class="prompt-body" id="prompt-3">
+            <div class="prompt-content" id="prompt-3">
               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
             </div>
           </div>
