@@ -10,8 +10,6 @@
     :root {
       --primary: #0078D4;
       --primary-dark: #106EBE;
-      --purple: #5C2D91;
-      --gray: #475569; 
     }
 
     * {
@@ -765,48 +763,47 @@
       padding: 0.75rem 1rem;
       font-size: 0.95rem;
       color: #1e293b;
-}
+  }
 
     /* ===== STEP INFO BOX (blue framed block) ===== */
 
-.step-info-box {
-  margin-top: 1.5rem;
-  padding: 1.5rem 1.75rem;
+    .step-info-box {
+      margin-top: 1.5rem;
+      padding: 1.5rem 1.75rem;
+    
+      background: #ffffff;
+      border: 2px solid var(--primary);
+      border-radius: 1rem;
+    
+      box-shadow: 0 6px 18px rgba(0, 120, 212, 0.08);
+    }
 
-  background: #ffffff;
-  border: 2px solid var(--primary);
-  border-radius: 1rem;
+  .step-info-item + .step-info-item {
+    margin-top: 1.25rem;
+  }
 
-  box-shadow: 0 6px 18px rgba(0, 120, 212, 0.08);
-}
+  .step-info-label {
+    display: inline-block;
+    margin-bottom: 0.4rem;
+  
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  
+    color: var(--primary);
+    background: rgba(0, 120, 212, 0.08);
+  
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.4rem;
+  }
 
-.step-info-item + .step-info-item {
-  margin-top: 1.25rem;
-}
-
-.step-info-label {
-  display: inline-block;
-  margin-bottom: 0.4rem;
-
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-
-  color: var(--primary);
-  background: rgba(0, 120, 212, 0.08);
-
-  padding: 0.25rem 0.6rem;
-  border-radius: 0.4rem;
-}
-
-.step-info-text {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  color: #475569;
-}
-
-   
+  .step-info-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #475569;
+  }
+  
   </style>
 </head>
 
@@ -1020,12 +1017,79 @@
         </div>
       </div>
 
-      <div id="agent1-problem-hint" class="level-section">
-        <h5 class="level-title">Get some tips</h5>
-        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
+    <!-- ===== Get some tips ===== -->
+      
+    <div id="agent1-problem-hint" class="level-section">
+  <h5 class="level-title">Get some tips</h5>
+  <p class="flow-text">
+    Use these tips to move faster and get better results from the agent.
+  </p>
+
+  <div class="tips-list">
+
+    <div class="tip-card">
+      <span class="tip-emoji">💡</span>
+      <p>
+        <strong>Start broad, then zoom in.</strong><br />
+        Begin with a simple 1–2 sentence description of what you’re working on.
+        The agent will help you narrow it down.
+      </p>
+    </div>
+
+    <div class="tip-card">
+      <span class="tip-emoji">💡</span>
+      <p>
+        <strong>Share real moments, not abstractions.</strong><br />
+        Describe what someone tried to do, what went wrong, and why it mattered.
+      </p>
+    </div>
+
+    <div class="tip-card">
+      <span class="tip-emoji">💡</span>
+      <p>
+        <strong>Use plain language.</strong><br />
+        You don’t need polished wording—the agent will translate your input into
+        clear framing and structure.
+      </p>
+    </div>
+
+    <div class="tip-card">
+      <span class="tip-emoji">💡</span>
+      <p>
+        <strong>Confirm fast, tweak small.</strong><br />
+        When something looks right, say “yes.” Only adjust the parts that feel off.
+      </p>
+    </div>
+
+    <div class="tip-card">
+      <span class="tip-emoji">💡</span>
+      <p>
+        <strong>Add nuance early.</strong><br />
+        If reality is messier than the description, explain briefly how it really works.
+      </p>
+    </div>
+
+    <div class="tip-card">
+      <span class="tip-emoji">💡</span>
+      <p>
+        <strong>Redirect explicitly when priorities change.</strong><br />
+        Say things like “Let’s shift the primary persona to…” to change direction.
+      </p>
+    </div>
+
+    <div class="tip-card">
+      <span class="tip-emoji">💡</span>
+      <p>
+        <strong>Keep replies short.</strong><br />
+        One or two sentences are often enough—the agent handles synthesis.
+      </p>
+    </div>
+
+  </div>
+</div>
 
       <!-- ===== Copy a prompt (inside the main card + level-section) ===== -->
+      
       <section id="agent1-problem-template" class="level-section prompt-section">
         <h5 class="level-title">Copy a prompt</h5>
         <p class="flow-text">
