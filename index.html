@@ -742,12 +742,13 @@
   }
 
     .copy-btn {
-      background: #4f46e5;
+      background: var(--primary);
       color: #ffffff;
       border: none;
       border-radius: 0.5rem;
       padding: 0.4rem 0.75rem;
       font-size: 0.85rem;
+      font-weight: 600;
       cursor: pointer;
   }
 
@@ -769,6 +770,11 @@
       margin-bottom: 0.25rem;
   }
 
+    .prompt-body {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: #1e293b;
+  }
    
   </style>
 </head>
@@ -884,213 +890,200 @@
     </div>
 
     <!-- ============ AGENT 1 ============ -->
-    <section id="agent-1" class="agent-section">
-      <div class="agent-card">
-        <div class="agent-eyebrow">Agent 1</div>
-        <div class="agent-title">Research &amp; Definition Agent</div>
-        <div class="agent-subtitle">
-          Use this section to clarify the problem, gather inputs, and define what the agent should do before you build.
+<section id="agent-1" class="agent-section">
+  <div class="agent-card">
+    <div class="agent-eyebrow">Agent 1</div>
+    <div class="agent-title">Research &amp; Definition Agent</div>
+    <div class="agent-subtitle">
+      Use this section to clarify the problem, gather inputs, and define what the agent should do before you build.
+    </div>
+
+    <div class="challenge-box">
+      <div class="challenge-label">Objective</div>
+      <div class="challenge-text">
+        Clarify the core problem, identify who is most affected, and define the job-to-be-done that will anchor the future agent’s design.
+      </div>
+    </div>
+
+    <p class="entry-label"> 1. Open the agent</p>
+    <a href="#" class="open-agent-link open-agent-btn">
+      🚀 Open in Copilot Studio <span aria-hidden="true">→</span>
+    </a>
+
+    <div class="entry-nav">
+      <p class="entry-label"> 2. Choose how you want to start</p>
+
+      <div class="entry-grid">
+        <button class="entry-btn" onclick="document.getElementById('agent1-problem').scrollIntoView({ behavior: 'smooth' })">
+          <span>🎯</span>
+          Start from a problem
+        </button>
+
+        <button class="entry-btn" onclick="document.getElementById('agent1-persona').scrollIntoView({ behavior: 'smooth' })">
+          <span>👤</span>
+          Start from a persona
+        </button>
+
+        <button class="entry-btn" onclick="document.getElementById('agent1-docs').scrollIntoView({ behavior: 'smooth' })">
+          <span>📄</span>
+          Start from documents
+        </button>
+      </div>
+
+      <p class="help-choose">
+        Not sure where to start?
+        <a href="#agent1-help">Help me choose →</a>
+      </p>
+    </div>
+
+    <!-- ===== Start from a problem ===== -->
+    <section id="agent1-problem" class="agent-subsection">
+      <h4>Start from a problem</h4>
+      <p class="sub-intro">
+        Use this path if you have a challenge or tension but the solution is still unclear.
+      </p>
+
+      <div class="flow-block">
+        <h5 class="level-title">What this step is about</h5>
+        <p class="flow-text">
+          This step helps you slow down and <strong>make sense</strong> of a challenge that feels messy,
+          unclear, or unresolved before jumping to solutions.
+        </p>
+      </div>
+
+      <div class="flow-block">
+        <h5 class="level-title">How to respond</h5>
+        <p class="flow-text">
+          Start from something concrete. Describe a <strong>real</strong> moment where this feels frustrating, risky, slow, or confusing.
+          Raw context and examples are more useful than polished summaries.
+        </p>
+      </div>
+
+      <div class="choose-level">
+        <div class="choose-level-header">
+          <h5 class="level-title">Choose your level</h5>
+          <p class="flow-text">Pick the kind of support you want for this step.</p>
         </div>
 
-        <div class="challenge-box">
-          <div class="challenge-label">Objective</div>
-          <div class="challenge-text">
-            Clarify the core problem, identify who is most affected, and define the job-to-be-done that will anchor the future agent’s design.
-          </div>
+        <div class="level-grid">
+          <button class="level-btn" onclick="document.getElementById('agent1-problem-hint').scrollIntoView({ behavior: 'smooth' })">
+            <span>💡</span>
+            Get a hint
+          </button>
+
+          <button class="level-btn" onclick="document.getElementById('agent1-problem-template').scrollIntoView({ behavior: 'smooth' })">
+            <span>📋</span>
+            Copy a prompt
+          </button>
+
+          <button class="level-btn" onclick="document.getElementById('agent1-problem-example').scrollIntoView({ behavior: 'smooth' })">
+            <span>🧩</span>
+            See an example
+          </button>
         </div>
-
-        <p class="entry-label"> 1. Open the agent</p>
-       <a href="#" class="open-agent-link open-agent-btn">
-  🚀 Open in Copilot Studio <span aria-hidden="true">→</span>
-</a>
-
-        <div class="entry-nav">
-          <p class="entry-label"> 2. Choose how you want to start</p>
-
-          <div class="entry-grid">
-            <button class="entry-btn" onclick="document.getElementById('agent1-problem').scrollIntoView({ behavior: 'smooth' })">
-              <span>🎯</span>
-              Start from a problem
-            </button>
-
-            <button class="entry-btn" onclick="document.getElementById('agent1-persona').scrollIntoView({ behavior: 'smooth' })">
-              <span>👤</span>
-              Start from a persona
-            </button>
-
-            <button class="entry-btn" onclick="document.getElementById('agent1-docs').scrollIntoView({ behavior: 'smooth' })">
-              <span>📄</span>
-              Start from documents
-            </button>
-          </div>
-
-          <p class="help-choose">
-            Not sure where to start?
-            <a href="#agent1-help">Help me choose →</a>
-          </p>
-        </div>
-
-       <section id="agent1-problem" class="agent-subsection">
-  <h4>Start from a problem</h4>
-  <p class="sub-intro">
-    Use this path if you have a challenge or tension but the solution is still unclear.
-  </p>
-
-  <div class="flow-block">
-  <h5 class="level-title">What this step is about</h5>
-  <p class="flow-text"> This step helps you slow down and <strong>make sense</strong> of a challenge that feels messy,
-    unclear, or unresolved. You’ll work with the agent to understand what’s really going on
-    before jumping to solutions.</p>
-</div>
-
-  <div class="flow-block">
-    <h5 class="level-title">How to respond</h5>
-    <p class="flow-text">Start from something concrete. Describe a <strong>real</strong> moment where this feels frustrating, risky, slow, or confusing.
-      Raw context and examples are more useful than polished language or abstract summaries.</p>
-  </div>
-
-  <div class="choose-level">
-    <div class="choose-level-header">
-      <h5 class="level-title">Choose your level</h5>
-      <p class="flow-text">Pick the kind of support you want for this step.</p>
-    </div>
-
-    <div class="level-grid">
-      <button class="level-btn" onclick="document.getElementById('agent1-problem-hint').scrollIntoView({ behavior: 'smooth' })">
-        <span>💡</span>
-        Get a hint
-      </button>
-
-      <button class="level-btn" onclick="document.getElementById('agent1-problem-template').scrollIntoView({ behavior: 'smooth' })">
-        <span>📋</span>
-        Copy a prompt
-      </button>
-
-      <button class="level-btn" onclick="document.getElementById('agent1-problem-example').scrollIntoView({ behavior: 'smooth' })">
-        <span>🧩</span>
-        See an example
-      </button>
-    </div>
-  </div>
-
-  <div id="agent1-problem-hint" class="level-section">
-    <h5 class="level-title">Get a hint</h5>
-    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-
-<section class="prompt-section">
-  <h2 class="section-title">Copy a prompt</h2>
-  <p class="section-subtitle">
-    Use these prompts to quickly explore the problem before going deeper.
-  </p>
-
-  <div class="prompt-container">
-    
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <span class="prompt-step">1</span>
-        <h3 class="prompt-title">Quick framing</h3>
-        <button class="copy-btn">📋 Copy</button>
       </div>
-      <div class="prompt-body">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+
+      <div id="agent1-problem-hint" class="level-section">
+        <h5 class="level-title">Get a hint</h5>
+        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <!-- ===== Copy a prompt (inside the main card + level-section) ===== -->
+      <section id="agent1-problem-template" class="level-section prompt-section">
+        <h5 class="level-title">Copy a prompt</h5>
+        <p class="flow-text">
+          Use these prompts to quickly explore the problem before going deeper.
         </p>
-        <ul>
-          <li>Lorem ipsum dolor sit amet</li>
-          <li>Consectetur adipiscing elit</li>
-          <li>Sed do eiusmod tempor</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <span class="prompt-step">2</span>
-        <h3 class="prompt-title">Add structure</h3>
-        <button class="copy-btn">📋 Copy</button>
-      </div>
-      <div class="prompt-body">
-        <p>
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-        </p>
-        <ul>
-          <li>Duis aute irure dolor</li>
-          <li>In reprehenderit in voluptate</li>
-          <li>Velit esse cillum dolore</li>
-        </ul>
-      </div>
-    </div>
+        <div class="prompt-container">
 
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <span class="prompt-step">3</span>
-        <h3 class="prompt-title">Stress test</h3>
-        <button class="copy-btn">📋 Copy</button>
-      </div>
-      <div class="prompt-body">
-        <p>
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.
-        </p>
-        <ul>
-          <li>Sed ut perspiciatis unde</li>
-          <li>Omnis iste natus error</li>
-          <li>Accusantium doloremque</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-  <div id="agent1-problem-example" class="level-section">
-    <h5 class="level-title">See an example</h5>
-    <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  </div>
-</section>
-
-
-        <section id="agent1-persona" class="agent-subsection">
-          <h4>Start from a persona</h4>
-          <p class="sub-intro">
-            Use this path if you know who you’re designing for but need clarity on their needs.
-          </p>
-        </section>
-
-        <section id="agent1-docs" class="agent-subsection">
-          <h4>Start from documents</h4>
-          <p class="sub-intro">
-            Use this path if you already have materials, files, or inputs the agent should be grounded in.
-          </p>
-        </section>
-
-        <div id="agent1-help" class="start-help">
-          <div class="start-help-title">Not sure where to start?</div>
-
-          <div class="start-help-list">
-            <a href="#agent1-problem" class="start-help-item">
-              <strong>Start from a problem</strong>
-              <span>→ when you have a challenge or symptoms, but no shared definition of what success looks like</span>
-            </a>
-
-            <a href="#agent1-persona" class="start-help-item">
-              <strong>Start from a persona</strong>
-              <span>→ when you know who the agent is for, but not what they actually need help with</span>
-            </a>
-
-            <a href="#agent1-docs" class="start-help-item">
-              <strong>Start from documents</strong>
-              <span>→ when you already have materials and want to ground the agent in facts</span>
-            </a>
+          <div class="prompt-card">
+            <div class="prompt-header">
+              <span class="prompt-step">1</span>
+              <h3 class="prompt-title">Quick framing</h3>
+              <button class="copy-btn" data-copy="prompt-1">📋 Copy</button>
+            </div>
+            <div class="prompt-body" id="prompt-1">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
           </div>
 
-          <p class="start-help-footer">
-            <strong>Still unsure?</strong> Start from a problem — if something feels hard or slow today, that’s usually a good place to begin.
-          </p>
+          <div class="prompt-card">
+            <div class="prompt-header">
+              <span class="prompt-step">2</span>
+              <h3 class="prompt-title">Add structure</h3>
+              <button class="copy-btn" data-copy="prompt-2">📋 Copy</button>
+            </div>
+            <div class="prompt-body" id="prompt-2">
+              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            </div>
+          </div>
+
+          <div class="prompt-card">
+            <div class="prompt-header">
+              <span class="prompt-step">3</span>
+              <h3 class="prompt-title">Stress test</h3>
+              <button class="copy-btn" data-copy="prompt-3">📋 Copy</button>
+            </div>
+            <div class="prompt-body" id="prompt-3">
+              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+            </div>
+          </div>
+
         </div>
+      </section>
+
+      <div id="agent1-problem-example" class="level-section">
+        <h5 class="level-title">See an example</h5>
+        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
     </section>
+
+    <!-- ===== Start from a persona ===== -->
+    <section id="agent1-persona" class="agent-subsection">
+      <h4>Start from a persona</h4>
+      <p class="sub-intro">
+        Use this path if you know who you’re designing for but need clarity on their needs.
+      </p>
+    </section>
+
+    <!-- ===== Start from documents ===== -->
+    <section id="agent1-docs" class="agent-subsection">
+      <h4>Start from documents</h4>
+      <p class="sub-intro">
+        Use this path if you already have materials, files, or inputs the agent should be grounded in.
+      </p>
+    </section>
+
+    <!-- ===== Help me choose ===== -->
+    <div id="agent1-help" class="start-help">
+      <div class="start-help-title">Not sure where to start?</div>
+
+      <div class="start-help-list">
+        <a href="#agent1-problem" class="start-help-item">
+          <strong>Start from a problem</strong>
+          <span>→ when you have a challenge or symptoms, but no shared definition of what success looks like</span>
+        </a>
+
+        <a href="#agent1-persona" class="start-help-item">
+          <strong>Start from a persona</strong>
+          <span>→ when you know who the agent is for, but not what they actually need help with</span>
+        </a>
+
+        <a href="#agent1-docs" class="start-help-item">
+          <strong>Start from documents</strong>
+          <span>→ when you already have materials and want to ground the agent in facts</span>
+        </a>
+      </div>
+
+      <p class="start-help-footer">
+        <strong>Still unsure?</strong> Start from a problem — if something feels hard or slow today, that’s usually a good place to begin.
+      </p>
+    </div>
+
+  </div>
+</section>
+
 
     <!-- ============ AGENT 2 ============ -->
     <section id="agent-2" class="agent-section">
@@ -1225,6 +1218,22 @@
       </div>
     </section>
   </div>
+
+  <script>
+  document.querySelectorAll(".copy-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      const targetId = button.getAttribute("data-copy");
+      const text = document.getElementById(targetId).innerText.trim();
+
+      navigator.clipboard.writeText(text).then(() => {
+        const original = button.innerText;
+        button.innerText = "✓ Copied";
+        setTimeout(() => (button.innerText = original), 1200);
+      });
+    });
+  });
+</script>
+
 </body>
 </html>
 
