@@ -705,22 +705,40 @@
 
 /* BIG CONTAINER */
     .prompt-container {
-      background: #fff7e6;
-      border: 2px dashed #f59e0b;
-      border-radius: 1rem;
-      padding: 1.5rem;
+      background: transparent;
+      border: none;
+      padding: 0;
       display: flex;
       flex-direction: column;
       gap: 1rem;
-  }
+}
+
 
 /* SMALL CARDS */
-    .prompt-card {
-      background: #ffffff;
+   .prompt-card {
+      position: relative;
+      background: #f8fafc; 
       border-radius: 0.75rem;
-      padding: 1rem 1.25rem;
-      border: 1px solid #e6eaf2;
-  }
+      padding: 1.25rem 1.5rem 1.25rem 2rem;
+      border: 1px solid #e2e8f0;
+}
+
+    .prompt-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1rem;
+      bottom: 1rem;
+      width: 4px;
+      border-radius: 2px;
+      background: linear-gradient(
+        180deg,
+        var(--primary),
+        var(--primary-dark)
+      );
+}
+
+
 
 /* HEADER */
     .prompt-header {
@@ -728,12 +746,15 @@
       align-items: center;
       gap: 0.75rem;
       margin-bottom: 0.75rem;
-  }
+}
 
-    .prompt-step {
+
+   .prompt-step {
       font-weight: 700;
-      color: #f59e0b;
-  }
+      color: var(--primary);
+      font-size: 0.9rem;
+}
+
 
     .prompt-title {
       flex: 1;
@@ -745,36 +766,40 @@
       background: var(--primary);
       color: #ffffff;
       border: none;
-      border-radius: 0.5rem;
+      border-radius: 0.6rem;
       padding: 0.4rem 0.75rem;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
       cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+}
+
+  .copy-btn:hover {
+      background: var(--primary-dark);
   }
 
-    .copy-btn:hover {
-      opacity: 0.9;
-  }
 
 /* BODY */
-    .prompt-body p {
-      margin-bottom: 0.5rem;
-  }
+  .prompt-body {
+  font-size: 0.95rem;
+  color: #334155;
+}
 
-    .prompt-body ul {
-      padding-left: 1.2rem;
-      margin: 0;
-  }
+.prompt-body p {
+  margin-bottom: 0.5rem;
+}
 
-    .prompt-body li {
-      margin-bottom: 0.25rem;
-  }
+.prompt-body ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
 
-    .prompt-body {
-      font-size: 0.9rem;
-      line-height: 1.6;
-      color: #1e293b;
-  }
+.prompt-body li {
+  margin-bottom: 0.25rem;
+}
+
    
   </style>
 </head>
