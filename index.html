@@ -957,7 +957,7 @@
       </nav>
     </div>
 
-    <!-- ============ AGENT 1 ============ -->
+   <!-- ============ AGENT 1 ============ -->
 <section id="agent-1" class="agent-section">
   <div class="agent-card">
     <div class="agent-eyebrow">Agent 1</div>
@@ -973,13 +973,13 @@
       </div>
     </div>
 
-    <p class="entry-label"> 1. Open the agent</p>
+    <p class="entry-label">1. Open the agent</p>
     <a href="#" class="open-agent-link open-agent-btn">
       🚀 Open in Copilot Studio <span aria-hidden="true">→</span>
     </a>
 
     <div class="entry-nav">
-      <p class="entry-label"> 2. Choose how you want to start</p>
+      <p class="entry-label">2. Choose how you want to start</p>
 
       <div class="entry-grid">
         <button class="entry-btn" onclick="document.getElementById('agent1-problem').scrollIntoView({ behavior: 'smooth' })">
@@ -1011,27 +1011,23 @@
         Use this path if you have a challenge or tension but the solution is still unclear.
       </p>
 
-   <div class="step-info-box">
+      <div class="step-info-box">
+        <div class="step-info-item">
+          <span class="step-info-label">What this step is about</span>
+          <p class="step-info-text">
+            This step helps you slow down and <strong>make sense</strong> of a challenge
+            that feels messy, unclear, or unresolved before jumping to solutions.
+          </p>
+        </div>
 
-  <div class="step-info-item">
-    <span class="step-info-label">What this step is about</span>
-    <p class="step-info-text">
-      This step helps you slow down and <strong>make sense</strong> of a challenge
-      that feels messy, unclear, or unresolved before jumping to solutions.
-    </p>
-  </div>
-
-  <div class="step-info-item">
-    <span class="step-info-label">How to respond</span>
-    <p class="step-info-text">
-      Start from something concrete. Describe a <strong>real</strong> moment where
-      this feels frustrating, risky, slow, or confusing. Raw context and examples
-      are more useful than polished summaries.
-    </p>
-  </div>
-
-</div>
-
+        <div class="step-info-item">
+          <span class="step-info-label">How to respond</span>
+          <p class="step-info-text">
+            Start from something concrete. Describe a <strong>real</strong> moment where
+            this feels frustrating, risky, slow, or confusing.
+          </p>
+        </div>
+      </div>
 
       <div class="choose-level">
         <div class="choose-level-header">
@@ -1057,140 +1053,55 @@
         </div>
       </div>
 
-    <!-- ===== Get some tips ===== -->
-      
-    <div id="agent1-problem-hint" class="level-section">
-  <h5 class="level-title">Get some tips</h5>
-  <p class="flow-text">
-    Use these tips to move faster and get better results from the agent.
-  </p>
+      <!-- ===== Get some tips ===== -->
+      <div id="agent1-problem-hint" class="level-section">
+        <h5 class="level-title">Get some tips</h5>
 
-  <div class="tips-list">
+        <div class="tips-list">
+          <div class="tip-card">
+            <span class="tip-emoji">💡</span>
+            <p><strong>Start from a real friction</strong> — describe what feels slow or confusing.</p>
+          </div>
 
-    <div class="tip-card">
-      <span class="tip-emoji">💡</span>
-      <p>
-        <strong>Start from a real friction</strong>
-        Describe something that feels slow, confusing, 
-        or frustrating today—without jumping to how to fix it.
-      </p>
-    </div>
-
-    <div class="tip-card">
-      <span class="tip-emoji">💡</span>
-      <p>
-        <strong>Ground the problem in a real moment.</strong>
-        Share a concrete situation someone experienced: what they tried to do,
-        where it broke down, and why it mattered.
-      </p>
-    </div>
-
-    <div class="tip-card">
-      <span class="tip-emoji">💡</span>
-      <p>
-        <strong>Describe what is, not what should be.</strong>
-        Stay descriptive, not prescriptive. 
-        The agent will help you move toward solutions later.
-      </p>
-    </div>
-
-    <div class="tip-card">
-      <span class="tip-emoji">💡</span>
-      <p>
-        <strong>Keep it short and imperfect.</strong>
-        One or two sentences are enough to get started. 
-        You can refine or redirect once the agent reflects the problem back to you.
-      </p>
-    </div>
-
-  </div>
-</div>
-
-     <!-- ===== Copy a prompt (inside the main card + level-section) ===== -->
-
-<section id="agent1-problem-template" class="level-section prompt-section">
-  <h5 class="level-title">Copy a prompt</h5>
-  <p class="flow-text">
-    Use these prompts to quickly explore the problem before going deeper.
-  </p>
-
-  <div class="prompt-container">
-
-    <!-- Starting prompts -->
-    <div class="prompt-divider">
-  <span>Starting prompts</span>
-</div>
-
-
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <span class="prompt-step">1</span>
-        <h3 class="prompt-title">Describe the problem space</h3>
-        <button class="copy-btn" data-copy="prompt-1">📋 Copy</button>
+          <div class="tip-card">
+            <span class="tip-emoji">💡</span>
+            <p><strong>Ground the problem in a moment</strong> someone actually experienced.</p>
+          </div>
+        </div>
       </div>
-      <div class="prompt-content" id="prompt-1">
-        <p>
-          I’m working with <strong>[organization / team]</strong> on
-          <strong>[area of focus]</strong>, and we’re trying to understand
-          <strong>[a problem or opportunity]</strong>.
-        </p>
-      </div>
-    </div>
 
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <span class="prompt-step">2</span>
-        <h3 class="prompt-title">Share a concrete moment</h3>
-        <button class="copy-btn" data-copy="prompt-2">📋 Copy</button>
-      </div>
-      <div class="prompt-content" id="prompt-2">
-        <p>
-          One moment where this problem shows up is when
-          <strong>[someone]</strong> tries to
-          <strong>[do something]</strong>, but
-          <strong>[what goes wrong]</strong>.
-        </p>
-      </div>
-    </div>
+      <!-- ===== Copy a prompt ===== -->
+      <section id="agent1-problem-template" class="level-section prompt-section">
+        <h5 class="level-title">Copy a prompt</h5>
 
-    <!-- Divider -->
-    <hr style="
-      border: none;
-      border-top: 1px solid #e2e8f0;
-      margin: 1.25rem 0;
-    ">
+        <div class="prompt-container">
+          <div class="prompt-divider"><span>Starting prompts</span></div>
 
-    <!-- Optional prompts -->
-    <div class="prompt-divider">
-  <span>Optional prompts</span>
-</div>
+          <div class="prompt-card">
+            <div class="prompt-header">
+              <h3 class="prompt-title">Describe the problem space</h3>
+              <button class="copy-btn" data-copy="prompt-1">📋 Copy</button>
+            </div>
+            <div class="prompt-content" id="prompt-1">
+              I’m working with <strong>[organization]</strong> on <strong>[area]</strong> and trying to understand <strong>[problem]</strong>.
+            </div>
+          </div>
 
-    <p class="flow-text">
-      After you start, the agent will ask follow-up questions to help you clarify
-      the problem. Respond naturally and honestly—just like you would in an
-      interview.
-      <br />
-      If you feel stuck, you can use the prompt below.
-    </p>
+          <div class="prompt-divider"><span>Optional prompts</span></div>
 
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <span class="prompt-step">3</span>
-        <h3 class="prompt-title">Add nuance or adjust direction</h3>
-        <button class="copy-btn" data-copy="prompt-3">📋 Copy</button>
-      </div>
-      <div class="prompt-content" id="prompt-3">
-        <p>
-          One important nuance is that
-          <strong>[something about how this actually works]</strong>,
-          which affects
-          <strong>[who is impacted or why this matters]</strong>.
-        </p>
-      </div>
-    </div>
+          <div class="prompt-card">
+            <div class="prompt-header">
+              <h3 class="prompt-title">Add nuance</h3>
+              <button class="copy-btn" data-copy="prompt-2">📋 Copy</button>
+            </div>
+            <div class="prompt-content" id="prompt-2">
+              One important nuance is that <strong>[how it actually works]</strong>, affecting <strong>[who / why]</strong>.
+            </div>
+          </div>
+        </div>
+      </section>
 
-  </div>
-</section>
+    </section> 
 
     <!-- ===== Start from a persona ===== -->
     <section id="agent1-persona" class="agent-subsection">
@@ -1204,38 +1115,18 @@
     <section id="agent1-docs" class="agent-subsection">
       <h4>Start from documents</h4>
       <p class="sub-intro">
-        Use this path if you already have materials, files, or inputs the agent should be grounded in.
+        Use this path if you already have materials the agent should be grounded in.
       </p>
     </section>
 
     <!-- ===== Help me choose ===== -->
     <div id="agent1-help" class="start-help">
       <div class="start-help-title">Not sure where to start?</div>
-
-      <div class="start-help-list">
-        <a href="#agent1-problem" class="start-help-item">
-          <strong>Start from a problem</strong>
-          <span>→ when you have a challenge or symptoms, but no shared definition of what success looks like</span>
-        </a>
-
-        <a href="#agent1-persona" class="start-help-item">
-          <strong>Start from a persona</strong>
-          <span>→ when you know who the agent is for, but not what they actually need help with</span>
-        </a>
-
-        <a href="#agent1-docs" class="start-help-item">
-          <strong>Start from documents</strong>
-          <span>→ when you already have materials and want to ground the agent in facts</span>
-        </a>
-      </div>
-
-      <p class="start-help-footer">
-        <strong>Still unsure?</strong> Start from a problem — if something feels hard or slow today, that’s usually a good place to begin.
-      </p>
     </div>
 
   </div>
 </section>
+
 
 
     <!-- ============ AGENT 2 ============ -->
