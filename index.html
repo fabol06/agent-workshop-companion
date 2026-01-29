@@ -923,6 +923,12 @@
   margin-top: 2.5rem;   
 }
 
+    .placeholder {
+      font-style: italic;
+      font-weight: 400;
+      color: #5a6f8f; 
+  }
+
     
   </style>
 </head>
@@ -1196,7 +1202,7 @@
               <button class="copy-btn" data-copy="prompt-1">📋 Copy</button>
             </div>
             <div class="prompt-content" id="prompt-1">
-              I’m working with <em>[organization]</em> on <em>[area]</em> and trying to understand <em>[problem]</em>.
+              I’m working with <span class="placeholder">[organization]</span> on <span class="placeholder">[area]</span> and trying to understand <span class="placeholder">[problem]</span>.
             </div>
           </div>
 
@@ -1206,8 +1212,8 @@
               <button class="copy-btn" data-copy="prompt-2">📋 Copy</button>
             </div>
             <div class="prompt-content" id="prompt-2">
-              A concrete moment where this problem shows up is when <em>[someone]</em> tries to <em>[do something]</em>, 
-              but <em>[what goes wrong or breaks down]</em>.
+              A concrete moment where this problem shows up is when <span class="placeholder">[someone]</span> tries to <span class="placeholder">[do something]</span>, 
+              but <span class="placeholder">[what goes wrong or breaks down]</span>.
             </div>
           </div>
           
@@ -1217,8 +1223,8 @@
               <button class="copy-btn" data-copy="prompt-3">📋 Copy</button>
             </div>
             <div class="prompt-content" id="prompt-3">
-              Today, the situation looks like this:<em>[describe what is happening now]</em>. 
-              This creates issues because<em>[what makes this hard, slow, confusing, or risky]</em>.
+              Today, the situation looks like this:<span class="placeholder">[describe what is happening now]</span>. 
+              This creates issues because<span class="placeholder">[what makes this hard, slow, confusing, or risky]</span>.
             </div>
           </div>
 
@@ -1232,7 +1238,7 @@
               <button class="copy-btn" data-copy="prompt-4">📋 Copy</button>
             </div>
             <div class="prompt-content" id="prompt-4">
-              One important nuance is that <em>[how it actually works]</em>, affecting <em>[who / why]</em>.
+              One important nuance is that <span class="placeholder">[how it actually works]</span>, affecting <span class="placeholder">[who / why]</span>.
             </div>
           </div>
 
@@ -1242,7 +1248,7 @@
               <button class="copy-btn" data-copy="prompt-5">📋 Copy</button>
             </div>
             <div class="prompt-content" id="prompt-5">
-              Here’s a concrete moment that shows the problem: <em>[what someone tried to do, what went wrong, and why it mattered in that moment].</em>
+              Here’s a concrete moment that shows the problem: <span class="placeholder">[what someone tried to do, what went wrong, and why it mattered in that moment].</span>
             </div>
           </div>
 
@@ -1252,7 +1258,7 @@
               <button class="copy-btn" data-copy="prompt-6">📋 Copy</button>
             </div>
             <div class="prompt-content" id="prompt-6">
-              This is mostly right, but one thing is missing or slightly off: <em>[short clarification].</em>
+              This is mostly right, but one thing is missing or slightly off: <span class="placeholder">[short clarification].</span>
             </div>
           </div>
 
@@ -1262,7 +1268,7 @@
               <button class="copy-btn" data-copy="prompt-7">📋 Copy</button>
             </div>
             <div class="prompt-content" id="prompt-7">
-              This problem is too broad. Let’s focus specifically on <em>[one part of the situation, moment, or context].</em>.
+              This problem is too broad. Let’s focus specifically on <span class="placeholder">[one part of the situation, moment, or context].</span>.
             </div>
           </div>
           
@@ -1272,7 +1278,7 @@
               <button class="copy-btn" data-copy="prompt-8">📋 Copy</button>
             </div>
             <div class="prompt-content" id="prompt-8">
-              I’d prefer to focus on a different person: <em>[who they are and why].</em>
+              I’d prefer to focus on a different person: <span class="placeholder">[who they are and why].</span>
             </div>
           </div>
 
@@ -1282,8 +1288,8 @@
               <button class="copy-btn" data-copy="prompt-9">📋 Copy</button>
             </div>
             <div class="prompt-content" id="prompt-9">
-              I’d like to shift focus. Instead of <em>[current framing]</em>, 
-              I want to explore <em>[new person, angle, or perspective]</em>.
+              I’d like to shift focus. Instead of <span class="placeholder">[current framing]</span>, 
+              I want to explore <span class="placeholder">[new person, angle, or perspective]</span>.
             </div>
           </div>
           
@@ -1476,8 +1482,8 @@
         <button class="copy-btn" data-copy="persona-prompt-1">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-1">
-        I’m working with <em>[a specific role or group of people]</em> who operate in <em>[context or environment]</em>.
-        Lately, it’s been hard for them to <em>[what feels most difficult, slow, or frustrating]</em>,
+        I’m working with <span class="placeholder">[a specific role or group of people]</span> who operate in <span class="placeholder">[context or environment]</span>.
+        Lately, it’s been hard for them to <span class="placeholder">[what feels most difficult, slow, or frustrating]</span>,
         and I want to better understand what makes this challenging for them day to day.
       </div>
     </div>
@@ -1489,8 +1495,8 @@
         <button class="copy-btn" data-copy="persona-prompt-2">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-2">
-        <em>[This person or group]</em> are responsible for <em>[key responsibility or task]</em>, 
-          often under <em>[constraints like time, resources, policy, or risk]</em>.
+        <span class="placeholder">[This person or group]</span> are responsible for <span class="placeholder">[key responsibility or task]</span>, 
+          often under <span class="placeholder">[constraints like time, resources, policy, or risk]</span>.
         I’d like to explore where they feel the most pressure or uncertainty in their work today.
       </div>
     </div>
@@ -1502,8 +1508,8 @@
         <button class="copy-btn" data-copy="persona-prompt-3">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-3">
-        I’m focusing on <em>[a specific role or type of person]</em>.
-        There’s a particular moment in their work that feels especially demanding or stressful for them: <em>[briefly describe the situation]</em>.
+        I’m focusing on <span class="placeholder">[a specific role or type of person]</span>.
+        There’s a particular moment in their work that feels especially demanding or stressful for them: <span class="placeholder">[briefly describe the situation]</span>.
         I want to understand why that moment is hard for them, and what’s at stake from their perspective.
       </div>
     </div>
@@ -1511,7 +1517,7 @@
     <div class="prompt-divider"><span> 🟪 Follow-up prompts</span></div>
 
     <div class="prompt-instruction-box">
-      📋 <em>Instruction:</em>
+      📋 <span class="placeholder">Instruction:</span>
       As the agent asks follow-up questions, respond naturally. If you get stuck, you can use one of the prompts below.
     </div>
 
@@ -1523,7 +1529,7 @@
       </div>
       <div class="prompt-content" id="persona-prompt-4">
        One important part of their role is that they are responsible for 
-        <em>[key task or responsibility]</em>, usually in <em>[context or moment]</em>, which affects how they work day to day.</em>.
+        <span class="placeholder">[key task or responsibility]</span>, usually in <span class="placeholder">[context or moment]</span>, which affects how they work day to day.</span>.
       </div>
     </div>
 
@@ -1534,7 +1540,7 @@
         <button class="copy-btn" data-copy="persona-prompt-5">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-5">
-        What feels hardest for them is <em>[specific friction or pressure]</em>, especially because <em>[why this is difficult in their context]</em>.
+        What feels hardest for them is <span class="placeholder">[specific friction or pressure]</span>, especially because <span class="placeholder">[why this is difficult in their context]</span>.
       </div>
     </div>
 
@@ -1545,8 +1551,8 @@
         <button class="copy-btn" data-copy="persona-prompt-6">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-6">
-        They often feel pressure because <em>[what they’re trying to balance or protect]</em>, 
-        and there’s little guidance or support around <em>[what makes this risky or stressful]</em>.
+        They often feel pressure because <span class="placeholder">[what they’re trying to balance or protect]</span>, 
+        and there’s little guidance or support around <span class="placeholder">[what makes this risky or stressful]</span>.
       </div>
     </div>
 
@@ -1557,8 +1563,8 @@
         <button class="copy-btn" data-copy="persona-prompt-7">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-7">
-        A concrete moment that shows this is when <em>[describe a real situation from their day]</em>, 
-        which makes things difficult because <em>[impact on them]</em>.
+        A concrete moment that shows this is when <span class="placeholder">[describe a real situation from their day]</span>, 
+        which makes things difficult because <span class="placeholder">[impact on them]</span>.
       </div>
     </div>
 
@@ -1569,7 +1575,7 @@
         <button class="copy-btn" data-copy="persona-prompt-8">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-8">
-        This is mostly right, but one thing that’s missing is <em>[clarification about the person, their role, or their context]</em>.
+        This is mostly right, but one thing that’s missing is <span class="placeholder">[clarification about the person, their role, or their context]</span>.
       </div>
     </div>
 
@@ -1580,7 +1586,7 @@
         <button class="copy-btn" data-copy="persona-prompt-9">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-9">
-        I’d like to focus on a different person or role: <em>[who they are]</em>, because they’re more central to this situation.
+        I’d like to focus on a different person or role: <span class="placeholder">[who they are]</span>, because they’re more central to this situation.
       </div>
     </div>
 
@@ -1591,7 +1597,7 @@
         <button class="copy-btn" data-copy="persona-prompt-10">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-10">
-        This feels a bit broad. Let’s focus specifically on <em>[part of their work, moment, or responsibility]</em>.
+        This feels a bit broad. Let’s focus specifically on <span class="placeholder">[part of their work, moment, or responsibility]</span>.
       </div>
     </div>
 
