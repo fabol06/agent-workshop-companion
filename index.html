@@ -857,6 +857,64 @@
       line-height: 1.45;
   }
 
+    /* ===== SEE AN EXAMPLE – CHAT STYLE ===== */
+
+    .example-section {
+      margin-top: 1.5rem;
+    }
+
+    .example-intro {
+      font-size: 0.9rem;
+      color: #64748b;
+      margin-bottom: 1.25rem;
+  }
+
+    .chat-example {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+  }
+
+/* Row */
+    .chat-row {
+      display: flex;
+      width: 100%;
+  }
+
+/* Agent left */
+    .chat-row.agent {
+      justify-content: flex-start;
+  }
+
+/* User right */
+    .chat-row.user {
+      justify-content: flex-end;
+  }
+
+/* Bubble base */
+  .chat-bubble {
+      max-width: 75%;
+      padding: 0.75rem 1rem;
+      border-radius: 0.9rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  }
+
+/* Agent bubble */
+  .chat-row.agent .chat-bubble {
+      background: #f1f5f9;
+      color: #1e293b;
+      border-top-left-radius: 0.25rem;
+}
+
+/* User bubble */
+  .chat-row.user .chat-bubble {
+    background: rgba(0,120,212,0.08);
+    color: #0f172a;
+    border-top-right-radius: 0.25rem;
+  }
+
     
   </style>
 </head>
@@ -1214,13 +1272,72 @@
         </div>
       </section>
 
-      <!-- ===== See an example ===== -->
+  <!-- ===== See an example ===== -->
+<div id="agent1-problem-example" class="level-section example-section">
+  <h5 class="level-title">See an example</h5>
 
-          <div id="agent1-problem-example" class="level-section">
-        <h5 class="level-title">See an example</h5>
-        <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  <p class="flow-text example-intro">
+    Here’s a short example of how a conversation with the agent might begin.
+    Your conversation will adapt to what you share.
+  </p>
+
+  <div class="chat-example">
+
+    <!-- User -->
+    <div class="chat-row user">
+      <div class="chat-bubble">
+        We’re working with a large nonprofit network and trying to improve how people find food and how information is managed across the system.
       </div>
-    </section>
+    </div>
+
+    <!-- Agent -->
+    <div class="chat-row agent">
+      <div class="chat-bubble">
+        Got it — that sounds like a broad problem space.  
+        Let’s slow it down a bit.
+        <br><br>
+        Can you describe one concrete moment where this feels most frustrating or risky?
+      </div>
+    </div>
+
+    <!-- User -->
+    <div class="chat-row user">
+      <div class="chat-bubble">
+        A neighbor tries to find a nearby food pantry online, but the information is outdated or wrong. They show up, and it’s closed or they’re not eligible.
+      </div>
+    </div>
+
+    <!-- Agent -->
+    <div class="chat-row agent">
+      <div class="chat-bubble">
+        That’s a very clear example — thank you.  
+        It shows both the human impact and the data reliability issue.
+        <br><br>
+        In that moment, who is most affected: the neighbor looking for food, or the staff responsible for keeping the information updated?
+      </div>
+    </div>
+
+    <!-- User -->
+    <div class="chat-row user">
+      <div class="chat-bubble">
+        The neighbor.
+      </div>
+    </div>
+
+    <!-- Agent -->
+    <div class="chat-row agent">
+      <div class="chat-bubble">
+        Got it — let’s focus on them.
+        <br><br>
+        People who need food often rely on online information to find pantries, but that information can be outdated or incomplete.
+        <br><br>
+        Does this feel right, or is something missing?
+      </div>
+    </div>
+
+  </div>
+</div>
+
 
     <!-- ===== Start from a persona ===== -->
     <section id="agent1-persona" class="agent-subsection">
