@@ -926,7 +926,7 @@
     .placeholder {
       font-style: italic;
       font-weight: 400;
-      color: #5a6f8f; 
+      color: #6b7280; 
   }
 
     
@@ -1307,6 +1307,7 @@
 
   <div class="chat-example">
 
+    
     <!-- User -->
     <div class="chat-row user">
       <div class="chat-bubble">
@@ -1673,17 +1674,63 @@
 
   </div>
 </div>
-
   
 </section>
 
-    <!-- ===== Start from documents ===== -->
-    <section id="agent1-docs" class="agent-subsection">
-      <h4>Start from documents</h4>
-      <p class="sub-intro">
-        Use this path if you already have materials the agent should be grounded in.
+   <!-- ===== Start from a document ===== -->
+<section id="agent1-document" class="agent-subsection">
+  <h4>Start from a document</h4>
+
+  <p class="sub-intro">
+    Use this path if you already have notes, briefs, decks, or research and want help making sense of them.
+  </p>
+
+  <div class="step-info-box">
+    <div class="step-info-item">
+      <span class="step-info-label">What this step is about</span>
+      <p class="step-info-text">
+        This step helps you turn existing materials into a clear understanding
+        of the situation, the people involved, and what feels most important to focus on.
       </p>
-    </section>
+    </div>
+
+    <div class="step-info-item">
+      <span class="step-info-label">How to respond</span>
+      <p class="step-info-text">
+        Paste or describe the documents you have, then help the agent understand
+        what feels most urgent, unclear, or worth digging into.
+      </p>
+    </div>
+  </div>
+
+  <div class="choose-level">
+    <div class="choose-level-header">
+      <h5 class="level-title">Choose your level</h5>
+      <p class="flow-text">Pick the kind of support you want for this step.</p>
+    </div>
+
+    <div class="level-grid">
+      <button class="level-btn"
+        onclick="document.getElementById('agent1-document-hint').scrollIntoView({ behavior: 'smooth' })">
+        <span>💡</span>
+        Get a few tips
+      </button>
+
+      <button class="level-btn"
+        onclick="document.getElementById('agent1-document-template').scrollIntoView({ behavior: 'smooth' })">
+        <span>📋</span>
+        Copy a prompt
+      </button>
+
+      <button class="level-btn"
+        onclick="document.getElementById('agent1-document-example').scrollIntoView({ behavior: 'smooth' })">
+        <span>🧩</span>
+        See an example
+      </button>
+    </div>
+  </div>
+</section>
+
 
     <!-- ===== Help me choose ===== -->
     <div id="agent1-help" class="start-help">
