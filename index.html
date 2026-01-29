@@ -1780,8 +1780,8 @@
   </div>
 </div>
 
- <!-- ===== Copy a prompt (document) ===== -->
-<div id="agent1-document-template" class="level-section">
+<!-- ===== Copy a prompt (document) ===== -->
+<section id="agent1-document-template" class="level-section prompt-section">
   <h5 class="level-title">Copy a prompt</h5>
 
   <p class="flow-text">
@@ -1789,93 +1789,135 @@
     incididunt ut labore et dolore magna aliqua.
   </p>
 
-  <!-- === Starting prompts === -->
+  <div class="prompt-container">
 
-  <div class="prompt-card">
-    <h6 class="prompt-title">Lorem ipsum dolor sit amet</h6>
-    <button class="copy-btn">📋 Copy</button>
-    <div class="prompt-body">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-      incididunt ut labore et dolore magna aliqua.
+    <!-- === Starting prompts === -->
+    <div class="prompt-divider"><span> 🟢 Starting prompts</span></div>
+    <div class="prompt-instruction-box">
+      📋 <strong>Instruction:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Sed do eiusmod tempor incididunt.
     </div>
-  </div>
 
-  <div class="prompt-card">
-    <h6 class="prompt-title">Sed ut perspiciatis unde omnis</h6>
-    <button class="copy-btn">📋 Copy</button>
-    <div class="prompt-body">
-      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-      laudantium.
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Lorem ipsum dolor sit amet</h3>
+        <button class="copy-btn" data-copy="doc-prompt-1">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="doc-prompt-1">
+        Lorem ipsum dolor sit amet, <span class="placeholder">[consectetur adipiscing]</span> elit,
+        sed do <span class="placeholder">[eiusmod tempor]</span> incididunt.
+      </div>
     </div>
-  </div>
 
-  <div class="prompt-card">
-    <h6 class="prompt-title">At vero eos et accusamus</h6>
-    <button class="copy-btn">📋 Copy</button>
-    <div class="prompt-body">
-      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Sed ut perspiciatis unde omnis</h3>
+        <button class="copy-btn" data-copy="doc-prompt-2">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="doc-prompt-2">
+        Sed ut perspiciatis unde <span class="placeholder">[omnis iste natus]</span> error sit
+        voluptatem <span class="placeholder">[accusantium]</span>.
+      </div>
     </div>
-  </div>
 
-  <!-- === Follow-up prompts === -->
-
-  <div class="prompt-card">
-    <h6 class="prompt-title">Lorem ipsum follow-up one</h6>
-    <button class="copy-btn">📋 Copy</button>
-    <div class="prompt-body">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">At vero eos et accusamus</h3>
+        <button class="copy-btn" data-copy="doc-prompt-3">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="doc-prompt-3">
+        At vero eos et <span class="placeholder">[accusamus et iusto]</span> odio dignissimos
+        <span class="placeholder">[ducimus]</span>.
+      </div>
     </div>
-  </div>
 
-  <div class="prompt-card">
-    <h6 class="prompt-title">Lorem ipsum follow-up two</h6>
-    <button class="copy-btn">📋 Copy</button>
-    <div class="prompt-body">
-      Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+    <!-- === Follow-up prompts === -->
+    <div class="prompt-divider"><span> 🟪 Follow-up prompts</span></div>
+    <div class="prompt-instruction-box">
+      📋 <strong>Instruction:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Ut enim ad minim veniam.
     </div>
-  </div>
 
-  <div class="prompt-card">
-    <h6 class="prompt-title">Lorem ipsum follow-up three</h6>
-    <button class="copy-btn">📋 Copy</button>
-    <div class="prompt-body">
-      Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Lorem ipsum follow-up one</h3>
+        <button class="copy-btn" data-copy="doc-prompt-4">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="doc-prompt-4">
+        Lorem ipsum dolor sit amet, <span class="placeholder">[quis nostrud]</span> exercitation
+        ullamco <span class="placeholder">[laboris]</span>.
+      </div>
     </div>
-  </div>
 
-  <div class="prompt-card">
-    <h6 class="prompt-title">Lorem ipsum follow-up four</h6>
-    <button class="copy-btn">📋 Copy</button>
-    <div class="prompt-body">
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Lorem ipsum follow-up two</h3>
+        <button class="copy-btn" data-copy="doc-prompt-5">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="doc-prompt-5">
+        Ut enim ad minim <span class="placeholder">[veniam]</span>, quis nostrud
+        <span class="placeholder">[exercitation]</span>.
+      </div>
     </div>
-  </div>
 
-  <div class="prompt-card">
-    <h6 class="prompt-title">Lorem ipsum follow-up five</h6>
-    <button class="copy-btn">📋 Copy</button>
-    <div class="prompt-body">
-      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Lorem ipsum follow-up three</h3>
+        <button class="copy-btn" data-copy="doc-prompt-6">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="doc-prompt-6">
+        Duis aute irure dolor in <span class="placeholder">[reprehenderit]</span> in voluptate
+        <span class="placeholder">[velit esse]</span>.
+      </div>
     </div>
-  </div>
 
-  <div class="prompt-card">
-    <h6 class="prompt-title">Lorem ipsum follow-up six</h6>
-    <button class="copy-btn">📋 Copy</button>
-    <div class="prompt-body">
-      Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur.
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Lorem ipsum follow-up four</h3>
+        <button class="copy-btn" data-copy="doc-prompt-7">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="doc-prompt-7">
+        Excepteur sint occaecat <span class="placeholder">[cupidatat]</span> non proident,
+        sunt in <span class="placeholder">[culpa]</span>.
+      </div>
     </div>
-  </div>
 
-  <div class="prompt-card">
-    <h6 class="prompt-title">Lorem ipsum follow-up seven</h6>
-    <button class="copy-btn">📋 Copy</button>
-    <div class="prompt-body">
-      Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Lorem ipsum follow-up five</h3>
+        <button class="copy-btn" data-copy="doc-prompt-8">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="doc-prompt-8">
+        Nemo enim ipsam <span class="placeholder">[voluptatem]</span> quia voluptas
+        <span class="placeholder">[aspernatur]</span>.
+      </div>
     </div>
-  </div>
 
-</div>
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Lorem ipsum follow-up six</h3>
+        <button class="copy-btn" data-copy="doc-prompt-9">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="doc-prompt-9">
+        Neque porro quisquam est, qui dolorem <span class="placeholder">[ipsum]</span>
+        quia <span class="placeholder">[dolor]</span>.
+      </div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Lorem ipsum follow-up seven</h3>
+        <button class="copy-btn" data-copy="doc-prompt-10">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="doc-prompt-10">
+        Temporibus autem <span class="placeholder">[quibusdam]</span> et aut officiis
+        <span class="placeholder">[debitis]</span>.
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 
   
