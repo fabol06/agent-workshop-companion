@@ -1358,16 +1358,16 @@
     <div class="step-info-item">
       <span class="step-info-label">What this step is about</span>
       <p class="step-info-text">
-        This step helps you focus on a specific person or group and understand
-        what makes their work or experience difficult today.
+        This step helps you focus on a specific <strong>person or group</strong> and understand
+        what makes their work or experience <strong>difficult today</strong>.
       </p>
     </div>
 
     <div class="step-info-item">
       <span class="step-info-label">How to respond</span>
       <p class="step-info-text">
-        Describe who this person is, what they are responsible for,
-        and where things tend to break down or feel risky for them.
+        Describe <strong>who</strong> this person is, <strong>what</strong> they are responsible for,
+        and <strong>where</strong> things tend to break down or feel risky for them.
       </p>
     </div>
   </div>
@@ -1444,6 +1444,86 @@
   </div>
 </div>
 
+  <!-- ===== Copy a prompt (persona) ===== -->
+<section id="agent1-persona-template" class="level-section prompt-section">
+  <h5 class="level-title">Copy a prompt</h5>
+  <p class="flow-text">
+    Use these prompts to help the agent understand who you’re designing for and what’s challenging for them.
+  </p>
+
+  <div class="prompt-container">
+    <div class="prompt-divider"><span> 🟢 Starting prompts</span></div>
+
+    <div class="prompt-instruction-box">
+      📋 <strong>Instruction:</strong>
+      Choose one of these prompts to get started. Pick the one that best helps you describe the person and their context.
+    </div>
+
+    <!-- Prompt 1 -->
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Describe the person you’re designing for</h3>
+        <button class="copy-btn" data-copy="persona-prompt-1">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="persona-prompt-1">
+        I’m designing for <strong>[who this person is]</strong>. They are responsible for <strong>[what they do]</strong> and usually work in <strong>[context or environment]</strong>.
+      </div>
+    </div>
+
+    <!-- Prompt 2 -->
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Describe what’s hard for them today</h3>
+        <button class="copy-btn" data-copy="persona-prompt-2">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="persona-prompt-2">
+        One of the hardest or most frustrating parts of their work today is <strong>[describe what feels slow, risky, or confusing]</strong>.
+      </div>
+    </div>
+
+    <!-- Prompt 3 -->
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Describe where things break down</h3>
+        <button class="copy-btn" data-copy="persona-prompt-3">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="persona-prompt-3">
+        A moment where things tend to break down is when <strong>[describe a concrete situation]</strong>, which creates problems because <strong>[why it matters]</strong>.
+      </div>
+    </div>
+
+    <div class="prompt-divider"><span> 🟪 Follow-up prompts</span></div>
+
+    <div class="prompt-instruction-box">
+      📋 <strong>Instruction:</strong>
+      As the agent asks follow-up questions, respond naturally. If you get stuck, you can use one of the prompts below.
+    </div>
+
+    <!-- Prompt 4 -->
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Clarify responsibilities or constraints</h3>
+        <button class="copy-btn" data-copy="persona-prompt-4">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="persona-prompt-4">
+        One important constraint for this person is <strong>[policy, time, resource, or system constraint]</strong>, which affects <strong>[what they can or can’t do]</strong>.
+      </div>
+    </div>
+
+    <!-- Prompt 5 -->
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">Refocus on the right person</h3>
+        <button class="copy-btn" data-copy="persona-prompt-5">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="persona-prompt-5">
+        I’d like to focus on a slightly different person: <strong>[who they are]</strong>, because <strong>[why they are more central to the problem]</strong>.
+      </div>
+    </div>
+
+  </div>
+</section>
+  
 </section>
 
     <!-- ===== Start from documents ===== -->
