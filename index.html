@@ -1461,33 +1461,39 @@
     <!-- Prompt 1 -->
     <div class="prompt-card">
       <div class="prompt-header">
-        <h3 class="prompt-title">Describe the person you’re designing for</h3>
+        <h3 class="prompt-title">Describe who this is for</h3>
         <button class="copy-btn" data-copy="persona-prompt-1">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-1">
-        I’m designing for <strong>[who this person is]</strong>. They are responsible for <strong>[what they do]</strong> and usually work in <strong>[context or environment]</strong>.
+        I’m working with <strong>[a specific role or group of people]</strong> who operate in <strong>[context or environment]</strong>.
+        Lately, it’s been hard for them to <strong>[what feels most difficult, slow, or frustrating]</strong>,
+        and I want to better understand what makes this challenging for them day to day.
       </div>
     </div>
 
     <!-- Prompt 2 -->
     <div class="prompt-card">
       <div class="prompt-header">
-        <h3 class="prompt-title">Describe what’s hard for them today</h3>
+        <h3 class="prompt-title">Describe what they are responsible for</h3>
         <button class="copy-btn" data-copy="persona-prompt-2">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-2">
-        One of the hardest or most frustrating parts of their work today is <strong>[describe what feels slow, risky, or confusing]</strong>.
+        <strong>[This person or group]</strong> are responsible for <strong>[key responsibility or task]</strong>, 
+          often under <strong>[constraints like time, resources, policy, or risk]</strong>.
+        I’d like to explore where they feel the most pressure or uncertainty in their work today.
       </div>
     </div>
 
     <!-- Prompt 3 -->
     <div class="prompt-card">
       <div class="prompt-header">
-        <h3 class="prompt-title">Describe where things break down</h3>
+        <h3 class="prompt-title">Describe what feels hardest for them today</h3>
         <button class="copy-btn" data-copy="persona-prompt-3">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-3">
-        A moment where things tend to break down is when <strong>[describe a concrete situation]</strong>, which creates problems because <strong>[why it matters]</strong>.
+        I’m focusing on <strong>[a specific role or type of person]</strong>.
+        There’s a particular moment in their work that feels especially demanding or stressful for them: <strong>[briefly describe the situation]</strong>.
+        I want to understand why that moment is hard for them, and what’s at stake from their perspective.
       </div>
     </div>
 
@@ -1501,22 +1507,80 @@
     <!-- Prompt 4 -->
     <div class="prompt-card">
       <div class="prompt-header">
-        <h3 class="prompt-title">Clarify responsibilities or constraints</h3>
+        <h3 class="prompt-title">When the agent asks about their responsibilities or context</h3>
         <button class="copy-btn" data-copy="persona-prompt-4">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-4">
-        One important constraint for this person is <strong>[policy, time, resource, or system constraint]</strong>, which affects <strong>[what they can or can’t do]</strong>.
+       One important part of their role is that they are responsible for 
+        <strong>[key task or responsibility]</strong>, usually in <strong>[context or moment]</strong>, which affects how they work day to day.</strong>.
       </div>
     </div>
 
     <!-- Prompt 5 -->
     <div class="prompt-card">
       <div class="prompt-header">
-        <h3 class="prompt-title">Refocus on the right person</h3>
+        <h3 class="prompt-title">When the agent asks what feels hardest or most frustrating</h3>
         <button class="copy-btn" data-copy="persona-prompt-5">📋 Copy</button>
       </div>
       <div class="prompt-content" id="persona-prompt-5">
-        I’d like to focus on a slightly different person: <strong>[who they are]</strong>, because <strong>[why they are more central to the problem]</strong>.
+        What feels hardest for them is <strong>[specific friction or pressure]</strong>, especially because <strong>[why this is difficult in their context]</strong>.
+      </div>
+    </div>
+
+      <!-- Prompt 6 -->
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">When the agent asks about pressure, risk, or trade-offs</h3>
+        <button class="copy-btn" data-copy="persona-prompt-6">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="persona-prompt-6">
+        They often feel pressure because <strong>[what they’re trying to balance or protect]</strong>, 
+        and there’s little guidance or support around <strong>[what makes this risky or stressful]</strong>.
+      </div>
+    </div>
+
+      <!-- Prompt 7 -->
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">When the agent needs a concrete example from their work</h3>
+        <button class="copy-btn" data-copy="persona-prompt-7">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="persona-prompt-7">
+        A concrete moment that shows this is when <strong>[describe a real situation from their day]</strong>, 
+        which makes things difficult because <strong>[impact on them]</strong>.
+      </div>
+    </div>
+
+      <!-- Prompt 8 -->
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">When something feels slightly off about the framing</h3>
+        <button class="copy-btn" data-copy="persona-prompt-8">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="persona-prompt-8">
+        This is mostly right, but one thing that’s missing is <strong>[clarification about the person, their role, or their context]</strong>.
+      </div>
+    </div>
+
+       <!-- Prompt 9 -->
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">When the focus is on the wrong person</h3>
+        <button class="copy-btn" data-copy="persona-prompt-9">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="persona-prompt-9">
+        I’d like to focus on a different person or role: <strong>[who they are]</strong>, because they’re more central to this situation.
+      </div>
+    </div>
+
+        <!-- Prompt 10 -->
+    <div class="prompt-card">
+      <div class="prompt-header">
+        <h3 class="prompt-title">When the description is too broad</h3>
+        <button class="copy-btn" data-copy="persona-prompt-10">📋 Copy</button>
+      </div>
+      <div class="prompt-content" id="persona-prompt-10">
+        This feels a bit broad. Let’s focus specifically on <strong>[part of their work, moment, or responsibility]</strong>.
       </div>
     </div>
 
