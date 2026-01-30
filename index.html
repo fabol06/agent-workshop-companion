@@ -2011,9 +2011,17 @@ function toggleExample(button) {
 
   if (isHidden) {
     example.removeAttribute("hidden");
-    button
-
+    button.textContent = "Hide example";
+    button.setAttribute("aria-expanded", "true");
+  } else {
+    example.setAttribute("hidden", "");
+    button.textContent = "Show full example";
+    button.setAttribute("aria-expanded", "false");
+  }
+}
 </script>
+
+
 
 <script>
  function toggleFollowups(button) {
