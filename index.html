@@ -2003,9 +2003,11 @@ h3 {
 
 <script>
 function toggleExample(button) {
-  const example = button.previousElementSibling;
+  const container = button.closest(".example-section");
+  if (!container) return;
 
-  if (!example || !example.classList.contains("example-collapsible")) return;
+  const example = container.querySelector(".example-collapsible");
+  if (!example) return;
 
   const isHidden = example.hasAttribute("hidden");
 
