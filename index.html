@@ -264,7 +264,7 @@
     }
 
     .entry-btn {
-      background: var(--bg-light);
+      background: var(--bg-white);
       border: 1px solid #e2e8f0;
       border-radius: 0.75rem;
       padding: 1.25rem 1rem;
@@ -759,7 +759,7 @@
       padding: 1.5rem 1.75rem;
     
       background: #ffffff;
-      border: 2px solid var(--primary);
+      border: 1px solid var(--primary);
       border-radius: 1rem;
     
       box-shadow: 0 6px 18px rgba(0, 120, 212, 0.08);
@@ -934,11 +934,7 @@
     border-top-right-radius: 0.25rem;
   }
 
-   
-#agent1-problem .choose-level,
-#agent1-problem .level-section {
-  margin-top: 2.5rem;   
-}
+  
 
     .placeholder {
       font-style: italic;
@@ -986,6 +982,17 @@
     
 .followup-prompts[hidden] {
   display: none !important;
+}
+
+    .agent-subsection > * + * {
+  margin-top: 2.25rem;
+}
+
+.agent-subsection .step-info-box,
+.agent-subsection .choose-level,
+.agent-subsection .level-section,
+.agent-subsection .prompt-section {
+  margin-top: 0;
 }
 
     
