@@ -992,8 +992,26 @@
   margin-bottom: 3rem;
 }
 
+h3 { 
+  color: var(--primary-dark); 
+  font-weight: 600; 
+  margin-bottom: 0.2 rem; 
+  line-height: 1 ; 
+  margin-top: 0.5rem; 
+}
 
+.before-start-content {
+  color: #5e5e5e;
+}
 
+.before-start-content ul {
+  padding-left: 2rem;
+  margin-top: 0.75rem;
+}
+
+.before-start-content li {
+  margin-bottom: 0.5rem;
+}
 
     
   </style>
@@ -1844,21 +1862,20 @@
     <div class="step-info-box">
   <div class="step-info-item">
     <span class="step-info-label">Before you start</span>
-    <p class="step-info-text">
-      This step builds directly on the output of the Research &amp; Definition Agent.
+    <div class="before-start-content">
+      This step builds directly on the output of the Research & Definition Agent. Your framing is already validated. 
+      Here, you’ll translate it into clear, enforceable Copilot behavior.
       <br><br>
       Before continuing, make sure you have:
     </p>
     <ul class="step-info-text">
-      <li>A <strong>validated framing</strong> (persona, job to be done, use case, constraints)</li>
-      <li>Alignment that this framing is <strong>good enough to build from</strong></li>
+      <li>The final output from the previous agent</li>
+      <li> A clear intent to turn that output into enforceable agent behavior</li>
     </ul>
-    <p class="step-info-text">
-      You won’t explore or redefine the problem here.
-      This step is about turning a confirmed framing into
-      <strong>clear, enforceable agent behavior</strong>.
+  <br> This step focuses on configuration and behavior — not exploration.
     </p>
   </div>
+ </div>
 </div>
 
     <!-- Open Copilot -->
