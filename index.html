@@ -1393,7 +1393,7 @@
       </div>
     </div>
 
-     <div class="followup-prompts" hidden>
+    <div class="example-collapsible" hidden>
 
     <!-- Agent -->
     <div class="chat-row agent">
@@ -1425,11 +1425,11 @@
 
  </div>
 
-      <button
+   <button
   class="show-more-btn"
   aria-expanded="false"
-  onclick="toggleFollowups(this)">
-  Show more
+  onclick="toggleExample(this)">
+  Show full example
 </button>
 
     
@@ -1934,6 +1934,27 @@
     </section>
   </div>
 
+<script>
+  function toggleExample(button) {
+  const example = button
+    .closest(".example-section")
+    .querySelector(".example-collapsible");
+
+  if (!example) return;
+
+  const isHidden = example.hasAttribute("hidden");
+
+  if (isHidden) {
+    example.removeAttribute("hidden");
+    button.textContent = "Hide example";
+    button.setAttribute("aria-expanded", "true");
+  } else {
+    example.setAttribute("hidden", "");
+    button.textContent = "Show full example";
+    button.setAttribute("aria-expanded", "false");
+  }
+}
+</script>
 
 <script>
   function toggleFollowups(button) {
