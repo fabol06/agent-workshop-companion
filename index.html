@@ -1079,7 +1079,7 @@
     </a>
 
     <div class="entry-nav">
-      <p class="entry-label">2. Choose how you want to start</p>
+      <p class="entry-label">2. Choose one way to start</p>
 
       <div class="entry-grid">
         <button class="entry-btn" onclick="document.getElementById('agent1-problem').scrollIntoView({ behavior: 'smooth' })">
@@ -1092,11 +1092,6 @@
           Start from a persona
         </button>
 
-        <button class="entry-btn" onclick="document.getElementById('agent1-docs').scrollIntoView({ behavior: 'smooth' })">
-          <span>📄</span>
-          Start from documents
-        </button>
-      </div>
 
       <p class="help-choose">
         Not sure where to start?
@@ -1691,252 +1686,6 @@
   
 </section>
 
-   <!-- ===== Start from a document ===== -->
-<section id="agent1-document" class="agent-subsection">
-  <h4>Start from a document</h4>
-
-  <p class="sub-intro">
-    Use this path if you already have notes, briefs, decks, or research and want help making sense of them.
-  </p>
-
-  <div class="step-info-box">
-    <div class="step-info-item">
-      <span class="step-info-label">What this step is about</span>
-      <p class="step-info-text">
-        This step helps you turn <strong>existing materials</strong> into a clear understanding
-        of the situation, the people involved, and what feels most important to focus on.
-      </p>
-    </div>
-
-    <div class="step-info-item">
-      <span class="step-info-label">How to respond</span>
-      <p class="step-info-text">
-        <strong>Paste</strong> or <strong>describe</strong> the documents you have, then help the agent understand
-        what feels most urgent, unclear, or worth digging into.
-      </p>
-    </div>
-  </div>
-
-  <div class="choose-level">
-    <div class="choose-level-header">
-      <h5 class="level-title">Choose your level</h5>
-      <p class="flow-text">Pick the kind of support you want for this step.</p>
-    </div>
-
-    <div class="level-grid">
-      <button class="level-btn"
-        onclick="document.getElementById('agent1-document-hint').scrollIntoView({ behavior: 'smooth' })">
-        <span>💡</span>
-        Get a few tips
-      </button>
-
-      <button class="level-btn"
-        onclick="document.getElementById('agent1-document-template').scrollIntoView({ behavior: 'smooth' })">
-        <span>📋</span>
-        Copy a prompt
-      </button>
-
-      <button class="level-btn"
-        onclick="document.getElementById('agent1-document-example').scrollIntoView({ behavior: 'smooth' })">
-        <span>🧩</span>
-        See an example
-      </button>
-    </div>
-  </div>
-
-
-<!-- ===== Get some tips (document) ===== -->
-<div id="agent1-document-hint" class="level-section">
-  <h5 class="level-title">Get some tips</h5>
-
-  <p class="flow-text">
-    Use these tips to help the agent make sense of your materials and focus on what matters most.
-  </p>
-
-  <div class="tips-list">
-
-    <div class="tip-card">
-      <span class="tip-emoji">💡</span>
-      <p>
-        <strong>Documents need context</strong>
-        Even if you paste a full brief or deck, add a sentence about why these materials matter
-        and what you’re hoping to clarify or decide.
-      </p>
-    </div>
-
-    <div class="tip-card">
-      <span class="tip-emoji">💡</span>
-      <p>
-        <strong>Point to what feels important</strong>
-        Call out what feels most urgent, confusing, or risky instead of expecting the agent
-        to infer priorities on its own.
-      </p>
-    </div>
-
-    <div class="tip-card">
-      <span class="tip-emoji">💡</span>
-      <p>
-        <strong>Share rough materials</strong>
-        Draft notes, messy research, or partial slides are fine. You don’t need a polished artifact
-        for the agent to be helpful.
-      </p>
-    </div>
-
-    <div class="tip-card">
-      <span class="tip-emoji">💡</span>
-      <p>
-        <strong>Stay descriptive before evaluative</strong>
-        Describe what the documents say and how things work today before jumping to opinions,
-        solutions, or fixes.
-      </p>
-    </div>
-
-  </div>
-</div>
-
-<!-- ===== Copy a prompt (document) ===== -->
-<section id="agent1-document-template" class="level-section prompt-section">
-  <h5 class="level-title">Copy a prompt</h5>
-
-  <p class="flow-text">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-    incididunt ut labore et dolore magna aliqua.
-  </p>
-
-  <div class="prompt-container">
-
-    <!-- === Starting prompts === -->
-    <div class="prompt-divider"><span> 🟢 Starting prompts</span></div>
-    <div class="prompt-instruction-box">
-      📋 <strong>Instruction:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Sed do eiusmod tempor incididunt.
-    </div>
-
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <h3 class="prompt-title">Lorem ipsum dolor sit amet</h3>
-        <button class="copy-btn" data-copy="doc-prompt-1">📋 Copy</button>
-      </div>
-      <div class="prompt-content" id="doc-prompt-1">
-        Lorem ipsum dolor sit amet, <span class="placeholder">[consectetur adipiscing]</span> elit,
-        sed do <span class="placeholder">[eiusmod tempor]</span> incididunt.
-      </div>
-    </div>
-
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <h3 class="prompt-title">Sed ut perspiciatis unde omnis</h3>
-        <button class="copy-btn" data-copy="doc-prompt-2">📋 Copy</button>
-      </div>
-      <div class="prompt-content" id="doc-prompt-2">
-        Sed ut perspiciatis unde <span class="placeholder">[omnis iste natus]</span> error sit
-        voluptatem <span class="placeholder">[accusantium]</span>.
-      </div>
-    </div>
-
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <h3 class="prompt-title">At vero eos et accusamus</h3>
-        <button class="copy-btn" data-copy="doc-prompt-3">📋 Copy</button>
-      </div>
-      <div class="prompt-content" id="doc-prompt-3">
-        At vero eos et <span class="placeholder">[accusamus et iusto]</span> odio dignissimos
-        <span class="placeholder">[ducimus]</span>.
-      </div>
-    </div>
-
-    <!-- === Follow-up prompts === -->
-    <div class="prompt-divider"><span> 🟪 Follow-up prompts</span></div>
-    <div class="prompt-instruction-box">
-      📋 <strong>Instruction:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Ut enim ad minim veniam.
-    </div>
-
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <h3 class="prompt-title">Lorem ipsum follow-up one</h3>
-        <button class="copy-btn" data-copy="doc-prompt-4">📋 Copy</button>
-      </div>
-      <div class="prompt-content" id="doc-prompt-4">
-        Lorem ipsum dolor sit amet, <span class="placeholder">[quis nostrud]</span> exercitation
-        ullamco <span class="placeholder">[laboris]</span>.
-      </div>
-    </div>
-
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <h3 class="prompt-title">Lorem ipsum follow-up two</h3>
-        <button class="copy-btn" data-copy="doc-prompt-5">📋 Copy</button>
-      </div>
-      <div class="prompt-content" id="doc-prompt-5">
-        Ut enim ad minim <span class="placeholder">[veniam]</span>, quis nostrud
-        <span class="placeholder">[exercitation]</span>.
-      </div>
-    </div>
-
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <h3 class="prompt-title">Lorem ipsum follow-up three</h3>
-        <button class="copy-btn" data-copy="doc-prompt-6">📋 Copy</button>
-      </div>
-      <div class="prompt-content" id="doc-prompt-6">
-        Duis aute irure dolor in <span class="placeholder">[reprehenderit]</span> in voluptate
-        <span class="placeholder">[velit esse]</span>.
-      </div>
-    </div>
-
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <h3 class="prompt-title">Lorem ipsum follow-up four</h3>
-        <button class="copy-btn" data-copy="doc-prompt-7">📋 Copy</button>
-      </div>
-      <div class="prompt-content" id="doc-prompt-7">
-        Excepteur sint occaecat <span class="placeholder">[cupidatat]</span> non proident,
-        sunt in <span class="placeholder">[culpa]</span>.
-      </div>
-    </div>
-
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <h3 class="prompt-title">Lorem ipsum follow-up five</h3>
-        <button class="copy-btn" data-copy="doc-prompt-8">📋 Copy</button>
-      </div>
-      <div class="prompt-content" id="doc-prompt-8">
-        Nemo enim ipsam <span class="placeholder">[voluptatem]</span> quia voluptas
-        <span class="placeholder">[aspernatur]</span>.
-      </div>
-    </div>
-
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <h3 class="prompt-title">Lorem ipsum follow-up six</h3>
-        <button class="copy-btn" data-copy="doc-prompt-9">📋 Copy</button>
-      </div>
-      <div class="prompt-content" id="doc-prompt-9">
-        Neque porro quisquam est, qui dolorem <span class="placeholder">[ipsum]</span>
-        quia <span class="placeholder">[dolor]</span>.
-      </div>
-    </div>
-
-    <div class="prompt-card">
-      <div class="prompt-header">
-        <h3 class="prompt-title">Lorem ipsum follow-up seven</h3>
-        <button class="copy-btn" data-copy="doc-prompt-10">📋 Copy</button>
-      </div>
-      <div class="prompt-content" id="doc-prompt-10">
-        Temporibus autem <span class="placeholder">[quibusdam]</span> et aut officiis
-        <span class="placeholder">[debitis]</span>.
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-  
-</section>
-
 
     <!-- ===== Help me choose ===== -->
     <div id="agent1-help" class="start-help">
@@ -1953,11 +1702,6 @@
           <span>→ when you know who the agent is for, but not what they actually need help with</span>
         </a>
 
-        <a href="#agent1-docs" class="start-help-item">
-          <strong>Start from documents</strong>
-          <span>→ when you already have materials and want to ground the agent in facts</span>
-        </a>
-      </div>
 
       <p class="start-help-footer">
         <strong>Still unsure?</strong> Start from a problem — if something feels hard or slow today, that’s usually a good place to begin.
