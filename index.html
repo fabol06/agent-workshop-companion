@@ -802,7 +802,7 @@
       align-items: flex-start;
       gap: 0.65rem;
   
-      background: var(--warning-bg);
+      background: #FFF1CC;
       border-radius: 0.6rem;
       padding: 0.7rem 1rem;
     
@@ -1903,20 +1903,26 @@
 
 <script>
   function toggleFollowups(button) {
-    const followups = button.previousElementSibling;
-    const isHidden = followups.hasAttribute('hidden');
+    const followups = button
+      .closest(".prompt-container")
+      .querySelector(".followup-prompts");
+
+    if (!followups) return;
+
+    const isHidden = followups.hasAttribute("hidden");
 
     if (isHidden) {
-      followups.removeAttribute('hidden');
-      button.textContent = 'Show fewer follow-up prompts';
-      button.setAttribute('aria-expanded', 'true');
+      followups.removeAttribute("hidden");
+      button.textContent = "Show fewer follow-up prompts";
+      button.setAttribute("aria-expanded", "true");
     } else {
-      followups.setAttribute('hidden', '');
-      button.textContent = 'Show more follow-up prompts';
-      button.setAttribute('aria-expanded', 'false');
+      followups.setAttribute("hidden", "");
+      button.textContent = "Show more follow-up prompts";
+      button.setAttribute("aria-expanded", "false");
     }
   }
 </script>
+
 
   
   <script>
