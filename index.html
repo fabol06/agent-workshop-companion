@@ -2024,25 +2024,23 @@ h3 {
 </script>
 
 <script>
-  function toggleFollowups(button) {
-    const followups = button
-      .closest(".prompt-container")
-      .querySelector(".followup-prompts");
+ function toggleFollowups(button) {
+  const followups = button.previousElementSibling;
 
-    if (!followups) return;
+  if (!followups || !followups.classList.contains("followup-prompts")) return;
 
-    const isHidden = followups.hasAttribute("hidden");
+  const isHidden = followups.hasAttribute("hidden");
 
-    if (isHidden) {
-      followups.removeAttribute("hidden");
-      button.textContent = "Show fewer follow-up prompts";
-      button.setAttribute("aria-expanded", "true");
-    } else {
-      followups.setAttribute("hidden", "");
-      button.textContent = "Show more follow-up prompts";
-      button.setAttribute("aria-expanded", "false");
-    }
+  if (isHidden) {
+    followups.removeAttribute("hidden");
+    button.textContent = "Show fewer follow-up prompts";
+    button.setAttribute("aria-expanded", "true");
+  } else {
+    followups.setAttribute("hidden", "");
+    button.textContent = "Show more follow-up prompts";
+    button.setAttribute("aria-expanded", "false");
   }
+}
 </script>
 
 
