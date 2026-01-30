@@ -2002,25 +2002,17 @@ h3 {
   </div>
 
 <script>
-  function toggleExample(button) {
-  const example = button
-    .closest(".example-section")
-    .querySelector(".example-collapsible");
+function toggleExample(button) {
+  const example = button.previousElementSibling;
 
-  if (!example) return;
+  if (!example || !example.classList.contains("example-collapsible")) return;
 
   const isHidden = example.hasAttribute("hidden");
 
   if (isHidden) {
     example.removeAttribute("hidden");
-    button.textContent = "Hide example";
-    button.setAttribute("aria-expanded", "true");
-  } else {
-    example.setAttribute("hidden", "");
-    button.textContent = "Show full example";
-    button.setAttribute("aria-expanded", "false");
-  }
-}
+    button
+
 </script>
 
 <script>
