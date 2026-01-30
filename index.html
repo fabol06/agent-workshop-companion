@@ -1321,6 +1321,15 @@
           </div>
 
          </div>
+
+          <button
+  class="show-more-btn"
+  aria-expanded="false"
+  onclick="toggleFollowups(this)">
+  Show more follow-up prompts
+</button>
+
+          
         </div>
       </section>
 
@@ -1869,16 +1878,20 @@
   </div>
 
 
-  <script>
+<script>
   function toggleFollowups(button) {
-    const box = button.previousElementSibling;
-    const isOpen = !box.hasAttribute('hidden');
+    const followups = button.previousElementSibling;
+    const isHidden = followups.hasAttribute('hidden');
 
-    box.toggleAttribute('hidden');
-    button.setAttribute('aria-expanded', String(!isOpen));
-    button.textContent = isOpen
-      ? 'Show more follow-up prompts'
-      : 'Show fewer follow-up prompts';
+    if (isHidden) {
+      followups.removeAttribute('hidden');
+      button.textContent = 'Show fewer follow-up prompts';
+      button.setAttribute('aria-expanded', 'true');
+    } else {
+      followups.setAttribute('hidden', '');
+      button.textContent = 'Show more follow-up prompts';
+      button.setAttribute('aria-expanded', 'false');
+    }
   }
 </script>
 
