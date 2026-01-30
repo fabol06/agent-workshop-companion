@@ -1420,7 +1420,7 @@ h3 {
       </div>
     </div>
 
-    <div class="example-collapsible" hidden>
+    <div class="example-collapsible" id="problem-example-1" hidden>
 
     <!-- Agent -->
     <div class="chat-row agent">
@@ -1452,13 +1452,13 @@ h3 {
 
  </div>
 
-   <button
+<button
   class="show-more-btn"
   aria-expanded="false"
+  data-target="problem-example-1"
   onclick="toggleExample(this)">
   Show full example
 </button>
-
     
   </div>
 </div>
@@ -1763,7 +1763,7 @@ h3 {
       </div>
     </div>
 
-    <div class="example-collapsible" hidden>
+  <div class="example-collapsible" id="problem-example-1" hidden>
       
     <!-- Agent -->
     <div class="chat-row agent">
@@ -1798,13 +1798,13 @@ h3 {
 
  </div>
 
-   <button
+ <button
   class="show-more-btn"
   aria-expanded="false"
+  data-target="problem-example-1"
   onclick="toggleExample(this)">
   Show full example
 </button>
-
     
   </div>
 </div>
@@ -2003,24 +2003,17 @@ h3 {
 
 <script>
 function toggleExample(button) {
-  const container = button.closest(".example-section");
-  if (!container) return;
-
-  const example = container.querySelector(".example-collapsible");
+  const id = button.dataset.target;
+  const example = document.getElementById(id);
   if (!example) return;
 
   const isHidden = example.hasAttribute("hidden");
 
-  if (isHidden) {
-    example.removeAttribute("hidden");
-    button.textContent = "Hide example";
-    button.setAttribute("aria-expanded", "true");
-  } else {
-    example.setAttribute("hidden", "");
-    button.textContent = "Show full example";
-    button.setAttribute("aria-expanded", "false");
-  }
+  example.toggleAttribute("hidden", !isHidden);
+  button.textContent = isHidden ? "Hide example" : "Show full example";
+  button.setAttribute("aria-expanded", String(isHidden));
 }
+
 </script>
 
 
