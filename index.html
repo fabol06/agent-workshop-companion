@@ -687,7 +687,7 @@
       padding: 0;
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
+      gap: 1.25rem;
 }
 
 
@@ -859,13 +859,14 @@
       color: var(--gray);
   }
 
-    .prompt-instruction-box {
+   .prompt-instruction-box {
       display: flex;
       align-items: flex-start;
       gap: 0.75rem;
     
-      background: var(--bg-lighter);      
-      border-radius: 12px;
+      background: #f0d9fe;      
+      border-radius: 5px;
+      border: 1px solid #702573; 
       padding: 0.75rem 1rem;
     
       color: var(--primary-dark);
@@ -1231,7 +1232,7 @@
 
         <div class="prompt-container">
           <div class="prompt-divider"><span> 🟢 Starting prompts</span></div>
-          <div class="prompt-instruction-box"> 📋 <strong> Instruction:</strong> Choose one of these prompts to begin. 
+          <div class="prompt-instruction-box"><strong> Instruction:</strong> Choose one of these prompts to begin. 
             Start wherever it feels easiest, you can refine or shift the problem as the conversation unfolds.</div>
 
           <div class="prompt-card">
@@ -1267,7 +1268,7 @@
           </div>
 
           <div class="prompt-divider"><span> 🟪 Follow-up prompts</span></div>
-          <div class="prompt-instruction-box"> 📋 <strong> Instruction:</strong> As the agent asks follow-up questions, 
+          <div class="prompt-instruction-box"><strong> Instruction:</strong> As the agent asks follow-up questions, 
             respond naturally. If you feel stuck, you can use the prompt below.</div>
 
           <div class="prompt-card">
@@ -1521,7 +1522,7 @@
     <div class="prompt-divider"><span> 🟢 Starting prompts</span></div>
 
     <div class="prompt-instruction-box">
-      📋 <strong>Instruction:</strong>
+      <strong>Instruction:</strong>
       Choose one of these prompts to get started. Pick the one that best helps you describe the person and their context.
     </div>
 
@@ -1577,7 +1578,7 @@
     <div class="prompt-divider"><span> 🟪 Follow-up prompts</span></div>
 
     <div class="prompt-instruction-box">
-      📋 <strong>Instruction:</strong>
+      <strong>Instruction:</strong>
       As the agent asks follow-up questions, respond naturally. If you get stuck, you can use one of the prompts below.
     </div>
 
