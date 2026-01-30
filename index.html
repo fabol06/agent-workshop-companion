@@ -7,10 +7,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
+     :root {
       --primary: #0078D4;
       --primary-dark: #106EBE;
+    
+      --gray: #605E5C;
+      --gray-dark: #323130;
+    
+      --bg-light: #FAF9F8;
+      --bg-lighter: #F3F2F1;
+    
+      --warning-bg: #FFF4CE;
+      --warning-border: #FFB900;
+      --warning-text: #8A6D1D;
     }
+
 
     * {
       box-sizing: border-box;
@@ -20,13 +31,21 @@
 
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      background: linear-gradient(180deg, #f9fbfd 0%, #edf2f7 100%);
-      color: #1e293b;
+      background: linear-gradient(
+      180deg,
+      var(--bg-light) 0%,
+      var(--bg-lighter) 100%
+      );
+      color: var(--gray-dark);
       line-height: 1.6;
     }
 
     .header {
-      background: linear-gradient(135deg, #004578 0%, #005A9E 100%);
+      background: linear-gradient(
+      135deg,
+      var(--primary-dark) 0%,
+      var(--primary) 100%
+       );
       color: white;
       padding: 3.5rem 1.5rem;
       text-align: center;
@@ -50,7 +69,7 @@
     }
 
     .copilot-bar {
-      background: linear-gradient(135deg, #0078D4 0%, #106EBE 100%);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
       color: white;
       padding: 1rem 1.5rem;
       text-align: center;
@@ -89,7 +108,7 @@
     }
 
     .intro {
-      background: white;
+      background: var(--bg-light);
       border-radius: 1rem;
       padding: 2rem 2.5rem;
       margin-bottom: 2.5rem;
@@ -137,7 +156,7 @@
     }
 
     .nav-btn {
-      background: white;
+      background: var(--bg-light);
       border: 2px solid transparent;
       border-radius: 0.75rem;
       padding: 1.25rem 1rem;
@@ -156,7 +175,7 @@
     }
 
     .nav-btn.primary {
-      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
       color: white;
     }
 
@@ -177,7 +196,7 @@
     }
 
     .agent-card {
-      background: white;
+      background: var(--bg-light);
       border-radius: 1rem;
       padding: 2rem 2.5rem;
       box-shadow: 0 1px 3px rgba(0,0,0,0.1);
@@ -202,14 +221,14 @@
 
     .agent-subtitle {
       font-size: 1rem;
-      color: #475569;
+      color: var(--gray-dark);
       line-height: 1.7;
       margin-bottom: 1.5rem;
     }
 
     .challenge-box {
-      background: #fff8e1;
-      border-left: 4px solid #f59e0b;
+      background: var(--warning-bg);
+      border-left: 4px solid var(--warning-border);
       border-radius: 0.75rem;
       padding: 1rem 1.25rem;
       margin-bottom: 1.5rem;
@@ -220,13 +239,13 @@
       letter-spacing: 0.06em;
       text-transform: uppercase;
       font-weight: 700;
-      color: #b45309;
+      color: var(--warning-text);
       margin-bottom: 0.35rem;
     }
 
     .challenge-text {
       font-size: 0.95rem;
-      color: #1e293b;
+      color: var(--gray-dark);
       line-height: 1.7;
     }
 
@@ -251,7 +270,7 @@
     }
 
     .entry-btn {
-      background: white;
+      background: var(--bg-light);
       border: 1px solid #e2e8f0;
       border-radius: 0.75rem;
       padding: 1.25rem 1rem;
@@ -283,7 +302,7 @@
    .agent-subsection {
       position: relative;
     
-      background: white;
+      background: var(--bg-light);
       border-radius: 1rem;
       padding: 2rem 2.5rem 2rem 3rem; 
       margin-bottom: 2rem;
@@ -327,7 +346,7 @@
       border-radius: 0.9rem;
       border: 1px solid rgba(255,255,255,0.25);
 
-      font-weight: 700;
+      font-weight: 600;
       font-size: 0.95rem;
       line-height: 1;
 
@@ -518,7 +537,7 @@
       padding: 0.85rem 1rem;
       vertical-align: top;
       border-top: 1px solid #e5e7eb;
-      color: #1e293b;
+      color: var(--gray-dark);
     }
 
     .cheatsheet-table tbody tr:nth-child(even) {
@@ -528,7 +547,7 @@
     .start-help {
       margin-top: 3rem;
       padding: 1.75rem 2rem;
-      background: #f7f9fc;
+      background: var(--bg-light);
       border: 1px solid rgba(0, 120, 212, 0.12);
       border-radius: 0.75rem;
     }
@@ -578,7 +597,7 @@
       margin-top: 1.25rem;
       padding-top: 1rem;
       border-top: 1px solid rgba(0, 120, 212, 0.18);
-      color: #334155;
+      color: var(--gray-dark);
       font-size: 0.95rem;
       line-height: 1.6;
     }
@@ -654,7 +673,7 @@
 
     .flow-text {
       font-size: 0.95rem;
-      color: #475569;
+      color: var(--gray);
       line-height: 1.7;
       margin-bottom: 0.75rem;
   }
@@ -679,7 +698,7 @@
 /* SMALL CARDS */
    .prompt-card {
       position: relative;
-      background: #f9fafb; 
+      background: var(--bg-lighter);
       border-radius: 0.75rem;
       padding: 1.1rem 1.4rem;
       border: 1px solid #e2e8f0;
@@ -704,7 +723,7 @@
       flex: 1;
       font-size: 0.92rem;
       font-weight: 600;
-      color: #1e293b;
+      color: var(--gray-dark);
   }
 
     .copy-btn {
@@ -732,7 +751,7 @@
       border-radius: 0.5rem;
       padding: 0.75rem 1rem;
       font-size: 0.9rem;
-      color: #334155;
+      color: var(--gray-dark);
   }
 
     /* ===== STEP INFO BOX (blue framed block) ===== */
@@ -771,7 +790,7 @@
   .step-info-text {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #475569;
+    color: var(--gray);
   }
 
 /* ===== GET SOME TIPS (YELLOW BOXES) ===== */
@@ -788,7 +807,7 @@
       align-items: flex-start;
       gap: 0.65rem;
   
-      background: #fff8e1;
+      background: var(--warning-bg);
       border-radius: 0.6rem;
       padding: 0.7rem 1rem;
     
@@ -806,7 +825,7 @@
     margin: 0;
     font-size: 0.9rem;    
     line-height: 1.55;
-    color: #334155;      
+    color: var(--gray-dark);      
   }
 
   .tip-card strong {
@@ -814,7 +833,7 @@
     font-weight: 600;     
     font-size: 0.92rem;   
     margin-bottom: 0.1rem;
-    color: #1e293b;
+    color: var(--gray-dark);
   }
 
     .prompt-section {
@@ -840,7 +859,7 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #475569;
+      color: var(--gray);
   }
 
     .prompt-instruction-box {
@@ -848,18 +867,18 @@
       align-items: flex-start;
       gap: 0.75rem;
     
-      background: #f0f6ff;      
+      background: var(--bg-lighter);      
       border-radius: 12px;
       padding: 0.75rem 1rem;
     
-      color: #2c59da;
+      color: var(--primary-dark);
       font-size: 0.95rem;
       line-height: 1.45;
       margin-bottom: 1rem;
   }
 
     .prompt-instruction-box strong {
-      color: #1f40b0;
+      color: var(--primary-dark);
   }
 
     /* ===== SEE AN EXAMPLE – CHAT STYLE ===== */
@@ -867,7 +886,7 @@
   
     .example-intro {
       font-size: 0.9rem;
-      color: #64748b;
+      color: var(--gray);
       margin-bottom: 0.75rem;
   }
 
@@ -906,14 +925,14 @@
 /* Agent bubble */
   .chat-row.agent .chat-bubble {
       background: #f1f5f9;
-      color: #1e293b;
+      color: var(--gray-dark);
       border-top-left-radius: 0.25rem;
 }
 
 /* User bubble */
   .chat-row.user .chat-bubble {
-    background: rgba(0,120,212,0.08);
-    color: #0f172a;
+    background: rgba(0,120,212,0.06);
+    color: var(--gray-dark);
     border-top-right-radius: 0.25rem;
   }
 
@@ -926,7 +945,7 @@
     .placeholder {
       font-style: italic;
       font-weight: 400;
-      color: #6b7280; 
+      color: var(--gray);
   }
 
     
