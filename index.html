@@ -296,7 +296,7 @@
    .agent-subsection {
       position: relative;
     
-      background: var(--bg-light);
+      background: #FDFBFF;
       border-radius: 1rem;
       padding: 2rem 2.5rem 2rem 3rem; 
       margin-bottom: 2rem;
@@ -943,6 +943,21 @@
       color: var(--gray);
   }
 
+    .followup-toggle {
+      margin-top: 0.75rem;
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0;
+  }
+
+    .followup-toggle:hover {
+      text-decoration: underline;
+  }
+
     
   </style>
 </head>
@@ -1261,6 +1276,9 @@
             </div>
           </div>
 
+   <!-- Collapsible follow-up prompts -->
+       <div class="followup-prompts" hidden>
+         
             <div class="prompt-card">
             <div class="prompt-header">
               <h3 class="prompt-title">When something feels slightly off</h3>
@@ -1301,7 +1319,8 @@
               I want to explore <span class="placeholder">[new person, angle, or perspective]</span>.
             </div>
           </div>
-          
+
+         </div>
         </div>
       </section>
 
@@ -1849,6 +1868,21 @@
     </section>
   </div>
 
+
+  <script>
+  function toggleFollowups(button) {
+    const box = button.previousElementSibling;
+    const isOpen = !box.hasAttribute('hidden');
+
+    box.toggleAttribute('hidden');
+    button.setAttribute('aria-expanded', String(!isOpen));
+    button.textContent = isOpen
+      ? 'Show more follow-up prompts'
+      : 'Show fewer follow-up prompts';
+  }
+</script>
+
+  
   <script>
   document.querySelectorAll(".copy-btn").forEach(button => {
     button.addEventListener("click", () => {
