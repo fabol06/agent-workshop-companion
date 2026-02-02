@@ -370,6 +370,31 @@
       color: var(--gray);
     }
 
+
+    .intro-divider {
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 1.75rem 0;
+}
+
+.prerequisites-box {
+  background: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.prerequisites-box ul {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+}
+
+.prerequisites-box li {
+  margin-bottom: 0.4rem;
+}
+
+    
     .help-choose {
       margin-top: 0.75rem;
       margin-bottom: 1.25rem;
@@ -1109,7 +1134,22 @@ h3 {
         <strong>working agent concept</strong>, a clear agent charter,
         and a roadmap to iterate and scale.
       </p>
-    </div>
+      
+      <!-- light divider -->
+  <div class="intro-divider"></div>
+
+  <!-- prerequisites inset -->
+  <div class="prerequisites-box">
+    <p class="start-label">Prerequisites</p>
+
+    <ul>
+      <li>Access to Microsoft Copilot Studio (trial or organizational access)</li>
+      <li>A laptop and stable internet connection</li>
+      <li>About 90 minutes of focused time</li>
+      <li>A real problem or challenge you’re willing to explore</li>
+    </ul>
+  </div>
+  </div>
     
     <section class="why-agents">
       <h2 class="why-title">What You’ll Learn</h2>
