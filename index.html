@@ -790,6 +790,47 @@
     color: var(--gray-dark);
   }
 
+     /* ===== STEP INFO BOX (red framed block) ===== */
+
+        .step-info-box2 {
+      margin-top: 1.5rem;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 3rem;
+    
+      background: #ffffff;
+      border: 1px solid #F4364C;
+      border-radius: 0.5rem;
+    
+      box-shadow: 0 6px 18px rgba(0, 120, 212, 0.08);
+    }
+
+  .step-info-item2 + .step-info-item2 {
+    margin-top: 1.25rem;
+  }
+
+  .step-info-label2 {
+    display: inline-block;
+    margin-bottom: 0.4rem;
+  
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  
+    color: #73262F;
+    background: #FFECEE;
+  
+    padding: 0.25rem 0.6rem;
+    border-radius: 0.4rem;
+  }
+
+  .step-info-text2 {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--gray-dark);
+  }
+
+
 /* ===== GET SOME TIPS (YELLOW BOXES) ===== */
 
     .tips-list {
@@ -1866,19 +1907,15 @@ h3 {
       </div>
     </div>
 
-  <div class="step-info-box">
-  <div class="step-info-item">
-    <span class="step-info-label">Before you start</span>
+ <div class="step-info-box2">
+  <div class="step-info-item2">
+    <span class="step-info-label2">Before you start</span>
 
     <div class="before-start-content">
-      <p class="step-info-text">
-        This step builds directly on the output of the Research &amp; Definition Agent.
-        Here, you’ll translate it into <strong>clear, enforceable Copilot behavior</strong>.
-      </p>
-
-      <p class="step-info-text">
-        Before continuing, make sure you have:
-      </p>
+      <p class="step-info-text2">
+        This step builds directly on the <strong>output</strong> of the Research &amp; Definition Agent.
+        Here, you’ll translate it into clear, enforceable Copilot behavior. <strong>Before continuing</strong>, make sure you have:
+     
 
       <ul class="step-info-text">
         <li>The final <strong>output</strong> from the previous agent</li>
@@ -1891,7 +1928,7 @@ h3 {
 <!-- Open Copilot -->
 <p class="entry-label">1. Open the agent</p>
 <a href="#" class="open-agent-link open-agent-btn">
-  🚀 Open Copilot Studio <span aria-hidden="true">→</span>
+  Open agent <span aria-hidden="true">→</span>
 </a>
 
 <div class="entry-nav">
