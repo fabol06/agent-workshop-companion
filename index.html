@@ -1089,6 +1089,16 @@ h3 {
   display: none !important;
 }
 
+.agent-flow-divider {
+  height: 1px;
+  margin: 3rem 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 120, 212, 0.25),
+    transparent
+  );
+}
 
 
     
@@ -1985,39 +1995,49 @@ h3 {
 
 
 
-    <div class="entry-nav">
-  <p class="entry-label">3. Designing your agent</p>
-  <p class="flow-text">
-  Work through these sections to shape how your agent behaves and responds.
-</p>
+   <p class="entry-label">3. Designing your agent</p>
+
+<div class="entry-grid">
+  <button class="entry-btn">
+    <span>🧭</span>
+    How the Agent Builder guides you
+  </button>
+
+  <button class="entry-btn">
+    <span>⚙️</span>
+    Configure agent behavior
+  </button>
+
+  <button class="entry-btn">
+    <span>💡</span>
+    Tips for better results
+  </button>
+
+  <button class="entry-btn">
+    <span>🧩</span>
+    See an example
+  </button>
+</div>
+
+    <div class="agent-flow-divider"></div>
+
+    <p class="entry-label">4. Once you’re done designing</p>
+
+<div class="entry-grid">
+  <button class="entry-btn">
+    <span>🚀</span>
+    Put it into Copilot Studio
+  </button>
+
+  <button class="entry-btn">
+    <span>🗺️</span>
+    Understand the Copilot Studio layout
+  </button>
+</div>
 
 
-  <div class="entry-grid">
-    <button class="entry-btn"
-      onclick="document.getElementById('agent2-how-it-works').scrollIntoView({ behavior: 'smooth' })">
-      <span>🧭</span>
-      How the Agent Builder guides you
-    </button>
 
-    <button class="entry-btn"
-      onclick="document.getElementById('agent2-behavior-dimensions').scrollIntoView({ behavior: 'smooth' })">
-      <span>⚙️</span>
-      Configure agent behavior
-    </button>
-
-    <button class="entry-btn"
-      onclick="document.getElementById('agent2-tips').scrollIntoView({ behavior: 'smooth' })">
-      <span>💡</span>
-      Tips for better results
-    </button>
-
-    <button class="entry-btn"
-      onclick="document.getElementById('agent2-example').scrollIntoView({ behavior: 'smooth' })">
-      <span>🧩</span>
-      See an example
-    </button>
-  </div>
-
+      
 </div>
 
 
