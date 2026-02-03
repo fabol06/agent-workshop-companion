@@ -1095,6 +1095,47 @@ h3 {
   background: #d9d9d6;
 }
 
+    /* ===== Agent 2 – Behavior configuration ===== */
+
+.behavior-card {
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.behavior-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 0.25rem;
+}
+
+.behavior-description {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 0.75rem;
+}
+
+.behavior-row {
+  font-size: 0.9rem;
+  color: var(--gray-dark);
+  line-height: 1.55;
+  margin-top: 0.4rem;
+}
+
+.behavior-row strong {
+  font-weight: 600;
+}
+
+.behavior-row.example {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px dashed #e2e8f0;
+  color: var(--gray);
+}
+
 
 
   </style>
@@ -2075,6 +2116,87 @@ h3 {
       </div>
     </section>
 
+<section id="agent2-behavior-config" class="level-section">
+
+  <h3>Configure agent behavior</h3>
+  <p class="flow-text">
+    These decisions define how your agent behaves in practice.
+    You’ll encounter each of these during the Agent Builder flow.
+  </p>
+
+  <!-- Determinism -->
+  <div class="behavior-card">
+    <h4 class="behavior-title">Determinism vs flexibility</h4>
+    <p class="behavior-description">
+      Controls how strictly the agent follows a predefined interaction flow.
+    </p>
+
+    <div class="behavior-row">
+      <strong>The agent is deciding:</strong>
+      whether to follow a fixed sequence or adapt to user input.
+    </div>
+
+    <div class="behavior-row">
+      <strong>You might answer:</strong>
+      “Always follow the same steps, even if the user jumps ahead.”
+    </div>
+
+    <div class="behavior-row example">
+      <strong>This works well if:</strong>
+      you’re designing an intake, eligibility, or customer support agent where consistency matters.
+    </div>
+  </div>
+
+  <!-- Uncertainty handling -->
+  <div class="behavior-card">
+    <h4 class="behavior-title">Handling uncertainty</h4>
+    <p class="behavior-description">
+      Defines what the agent should do when information is missing or unclear.
+    </p>
+
+    <div class="behavior-row">
+      <strong>The agent is deciding:</strong>
+      whether to exclude, flag, or ask about uncertain data.
+    </div>
+
+    <div class="behavior-row">
+      <strong>You might answer:</strong>
+      “Do not include results unless all criteria are met.”
+    </div>
+
+    <div class="behavior-row example">
+      <strong>This works well if:</strong>
+      your agent supports trust-sensitive or high-stakes decisions.
+    </div>
+  </div>
+
+  <!-- Output structure -->
+  <div class="behavior-card">
+    <h4 class="behavior-title">Output structure</h4>
+    <p class="behavior-description">
+      Determines how results are presented to the user.
+    </p>
+
+    <div class="behavior-row">
+      <strong>The agent is deciding:</strong>
+      whether to show compact lists, detailed tables, or step-by-step results.
+    </div>
+
+    <div class="behavior-row">
+      <strong>You might answer:</strong>
+      “Show a short ranked list with only key details.”
+    </div>
+
+    <div class="behavior-row example">
+      <strong>This works well if:</strong>
+      users need to make fast decisions without reading long explanations.
+    </div>
+  </div>
+
+</section>
+
+
+    
   </div> <!-- /agent-card -->
 
 
