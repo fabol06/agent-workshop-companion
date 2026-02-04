@@ -2216,6 +2216,121 @@ h3 {
   </div>
       </section>
 
+
+      <!-- ===== See an example ===== -->
+<div id="agent2-builder-example" class="level-section example-section">
+  <h3>See an example</h3>
+
+  <p class="flow-text example-intro">
+    This example shows how the Agent Builder leads the conversation
+    and proposes decisions — you don’t need to know the answers upfront.
+  </p>
+
+  <div class="chat-example">
+
+    <!-- Agent -->
+    <div class="chat-row agent">
+      <div class="chat-bubble">
+        Welcome — I’ll help you turn what you already have into a
+        complete system prompt for Copilot Studio.
+        <br><br>
+        To start, paste the output you’re working from.
+      </div>
+    </div>
+
+    <!-- User -->
+    <div class="chat-row user">
+      <div class="chat-bubble">
+        <em>[Paste your validated framing here]</em>
+      </div>
+    </div>
+
+    <!-- Agent -->
+    <div class="chat-row agent">
+      <div class="chat-bubble">
+        Thanks — that’s enough for me to get started.
+        <br><br>
+        Based on what you shared, I’ll propose a few options at each step.
+        You can pick one, tweak it, or suggest an alternative.
+      </div>
+    </div>
+
+    <!-- Agent -->
+    <div class="chat-row agent">
+      <div class="chat-bubble">
+        First, let’s define the overall agent type.
+        <br><br>
+        Based on your framing, here are a few options that could fit:
+        <br><br>
+        1) An agent that retrieves information precisely  
+        2) An agent that helps compare and narrow down options  
+        3) An agent that guides users through a conversation
+        <br><br>
+        You can choose one, or tell me if you’re aiming for something slightly different.
+      </div>
+    </div>
+
+    <!-- User -->
+    <div class="chat-row user">
+      <div class="chat-bubble">
+        Let’s go with the first option.
+      </div>
+    </div>
+
+    <!-- Collapsible content -->
+    <div class="example-collapsible" id="builder-example-1" hidden>
+
+      <!-- Agent -->
+      <div class="chat-row agent">
+        <div class="chat-bubble">
+          Great — I’ll proceed with that direction.
+          <br><br>
+          Next, I’ll guide you through a few behavior decisions.
+          I’ll suggest defaults, and you can confirm or adjust them.
+        </div>
+      </div>
+
+      <!-- Agent -->
+      <div class="chat-row agent">
+        <div class="chat-bubble">
+          For example, one decision is how strictly the agent should
+          follow a fixed interaction flow.
+          <br><br>
+          Here are a few common approaches — which one feels closest?
+        </div>
+      </div>
+
+      <!-- User -->
+      <div class="chat-row user">
+        <div class="chat-bubble">
+          I’m fine with the stricter option.
+        </div>
+      </div>
+
+      <!-- Agent -->
+      <div class="chat-row agent">
+        <div class="chat-bubble">
+          Got it — I’ll lock that in.
+          <br><br>
+          We’ll continue like this until all key behaviors are defined.
+          At the end, I’ll generate a single block of instructions
+          you can paste directly into Copilot Studio.
+        </div>
+      </div>
+
+    </div>
+
+    <button
+      class="show-more-btn"
+      aria-expanded="false"
+      data-target="builder-example-1"
+      onclick="toggleExample(this)">
+      Show full example
+    </button>
+
+  </div>
+</div>
+
       <!-- Move to Copilot (inline closure, Agent 1 pattern) -->
       <div class="start-help">
         <div class="start-help-title">Are you done designing?</div>
