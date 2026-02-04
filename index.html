@@ -1216,6 +1216,35 @@ h3 {
   background-color: #E6F2C9; 
 }
 
+    /* Instruction blocks inside a big card */
+
+.instructions-wrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.instruction-step {
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  border-radius: 0.5rem;
+  padding: 0.9rem 1rem;
+}
+
+.instruction-step-number {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #6B7280;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.instruction-step-text {
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
 
   </style>
 </head>
@@ -2519,22 +2548,50 @@ h3 {
   </div>
 
   <!-- ===== Path 1 ===== -->
-  <section id="agent2-copilot-steps" class="level-section">
-    <h3>Put your agent into Copilot</h3>
+<section class="level-section">
 
-    <p class="flow-text">
-      Open Copilot and start creating a new agent using Agent Builder.
-      <br><br>
-      Paste the output you generated in the previous step exactly as provided.
-      This includes:
-      <br><br>
-      – the Instructions block  
-      – the Examples and Knowledge block
-      <br><br>
-      Once pasted, run a few realistic prompts to verify that the agent behaves
-      according to the decisions you made.
-    </p>
-  </section>
+  <h3>Paste and test your agent</h3>
+
+  <p class="flow-text">
+    Use the output from the Agent Builder to create and test your agent inside Copilot.
+    No new decisions are needed — you’re applying what you already defined.
+  </p>
+
+  <div class="instructions-wrapper">
+
+    <div class="instruction-step">
+      <div class="instruction-step-number">Step 1</div>
+      <div class="instruction-step-text">
+        Open Copilot and start creating a new agent using Agent Builder.
+      </div>
+    </div>
+
+    <div class="instruction-step">
+      <div class="instruction-step-number">Step 2</div>
+      <div class="instruction-step-text">
+        Paste the <strong> first part of the output</strong> into the <strong>Describe</strong> field,
+        exactly as generated.
+      </div>
+    </div>
+
+    <div class="instruction-step">
+      <div class="instruction-step-number">Step 3</div>
+      <div class="instruction-step-text">
+        Paste the <strong>Examples and Knowledge</strong> section right after the first part of the instruction.
+      </div>
+    </div>
+
+    <div class="instruction-step">
+      <div class="instruction-step-number">Step 4</div>
+      <div class="instruction-step-text">
+        Save the agent and test it with a few realistic prompts to confirm the behavior.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
 
   <!-- ===== Path 2 ===== -->
   <section id="agent2-copilot-orientation" class="level-section">
