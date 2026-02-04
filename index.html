@@ -2031,88 +2031,74 @@ h3 {
       Open agent <span aria-hidden="true">→</span>
     </a>
 
-    <br> <br> 
-    
+    <br><br>
+
     <!-- Step 2 -->
     <p class="entry-label">2. Paste your validated framing</p>
+    <p class="flow-text">
+      Copy the final structured output from the Research &amp; Definition Agent and paste it into Copilot.
+      This framing will be used as the foundation for all decisions in this step.
+    </p>
 
-    <br>
+    <!-- ================= DESIGN YOUR AGENT ================= -->
+    <section class="agent-subsection">
 
-    <!-- Step 3 -->
-    <p class="entry-label">3. Design your agent</p>
-  
-    <div class="entry-grid">
-      <button
-        class="entry-btn"
-        onclick="document.getElementById('how-agent-guides-you').scrollIntoView({ behavior: 'smooth' })">
-        <span>🧭</span>
-        How the Agent Builder guides you
-      </button>
+      <h2>Design your agent</h2>
 
-      <button
-        class="entry-btn"
-        onclick="document.getElementById('tips-agent-2').scrollIntoView({ behavior: 'smooth' })">
-        <span>💡</span>
-        Tips for better results
-      </button>
-
-    <button
-  class="entry-btn"
-  onclick="document.getElementById('agent2-behavior-config').scrollIntoView({ behavior: 'smooth' })">
-  <span>⚙️</span>
-  Configure agent behavior
-</button>
-
-
-      <button class="entry-btn">
-        <span>🧩</span>
-        See an example
-      </button>
-    </div>
-
-    <br>
-
-    <!-- Step 4 -->
-    <p class="entry-label">4. Move to Copilot</p>
-
-    <div class="entry-grid">
-      <button class="entry-btn">
-        <span>🚀</span>
-        Put it into Copilot Studio
-      </button>
-
-      <button class="entry-btn">
-        <span>🗺️</span>
-        Understand the Copilot Studio layout
-      </button>
-    </div>
-
-    <div class="agent-flow-divider"></div>
-
-    <!-- How the Agent Builder guides you -->
-    <section id="how-agent-guides-you">
+      <!-- Step info (same pattern as Agent 1) -->
       <div class="step-info-box">
         <div class="step-info-item">
           <span class="step-info-label">What will happen in this step</span>
           <p class="step-info-text">
-            The agent will guide you through a series of <strong>focused questions</strong> to translate your validated framing
-            into clear <strong>agent behavior</strong>. You’ll move one decision at a time, with confirmation before moving forward.
+            The agent will guide you through a series of focused questions 
+            to translate your validated framing into clear <strong>agent behavior.</strong> 
+            You’ll move one decision at a time, with confirmation before moving forward.
           </p>
         </div>
 
         <div class="step-info-item">
           <span class="step-info-label">How the agent makes decisions</span>
           <p class="step-info-text">
-            The agent proposes defaults based on your inputs, explains why each decision matters, and asks you to confirm
-            or adjust before continuing. You’re not expected to have perfect answers: the goal is <strong>alignment</strong>, not precision.
+            The agent proposes defaults based on your inputs, explains why each decision matters, 
+            and asks you to confirm or adjust before continuing. 
+            You’re not expected to have perfect answers: the goal is <strong>alignment</strong>, not precision.
           </p>
         </div>
       </div>
-    </section>
 
-    <!-- Tips -->
-    <section id="tips-agent-2">
-      <div class="level-section">
+      <!-- Choose your level) -->
+      <div class="choose-level">
+        <div class="choose-level-header">
+          <h3>Choose your level</h3>
+          <p class="flow-text">
+            Explore guidance for this step in the way that’s most useful to you.
+          </p>
+        </div>
+
+        <div class="level-grid">
+          <button
+            class="level-btn"
+            onclick="document.getElementById('tips-agent-2').scrollIntoView({ behavior: 'smooth' })">
+            <span>💡</span>
+            Get some tips
+          </button>
+
+          <button
+            class="level-btn"
+            onclick="document.getElementById('agent2-behavior-config').scrollIntoView({ behavior: 'smooth' })">
+            <span>⚙️</span>
+            Configure agent behavior
+          </button>
+
+          <button class="level-btn">
+            <span>🧩</span>
+            See an example
+          </button>
+        </div>
+      </div>
+
+      <!-- Tips -->
+      <section id="tips-agent-2" class="level-section">
         <h3>Get some tips</h3>
         <p class="flow-text">
           Use these tips to move confidently through the Agent Builder and make deliberate configuration choices.
@@ -2123,7 +2109,7 @@ h3 {
             <span class="tip-emoji">💡</span>
             <p>
               <strong>Every confirmation locks behavior in place</strong>
-              When the agent asks you to confirm something, it’s fixing that decision into the agent’s instructions.
+              When the agent asks you to confirm something, it becomes a rule the agent will follow every time.
             </p>
           </div>
 
@@ -2147,22 +2133,20 @@ h3 {
             <span class="tip-emoji">💡</span>
             <p>
               <strong>Define defaults, not edge cases</strong>
-              Get the standard path right first.
+              Get the standard path right first — you can refine later.
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-<section id="agent2-behavior-config" class="level-section">
+      <!-- Behavior configuration -->
+      <section id="agent2-behavior-config" class="level-section">
+        <h3>Configure agent behavior</h3>
+        <p class="flow-text">
+          These decisions define how your agent behaves in practice.
+        </p>
 
-  <h3>Configure agent behavior</h3>
-  <p class="flow-text">
-    These decisions define how your agent behaves in practice.
-    You’ll encounter each of these during the Agent Builder flow.
-  </p>
-
-  <!-- Determinism -->
+      <!-- Determinism -->
   <div class="behavior-card">
     <h4 class="behavior-title">Determinism vs flexibility</h4>
     <p class="behavior-description">
@@ -2230,16 +2214,29 @@ h3 {
       users need to make fast decisions without reading long explanations.
     </div>
   </div>
+      </section>
 
-</section>
+      <!-- Move to Copilot (inline closure, Agent 1 pattern) -->
+      <div class="start-help">
+        <div class="start-help-title">Are you done designing?</div>
 
+        <p class="flow-text">
+          Once you have the final output from the Agent Builder, move into Copilot Studio
+          to create and test your agent.
+        </p>
 
-    
-  </div> <!-- /agent-card -->
+        <a
+          href="https://copilotstudio.preview.microsoft.com/"
+          class="start-help-item">
+          <strong>Move to Copilot Studio</strong>
+          <span>→ paste your instructions and continue</span>
+        </a>
+      </div>
 
+    </section>
+    <!-- ============ /DESIGN YOUR AGENT ============ -->
 
-
-  
+  </div>
 </section>
 
 
