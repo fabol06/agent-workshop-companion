@@ -1451,6 +1451,53 @@ h3 {
 
 }
 
+    /* ===== Copilot style prompt block ===== */
+
+.prompt-clean {
+  border: 1px solid #d1d1d1;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  margin-top: 0.75rem;
+  background: white;
+}
+
+.prompt-clean-header {
+  background: #f3f2f1;
+  border-bottom: 1px solid #d1d1d1;
+  padding: 0.45rem 0.65rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prompt-clean-header span {
+  font-size: 0.75rem;
+  color: #605e5c;
+  font-weight: 600;
+}
+
+.prompt-clean-copy {
+  background: white;
+  border: 1px solid #c8c6c4;
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.prompt-clean-copy:hover {
+  background: #f3f2f1;
+}
+
+.prompt-clean-body {
+  padding: 1rem 1.1rem;
+  font-family: "Consolas","Courier New",monospace;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: #201f1e;
+  white-space: pre-wrap;
+}
+
     
   </style>
 </head>
@@ -2878,31 +2925,40 @@ h3 {
       This will generate the structured summary needed for the next step.</em>
     </p>
 
-    <!-- COPY PROMPT -->
-    
+   <p class="entry-label">1. Generate your agent definition summary</p>
 
-      <div class="prompt-container">
-        <div class="prompt-card">
-          <div class="prompt-header">
-            <h3 class="prompt-title"></h3>
-            <button class="copy-btn" data-copy="agent3-prompt">📋 Copy</button>
-          </div>
-          <div class="prompt-content" id="agent3-prompt">
+<p class="flow-text">
+<em>Stay inside Copilot Agent Builder.  
+In the <strong>Describe</strong> field of your current agent, paste this prompt and run it.</em>
+</p>
 
-            Generate a concise Agent Definition Summary for this agent.This summary will be used to create a Safety, Privacy & Guardrails Charter.
-            Include only: 
-            Agent purpose
-            Primary users  
-            Core responsibilities  
-            Explicit non-goals  
-            Key behaviors  
-            Constraints or sensitivities  
-            Keep the summary compact, structured, and easy to copy.
-          </div>
-        </div>
-      </div>
-      
-      <br> 
+<div class="prompt-clean">
+
+  <div class="prompt-clean-header">
+    <span>Prompt</span>
+    <button class="prompt-clean-copy" onclick="copyAgent3Prompt()">Copy</button>
+  </div>
+
+  <div class="prompt-clean-body" id="agent3PromptText">
+Generate a concise Agent Definition Summary for this agent.
+
+This summary will be used to create a Safety, Privacy & Guardrails Charter.
+
+Include only:
+
+Agent purpose
+Primary users
+Core responsibilities
+Explicit non-goals
+Key behaviors
+Constraints or sensitivities
+
+Keep the summary compact, structured, and easy to copy.
+  </div>
+
+</div>
+<br>
+
 
     <!-- STEP 2 -->
     <p class="entry-label">2. Open the Digital Impact Studio Trust & Safety Agent</p>
@@ -3009,6 +3065,21 @@ h3 {
     </section>
   </div>
 
+
+  <script>
+function copyAgent3Prompt() {
+  const text = document.getElementById("agent3PromptText").innerText.trim();
+  navigator.clipboard.writeText(text);
+
+  const btn = document.querySelector(".prompt-clean-copy");
+  const original = btn.innerText;
+  btn.innerText = "Copied";
+  setTimeout(()=> btn.innerText = original, 1200);
+}
+</script>
+
+
+  
 <script>
 function toggleExample(button) {
   const id = button.dataset.target;
