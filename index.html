@@ -1393,6 +1393,63 @@ h3 {
 
 }
 
+    /* =========================
+   MOBILE — reduce card-in-card heaviness
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Level sections inside big cards */
+  .level-section {
+    background: #ffffff;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: none;
+    border-radius: 0.6rem;
+  }
+
+  /* Choose level box */
+  .choose-level {
+    border: 1px solid rgba(0,120,212,0.14);
+    box-shadow: none;
+  }
+
+  /* Prompt cards (copy prompt blocks) */
+  .prompt-card {
+    background: #fafafa;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: none;
+  }
+
+  /* Behavior cards (Agent 2) */
+  .behavior-card {
+    background: #fcfcfc;
+    border: 1px solid rgba(0,0,0,0.06);
+    box-shadow: none;
+  }
+
+  /* Instruction steps */
+  .instruction-step {
+    background: #fafafa;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: none;
+  }
+
+  /* Tips cards */
+  .tip-card {
+    background: #fff6da;
+    box-shadow: none;
+  }
+
+  /* Chat bubbles slightly softer */
+  .chat-row.agent .chat-bubble {
+    background: #f5f7fa;
+  }
+
+  .chat-row.user .chat-bubble {
+    background: rgba(0,120,212,0.08);
+  }
+
+}
 
     
   </style>
