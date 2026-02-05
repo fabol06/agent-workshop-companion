@@ -2427,7 +2427,7 @@ h3 {
             class="level-btn"
             onclick="document.getElementById('agent2-behavior-config').scrollIntoView({ behavior: 'smooth' })">
             <span>⚙️</span>
-            Configure agent behavior
+            What your choices will change
           </button>
 
     
@@ -2484,79 +2484,93 @@ h3 {
 
       <!-- Behavior configuration -->
       <section id="agent2-behavior-config" class="level-section">
-        <h3>Configure agent behavior</h3>
+        <h3>What your choices will change</h3>
         <p class="flow-text">
-          These decisions define how your agent behaves in practice. You’ll encounter each of these during the Agent Builder flow.
+          Each choice you make will shape how your agent behaves with real users. Use this space to understand what each decision will change.
         </p>
 
-      <!-- Determinism -->
-  <div class="behavior-card">
-    <h4 class="behavior-title">Determinism vs flexibility</h4>
-    <p class="behavior-description">
-      Controls how strictly the agent follows a predefined interaction flow.
-    </p>
+ <div class="behavior-card">
+  <div class="behavior-title">How structured should your agent’s interaction be?</div>
 
-    <div class="behavior-row">
-      <strong>The agent is deciding:</strong>
-      whether to follow a fixed sequence or adapt to user input.
-    </div>
-
-    <div class="behavior-row">
-      <strong>You might answer:</strong>
-      “Always follow the same steps, even if the user jumps ahead.”
-    </div>
-
-    <div class="behavior-row example">
-      <strong>This works well if:</strong>
-      you’re designing an intake, eligibility, or customer support agent where consistency matters.
-    </div>
+  <div class="behavior-row">
+    <strong>What the agent is asking you</strong><br>
+    The agent will ask how strictly it should follow a predefined interaction flow when working with users.
   </div>
+
+  <div class="behavior-row">
+    <strong>What you’re really deciding</strong><br>
+    You’re defining how predictable and controlled the interaction should feel.
+  </div>
+
+  <div class="behavior-row">
+    <strong>What changes depending on your choice</strong><br>
+    A more structured approach creates consistent, repeatable interactions and reduces ambiguity.  
+    A more flexible approach allows the agent to adapt to users’ responses and move more conversationally.
+  </div>
+
+ <div class="behavior-row example">
+    <strong>When this matters most</strong><br>
+    Choose more structure if consistency, reliability, or compliance are important.  
+    Choose more flexibility if users need a more natural, adaptive interaction.
+  </div>
+</div>
+
 
   <!-- Uncertainty handling -->
-  <div class="behavior-card">
-    <h4 class="behavior-title">Handling uncertainty</h4>
-    <p class="behavior-description">
-      Defines what the agent should do when information is missing or unclear.
-    </p>
+<div class="behavior-card">
+  <div class="behavior-title">What should the agent do when information is missing or unclear?</div>
 
-    <div class="behavior-row">
-      <strong>The agent is deciding:</strong>
-      whether to exclude, flag, or ask about uncertain data.
-    </div>
-
-    <div class="behavior-row">
-      <strong>You might answer:</strong>
-      “Do not include results unless all criteria are met.”
-    </div>
-
-    <div class="behavior-row example">
-      <strong>This works well if:</strong>
-      your agent supports trust-sensitive or high-stakes decisions.
-    </div>
+  <div class="behavior-row">
+    <strong>What the agent is asking you</strong><br>
+    The agent will ask how it should behave when data is incomplete, uncertain, or partially missing.
   </div>
+
+  <div class="behavior-row">
+    <strong>What you’re really deciding</strong><br>
+    You’re defining whether the agent should prioritize accuracy and strict matching, or provide broader results while clearly signaling uncertainty.
+  </div>
+
+  <div class="behavior-row">
+    <strong>What changes depending on your choice</strong><br>
+    A stricter approach will exclude anything that doesn’t fully meet the criteria.  
+    A more flexible approach will include partial matches but clearly flag gaps or uncertainty.
+  </div>
+
+ <div class="behavior-row example">
+    <strong>When this matters most</strong><br>
+    Choose stricter handling when trust, safety, or sensitive decisions are involved.  
+    Choose more flexibility when it’s better to show options rather than risk hiding useful information.
+  </div>
+</div>
+
 
   <!-- Output structure -->
   <div class="behavior-card">
-    <h4 class="behavior-title">Output structure</h4>
-    <p class="behavior-description">
-      Determines how results are presented to the user.
-    </p>
+  <div class="behavior-title">How should the agent present results to users?</div>
 
-    <div class="behavior-row">
-      <strong>The agent is deciding:</strong>
-      whether to show compact lists, detailed tables, or step-by-step results.
-    </div>
-
-    <div class="behavior-row">
-      <strong>You might answer:</strong>
-      “Show a short ranked list with only key details.”
-    </div>
-
-    <div class="behavior-row example">
-      <strong>This works well if:</strong>
-      users need to make fast decisions without reading long explanations.
-    </div>
+  <div class="behavior-row">
+    <strong>What the agent is asking you</strong><br>
+    The agent will ask how structured and detailed its responses should be when presenting results.
   </div>
+
+  <div class="behavior-row">
+    <strong>What you’re really deciding</strong><br>
+    You’re shaping how users will receive and interpret information from the agent.
+  </div>
+
+  <div class="behavior-row">
+    <strong>What changes depending on your choice</strong><br>
+    A compact structure provides quick, scannable results and faster decision-making.  
+    A more detailed structure provides richer context but may require more attention from users.
+  </div>
+
+  <div class="behavior-row example">
+    <strong>When this matters most</strong><br>
+    Choose compact outputs when users need speed and clarity.  
+    Choose more detailed outputs when context and comparison are important.
+  </div>
+</div>
+
       </section>
 
 
