@@ -1498,6 +1498,32 @@ h3 {
   white-space: pre-wrap;
 }
 
+    .real-checklist {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.check-item input {
+  margin-top: 0.18rem;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.check-item span {
+  flex: 1;
+}
+
     
   </style>
 </head>
@@ -2928,8 +2954,7 @@ h3 {
 </section>
 
 
-
-      <!-- ============ AGENT 3 ============ -->
+  <!-- ============ AGENT 3 ============ -->
     <section id="agent-3" class="agent-section">
       <div class="agent-card">
         <div class="agent-eyebrow">Agent 3</div>
@@ -2995,8 +3020,140 @@ Keep the summary compact, structured, and easy to copy.
       Copy the summary Copilot generated and paste it into the Digital Impact Studio Trust & Safety Agent. It will use this to generate your final Agent Charter.</em>
     </p>
 
+<!-- ================= AGENT 3 — CONSOLIDATE & CHARTER ================= -->
+<section class="agent-subsection" id="agent3-wrapup">
+
+  <h2>Finalize your Agent Charter</h2>
+
+  <!-- Mini intro (Step info pattern) -->
+  <div class="step-info-box">
+    <div class="step-info-item">
+      <span class="step-info-label">What this step is about</span>
+      <p class="step-info-text">
+        This step helps you consolidate what you’ve built and make sure your agent is clear, responsible, and ready to be used in real contexts.
+      </p>
+    </div>
+
+    <div class="step-info-item">
+      <span class="step-info-label">What this produces</span>
+      <p class="step-info-text">
+        A short <strong>Agent Charter</strong> you can use to document scope, guardrails, ownership, and success signals.
+      </p>
+    </div>
+  </div>
+
+<!-- Checklist -->
+<div class="level-section" id="agent3-checklist">
+  <h3>Quick readiness checklist</h3>
+  <p class="flow-text">
+    Use this quick check to confirm your agent is ready to exist beyond this workshop.
+  </p>
+
+  <div class="real-checklist">
+
+    <label class="check-item">
+      <input type="checkbox">
+      <span>I can clearly explain what this agent does and does not do</span>
+    </label>
+
+    <label class="check-item">
+      <input type="checkbox">
+      <span>The primary users and context are well defined</span>
+    </label>
+
+    <label class="check-item">
+      <input type="checkbox">
+      <span>The agent’s behavior and boundaries feel intentional</span>
+    </label>
+
+    <label class="check-item">
+      <input type="checkbox">
+      <span>Risks or sensitive areas have been considered</span>
+    </label>
+
+    <label class="check-item">
+      <input type="checkbox">
+      <span>There is a clear owner or team responsible for this agent</span>
+    </label>
+
+    <label class="check-item">
+      <input type="checkbox">
+      <span>I know how this agent should be tested or used next</span>
+    </label>
+
+  </div>
+</div>
+
+
+<!-- Where useful -->
+<div class="level-section" id="agent3-why-useful">
+  <h3>Where this becomes useful</h3>
+  <p class="flow-text">
+    Your Agent Charter becomes a lightweight reference you can use across contexts.
+  </p>
+
+  <div class="instructions-wrapper">
+
+    <div class="instruction-step">
+      <div class="instruction-step-text">
+        <strong>You can use this to clarify the agent for others</strong><br>
+        Share a clear description of what the agent does, who it’s for, and where it should be used.
+      </div>
+    </div>
+
+    <div class="instruction-step">
+      <div class="instruction-step-text">
+        <strong>You can use this to document scope and guardrails</strong><br>
+        Keep a simple record of what the agent should and should not do as it evolves.
+      </div>
+    </div>
+
+    <div class="instruction-step">
+      <div class="instruction-step-text">
+        <strong>You can use this to support responsible testing or rollout</strong><br>
+        Use the charter as a reference when sharing the agent with teammates or piloting it in real workflows.
+      </div>
+    </div>
+
+    <div class="instruction-step">
+      <div class="instruction-step-text">
+        <strong>You can use this to revisit decisions later</strong><br>
+        Return to the charter when refining behavior, expanding scope, or scaling the agent.
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+  <!-- Final box (same pattern as Agent 1/2) -->
+  <div class="start-help2" id="agent3-done">
+    <div class="start-help-title2">Are you done completing everything?</div>
+
+    <p class="start-help-body2">
+      If your charter feels clear and aligned, you’re ready to move forward.
+    </p>
+
+    <br>
+
+    <p class="start-help-item2">
+      → Start testing the agent in real scenarios
+    </p>
+
+    <p class="start-help-item2">
+      → Share it with your team or stakeholders
+    </p>
+
+    <p class="start-help-item2">
+      → Or return to any previous step if something still feels unclear
+    </p>
+  </div>
+
+</section>
+
   </div>
 </section>
+
 
     <!-- ============ CHEATSHEET ============ -->
     <section class="cheatsheet">
