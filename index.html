@@ -1524,16 +1524,74 @@ h3 {
   flex: 1;
 }
 
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  
+  background: white;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding: 8px 0;
+}
+
+
+
+.topbar-inner {
+  width: 100%;
+  max-width: none;      
+  margin: 0;           
+  padding-left: 24px;   
+  padding-right: 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* LOGO */
+.topbar-logo {
+  height: 50px;   
+  width: auto;
+}
+
+/* DIVIDER */
+.topbar-divider {
+  width: 1px;
+  height: 22px;
+  margin: 0 12px;
+  background: rgba(0,0,0,0.25);
+}
+
+/* TEXT */
+.topbar-title {
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 500;
+}
+
+
     
   </style>
 </head>
 
 <body>
-  <header class="header">
-    <h1>AI for Nonprofit Leaders</h1>
-    <p class="subtitle">Choose Your Own Adventure — Microsoft Elevate Days</p>
-    <p class="meta">90 minutes • London</p>
-  </header>
+
+<header class="topbar">
+  <div class="topbar-inner">
+
+    <!-- Logo  -->
+    <img src="images/LogoElevate.png" alt="Microsoft Elevate" class="topbar-logo">
+
+    <!-- Divider -->
+    <span class="topbar-divider"></span>
+
+    <!-- Event name -->
+    <span class="topbar-title">
+      Elevate Days
+    </span>
+
+  </div>
+</header>
+
+
 
   <div class="container">
     <div class="intro">
@@ -3314,4 +3372,3 @@ function toggleExample(button) {
 
 </body>
 </html>
-
