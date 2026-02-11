@@ -1567,6 +1567,37 @@ h3 {
   font-weight: 500;
 }
 
+    /* Copilot visual guide */
+.copilot-map{
+  margin: 1.8rem 0 2.4rem;
+}
+
+.copilot-map img{
+  width:100%;
+  border-radius:12px;
+  border:1px solid #e1e1e1;
+  box-shadow:0 8px 22px rgba(0,0,0,0.06);
+}
+
+.copilot-explain{
+  margin-top:1rem;
+  padding:1.1rem 1.25rem;
+  background:#f8f9fb;
+  border-radius:10px;
+  border:1px solid #ececec;
+}
+
+.copilot-explain h4{
+  font-size:1rem;
+  margin:0 0 0.4rem 0;
+  font-weight:600;
+  color:#242424;
+}
+
+.copilot-explain p{
+  margin:0 0 .6rem 0;
+  colo
+::contentReference[oaicite:0]{index=0}
 
     
   </style>
@@ -2963,15 +2994,54 @@ h3 {
 </section>
 
 
-  <!-- ===== Path 2 ===== -->
- <section id="agent2-copilot-orientation" class="level-section">
+<!-- ===== Path 2 ===== -->
+<section id="agent2-copilot-orientation" class="level-section">
 
   <h3>I'm New to Copilot</h3>
 
   <p class="flow-text">
-   [[TODO: add simple visual map of Copilot Agent Builder UI for first-time users]
+    If this is your first time using Copilot Agent Builder, this quick visual guide
+    will help you understand what you're looking at before we start.
   </p>
 
+  <!-- IMAGE 1 -->
+  <div class="copilot-map">
+    <img src="images/Agent1.png" alt="Copilot Agent Builder overview">
+
+    <div class="copilot-explain">
+      <h4>What you're looking at</h4>
+      <p>
+        This is the Copilot Agent Builder workspace.  
+        Here you define what your agent is, what it should do, and how it should behave.
+      </p>
+
+      <ul>
+        <li><strong>Name & description</strong> — where you define your agent's purpose</li>
+        <li><strong>Instructions panel</strong> — where you shape its behaviour and tone</li>
+        <li><strong>Test chat</strong> — where you try your agent live as you build</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- IMAGE 2 -->
+  <div class="copilot-map">
+    <img src="images/Agent2.png" alt="Copilot Agent Builder sections">
+
+    <div class="copilot-explain">
+      <h4>Key areas you'll use today</h4>
+
+      <ul>
+        <li><strong>Agent description</strong> — clarifies what your agent is for</li>
+        <li><strong>System instructions</strong> — the core prompt shaping its behavior</li>
+        <li><strong>Knowledge & files</strong> — optional context you can add</li>
+        <li><strong>Test & iterate</strong> — refine your agent through conversation</li>
+      </ul>
+
+      <p class="micro-note">
+        Don’t worry about getting everything perfect — we’ll build this step by step together.
+      </p>
+    </div>
+  </div>
 
 </section>
 
