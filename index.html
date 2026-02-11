@@ -1567,7 +1567,7 @@ h3 {
   font-weight: 500;
 }
 
-    /* Copilot visual guide */
+/* Copilot visual guide */
 .copilot-map{
   margin: 1.8rem 0 2.4rem;
 }
@@ -1579,26 +1579,40 @@ h3 {
   box-shadow:0 8px 22px rgba(0,0,0,0.06);
 }
 
+/* explanation box */
 .copilot-explain{
   margin-top:1rem;
-  padding:1.1rem 1.25rem;
+  padding:1.4rem 1.6rem; 
   background:#f8f9fb;
-  border-radius:10px;
+  border-radius:12px;
   border:1px solid #ececec;
 }
 
+/* section titles */
 .copilot-explain h4{
-  font-size:1rem;
-  margin:0 0 0.4rem 0;
+  font-size:0.95rem;
+  margin:1.2rem 0 0.35rem 0;
   font-weight:600;
   color:#242424;
 }
 
-.copilot-explain p{
-  margin:0 0 .6rem 0;
-  colo
-::contentReference[oaicite:0]{index=0}
+/* first title no top margin */
+.copilot-explain h4:first-child{
+  margin-top:0;
+}
 
+/* body text */
+.copilot-explain p{
+  margin:0 0 0.65rem 0;
+  font-size:0.95rem;
+  color:#616161;
+  line-height:1.55;
+}
+
+/* spacing between blocks */
+.copilot-block{
+  margin-bottom:1rem;
+}
     
   </style>
 </head>
@@ -2994,57 +3008,54 @@ h3 {
 </section>
 
 
-<!-- ===== Path 2 ===== -->
 <section id="agent2-copilot-orientation" class="level-section">
 
-  <h3>I'm New to Copilot</h3>
+<h3>I'm New to Copilot</h3>
 
-  <p class="flow-text">
-    If this is your first time using Copilot Agent Builder, this quick visual guide
-    will help you understand what you're looking at before we start.
-  </p>
+<!-- IMAGE 1 -->
+<div class="copilot-map">
+  <img src="images/Agent1.png" alt="Copilot Agent Builder overview">
+</div>
 
-  <!-- IMAGE 1 -->
-  <div class="copilot-map">
-    <img src="images/Agent1.png" alt="Copilot Agent Builder overview">
+<div class="copilot-explain">
 
-    <div class="copilot-explain">
-      <h4>What you're looking at</h4>
-      <p>
-        This is the Copilot Agent Builder workspace.  
-        Here you define what your agent is, what it should do, and how it should behave.
-      </p>
-
-      <ul>
-        <li><strong>Name & description</strong> — where you define your agent's purpose</li>
-        <li><strong>Instructions panel</strong> — where you shape its behaviour and tone</li>
-        <li><strong>Test chat</strong> — where you try your agent live as you build</li>
-      </ul>
-    </div>
+  <div class="copilot-block">
+    <h4>Name & description</h4>
+    <p>Give your agent a clear name and a short description. This helps others understand what the agent does and when to use it.</p>
   </div>
 
-  <!-- IMAGE 2 -->
-  <div class="copilot-map">
-    <img src="images/Agent2.png" alt="Copilot Agent Builder sections">
-
-    <div class="copilot-explain">
-      <h4>Key areas you'll use today</h4>
-
-      <ul>
-        <li><strong>Agent description</strong> — clarifies what your agent is for</li>
-        <li><strong>System instructions</strong> — the core prompt shaping its behavior</li>
-        <li><strong>Knowledge & files</strong> — optional context you can add</li>
-        <li><strong>Test & iterate</strong> — refine your agent through conversation</li>
-      </ul>
-
-      <p class="micro-note">
-        Don’t worry about getting everything perfect — we’ll build this step by step together.
-      </p>
-    </div>
+  <div class="copilot-block">
+    <h4>Instructions</h4>
+    <p>This is the core system prompt of your agent. Describe what the agent should do, its tone, boundaries, and how it should behave.</p>
   </div>
+
+  <div class="copilot-block">
+    <h4>Knowledge</h4>
+    <p>Upload documents, links, or sources your agent can reference. This allows it to generate responses grounded in real materials.</p>
+  </div>
+
+</div>
+
+<!-- IMAGE 2 -->
+<div class="copilot-map">
+  <img src="images/Agent2.png" alt="Copilot capabilities and prompts">
+</div>
+
+<div class="copilot-explain">
+
+  <div class="copilot-block">
+    <h4>Capabilities</h4>
+    <p>Enable tools like document creation, data analysis, or image generation depending on what your agent needs to do.</p>
+  </div>
+
+  <div class="copilot-block">
+    <h4>Suggested prompts</h4>
+    <p>Add example prompts to guide users on how to interact with your agent. These appear as quick starters inside Copilot.</p>
+  </div>
+
+</div>
 
 </section>
-
 
       <!-- Move to Copilot (inline closure, Agent 1 pattern) -->
       <div class="start-help2">
