@@ -179,6 +179,20 @@
       box-shadow: 0 6px 16px rgba(0,120,212,0.35);
     }
 
+    .nav-eyebrow {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  opacity: 0.85;
+  margin-top: 2px;
+}
+
+.nav-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+
     @media (max-width: 768px) {
       .nav-grid {
         grid-template-columns: 1fr;
@@ -1750,20 +1764,20 @@ h3 {
         <div class="nav-grid">
           <button class="nav-btn primary" onclick="document.getElementById('agent-1').scrollIntoView({ behavior: 'smooth' })">
             <span>🔍</span>
-            DIS <br>
-            Research Agent
+            <div class="nav-eyebrow">DIS</div>
+            <div class="nav-title">Research Agent</div>
           </button>
 
           <button class="nav-btn primary" onclick="document.getElementById('agent-2').scrollIntoView({ behavior: 'smooth' })">
             <span>🧠</span>
-            DIS <br>
-           Instruction Generator Agent
+             <div class="nav-eyebrow">DIS</div>
+            <div class="nav-title">Instruction Generator Agent</div>
           </button>
 
           <button class="nav-btn primary" onclick="document.getElementById('agent-3').scrollIntoView({ behavior: 'smooth' })">
             <span>🔰</span>
-            DIS <br>
-            Trust & Safety Agent 
+           <div class="nav-eyebrow">DIS</div>
+            <div class="nav-title">Trust & Safety Agent</div>
           </button>
         </div>
       </nav>
